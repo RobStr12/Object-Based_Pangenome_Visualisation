@@ -54,6 +54,7 @@ class PangenomeGraphDatabase:
         insert += f' insert (gene: $gene, chromosome: $chromosome) isa locus;'
         return insert
 
+    # Define the create, migrate, and query functions for the actual database handling
     def create(self, path: str, replace: bool = None):
         # Check if database already exists
         exists = self.client.databases().contains(self.name)
