@@ -10,9 +10,9 @@ class PangenomeGraphDatabase:
         self.localhost = localhost
         self.name = name
         self.inputs = [
-            {"file": "Genes", "template": gene_template},
-            {"file": "Chromosomes", "template": chromosome_template},
-            {"file": "Loci", "template": locus_template}
+            {"file": "./Data/Genes.json", "template": gene_template},
+            {"file": "./Data/Chromosomes.json", "template": chromosome_template},
+            {"file": "./Data/Loci.json", "template": locus_template}
         ]
 
     def __enter__(self):
@@ -27,6 +27,12 @@ class PangenomeGraphDatabase:
 
     def delete(self):
         self.client.databases().get(self.name).delete()
+
+    def parser(self):
+        for input in self.inputs:
+            with open(input["file"], "r") as data:
+                items = [input["template"](item) for item in ijson.items(data, "item")]
+                self.migrate(items)
 
     def create(self, path: str, replace: bool = None):
         # Check if database already exists
@@ -54,19 +60,13 @@ class PangenomeGraphDatabase:
             if doReplace:
                 self.create(path, True)
 
-    def migrate(self):
-        for input in self.inputs:
-            file = input["file"]
-            template = input["template"]
-            with open(f"./Data/{file}.json", "r") as data:
-                items = [template(item) for item in ijson.items(data, "item")]
-
-            with self.client.session(self.name, SessionType.DATA) as session:
-                with session.transaction(TransactionType.WRITE) as transaction:
-                    for item in items:
-                        print(item)
-                        transaction.query().insert(item)
-                    transaction.commit()
+    def migrate(self, items):
+        with self.client.session(self.name, SessionType.DATA) as session:
+            with session.transaction(TransactionType.WRITE) as transaction:
+                for item in items:
+                    print(item)
+                    transaction.query().insert(item)
+                transaction.commit()
 
     def query(self, query):
         pass
@@ -95,4 +95,4 @@ def locus_template(input):
 if __name__ == "__main__":
     with PangenomeGraphDatabase("localhost:1729", "Spidermite") as db:
         db.create("./Data/DatabaseSchemaTemplate.tql", True)
-        db.migrate()
+        db.parser()
