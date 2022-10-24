@@ -30,7 +30,8 @@ class PangenomeGraphDatabase:
     def delete(self):
         self.client.databases().get(self.name).delete()
 
-    def parser(self):
+    # Parsers for different data types
+    def json_parser(self):
         for input in self.inputs:
             with open(input["file"], "r") as data:
                 items = [input["template"](item) for item in ijson.items(data, "item")]
@@ -90,10 +91,17 @@ class PangenomeGraphDatabase:
                 transaction.commit()
 
     def query(self, query):
-        pass
+        with self.client.session(self.name, SessionType.DATA) as session:
+            with session.transaction(TransactionType.READ) as transaction:
+                iterator = transaction.query().match(query[0])
+
+                result = [res.get(query[1]).get_value() for res in iterator]
+                return result
 
 
 if __name__ == "__main__":
     with PangenomeGraphDatabase("localhost:1729", "Spidermite") as db:
         db.create("./Data/DatabaseSchemaTemplate.tql", True)
-        db.parser()
+        db.json_parser()
+        query = ["match $chrom isa chromosome, has chr_id $id; (gene: $gene, chromosome: $chrom) isa locus; get $id;", "id"]
+        print(db.query(query))
