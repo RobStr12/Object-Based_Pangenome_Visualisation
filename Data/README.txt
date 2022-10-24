@@ -1,1 +1,3 @@
 In this part, we could store our data...
+
+For now, some dummy datasets are added to this folder. First we have a template/dummy schema for the typeDB with the .tql extension. Next, we have the dummy data (with the .json extension) I used to test the template class.
