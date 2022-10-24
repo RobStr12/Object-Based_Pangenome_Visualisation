@@ -102,7 +102,7 @@ class PangenomeGraphDatabase:
                 return result
 
     # Define Crude(!!!) Query templates and Generator
-    # These crude templates can serve as inspiration or buidling blocks of more complex queries
+    # These crude templates can serve as inspiration or building blocks of more complex queries
     # and query generators.
     def entity_query_template(self, entity: str):
         return f'${entity} isa {entity}'
