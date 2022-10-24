@@ -1,104 +1,227 @@
-2022/10/24-19:58:19.113287 3f5c RocksDB version: 6.20.3
-2022/10/24-19:58:19.113365 3f5c Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
-2022/10/24-19:58:19.113381 3f5c Compile date 2021-05-07 18:16:49
-2022/10/24-19:58:19.113415 3f5c DB SUMMARY
-2022/10/24-19:58:19.113430 3f5c DB Session ID:  88E1IPMKXYB3DMO42508
-2022/10/24-19:58:19.114548 3f5c CURRENT file:  CURRENT
-2022/10/24-19:58:19.114564 3f5c IDENTITY file:  IDENTITY
-2022/10/24-19:58:19.114646 3f5c MANIFEST file:  MANIFEST-000004 size: 57 Bytes
-2022/10/24-19:58:19.114664 3f5c SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema dir, Total Num: 0, files: 
-2022/10/24-19:58:19.114675 3f5c Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema: 000005.log size: 1191 ; 
-2022/10/24-19:58:19.114816 3f5c                         Options.error_if_exists: 0
-2022/10/24-19:58:19.114822 3f5c                       Options.create_if_missing: 1
-2022/10/24-19:58:19.114825 3f5c                         Options.paranoid_checks: 1
-2022/10/24-19:58:19.114828 3f5c                               Options.track_and_verify_wals_in_manifest: 0
-2022/10/24-19:58:19.114831 3f5c                                     Options.env: 000001953BBD3140
-2022/10/24-19:58:19.114834 3f5c                                      Options.fs: WinFS
-2022/10/24-19:58:19.114837 3f5c                                Options.info_log: 000001953BC1BA70
-2022/10/24-19:58:19.114840 3f5c                Options.max_file_opening_threads: 16
-2022/10/24-19:58:19.114843 3f5c                              Options.statistics: 0000000000000000
-2022/10/24-19:58:19.114846 3f5c                               Options.use_fsync: 0
-2022/10/24-19:58:19.114849 3f5c                       Options.max_log_file_size: 0
-2022/10/24-19:58:19.114852 3f5c                  Options.max_manifest_file_size: 1073741824
-2022/10/24-19:58:19.114855 3f5c                   Options.log_file_time_to_roll: 0
-2022/10/24-19:58:19.114858 3f5c                       Options.keep_log_file_num: 1000
-2022/10/24-19:58:19.114861 3f5c                    Options.recycle_log_file_num: 0
-2022/10/24-19:58:19.114863 3f5c                         Options.allow_fallocate: 1
-2022/10/24-19:58:19.114866 3f5c                        Options.allow_mmap_reads: 0
-2022/10/24-19:58:19.114869 3f5c                       Options.allow_mmap_writes: 0
-2022/10/24-19:58:19.114872 3f5c                        Options.use_direct_reads: 0
-2022/10/24-19:58:19.114875 3f5c                        Options.use_direct_io_for_flush_and_compaction: 0
-2022/10/24-19:58:19.114877 3f5c          Options.create_missing_column_families: 0
-2022/10/24-19:58:19.114880 3f5c                              Options.db_log_dir: 
-2022/10/24-19:58:19.114883 3f5c                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema
-2022/10/24-19:58:19.114886 3f5c                Options.table_cache_numshardbits: 6
-2022/10/24-19:58:19.114889 3f5c                         Options.WAL_ttl_seconds: 0
-2022/10/24-19:58:19.114892 3f5c                       Options.WAL_size_limit_MB: 0
-2022/10/24-19:58:19.114895 3f5c                        Options.max_write_batch_group_size_bytes: 1048576
-2022/10/24-19:58:19.114898 3f5c             Options.manifest_preallocation_size: 4194304
-2022/10/24-19:58:19.114900 3f5c                     Options.is_fd_close_on_exec: 1
-2022/10/24-19:58:19.114903 3f5c                   Options.advise_random_on_open: 1
-2022/10/24-19:58:19.114906 3f5c                    Options.db_write_buffer_size: 0
-2022/10/24-19:58:19.114909 3f5c                    Options.write_buffer_manager: 000001953BC36950
-2022/10/24-19:58:19.114912 3f5c         Options.access_hint_on_compaction_start: 1
-2022/10/24-19:58:19.114915 3f5c  Options.new_table_reader_for_compaction_inputs: 0
-2022/10/24-19:58:19.114917 3f5c           Options.random_access_max_buffer_size: 1048576
-2022/10/24-19:58:19.114920 3f5c                      Options.use_adaptive_mutex: 0
-2022/10/24-19:58:19.114923 3f5c                            Options.rate_limiter: 0000000000000000
-2022/10/24-19:58:19.114949 3f5c     Options.sst_file_manager.rate_bytes_per_sec: 0
-2022/10/24-19:58:19.114954 3f5c                       Options.wal_recovery_mode: 2
-2022/10/24-19:58:19.114957 3f5c                  Options.enable_thread_tracking: 0
-2022/10/24-19:58:19.114960 3f5c                  Options.enable_pipelined_write: 0
-2022/10/24-19:58:19.114963 3f5c                  Options.unordered_write: 0
-2022/10/24-19:58:19.114966 3f5c         Options.allow_concurrent_memtable_write: 1
-2022/10/24-19:58:19.114969 3f5c      Options.enable_write_thread_adaptive_yield: 1
-2022/10/24-19:58:19.114972 3f5c             Options.write_thread_max_yield_usec: 100
-2022/10/24-19:58:19.114975 3f5c            Options.write_thread_slow_yield_usec: 3
-2022/10/24-19:58:19.114978 3f5c                               Options.row_cache: None
-2022/10/24-19:58:19.114981 3f5c                              Options.wal_filter: None
-2022/10/24-19:58:19.114984 3f5c             Options.avoid_flush_during_recovery: 0
-2022/10/24-19:58:19.114987 3f5c             Options.allow_ingest_behind: 0
-2022/10/24-19:58:19.114990 3f5c             Options.preserve_deletes: 0
-2022/10/24-19:58:19.114992 3f5c             Options.two_write_queues: 0
-2022/10/24-19:58:19.114997 3f5c             Options.manual_wal_flush: 0
-2022/10/24-19:58:19.114999 3f5c             Options.atomic_flush: 0
-2022/10/24-19:58:19.115002 3f5c             Options.avoid_unnecessary_blocking_io: 0
-2022/10/24-19:58:19.115005 3f5c                 Options.persist_stats_to_disk: 0
-2022/10/24-19:58:19.115008 3f5c                 Options.write_dbid_to_manifest: 0
-2022/10/24-19:58:19.115033 3f5c                 Options.log_readahead_size: 0
-2022/10/24-19:58:19.115036 3f5c                 Options.file_checksum_gen_factory: Unknown
-2022/10/24-19:58:19.115039 3f5c                 Options.best_efforts_recovery: 0
-2022/10/24-19:58:19.115042 3f5c                Options.max_bgerror_resume_count: 2147483647
-2022/10/24-19:58:19.115045 3f5c            Options.bgerror_resume_retry_interval: 1000000
-2022/10/24-19:58:19.115048 3f5c             Options.allow_data_in_errors: 0
-2022/10/24-19:58:19.115051 3f5c             Options.db_host_id: __hostname__
-2022/10/24-19:58:19.115054 3f5c             Options.max_background_jobs: 2
-2022/10/24-19:58:19.115057 3f5c             Options.max_background_compactions: -1
-2022/10/24-19:58:19.115059 3f5c             Options.max_subcompactions: 1
-2022/10/24-19:58:19.115062 3f5c             Options.avoid_flush_during_shutdown: 0
-2022/10/24-19:58:19.115065 3f5c           Options.writable_file_max_buffer_size: 1048576
-2022/10/24-19:58:19.115086 3f5c             Options.delayed_write_rate : 16777216
-2022/10/24-19:58:19.115089 3f5c             Options.max_total_wal_size: 0
-2022/10/24-19:58:19.115092 3f5c             Options.delete_obsolete_files_period_micros: 21600000000
-2022/10/24-19:58:19.115095 3f5c                   Options.stats_dump_period_sec: 600
-2022/10/24-19:58:19.115098 3f5c                 Options.stats_persist_period_sec: 600
-2022/10/24-19:58:19.115101 3f5c                 Options.stats_history_buffer_size: 1048576
-2022/10/24-19:58:19.115104 3f5c                          Options.max_open_files: -1
-2022/10/24-19:58:19.115107 3f5c                          Options.bytes_per_sync: 0
-2022/10/24-19:58:19.115110 3f5c                      Options.wal_bytes_per_sync: 0
-2022/10/24-19:58:19.115113 3f5c                   Options.strict_bytes_per_sync: 0
-2022/10/24-19:58:19.115116 3f5c       Options.compaction_readahead_size: 0
-2022/10/24-19:58:19.115119 3f5c                  Options.max_background_flushes: -1
-2022/10/24-19:58:19.115127 3f5c Compression algorithms supported:
-2022/10/24-19:58:19.115131 3f5c 	kZSTD supported: 1
-2022/10/24-19:58:19.115134 3f5c 	kSnappyCompression supported: 1
-2022/10/24-19:58:19.115137 3f5c 	kBZip2Compression supported: 0
-2022/10/24-19:58:19.115140 3f5c 	kZlibCompression supported: 1
-2022/10/24-19:58:19.115143 3f5c 	kLZ4Compression supported: 1
-2022/10/24-19:58:19.115146 3f5c 	kXpressCompression supported: 0
-2022/10/24-19:58:19.115171 3f5c 	kLZ4HCCompression supported: 1
-2022/10/24-19:58:19.115176 3f5c 	kZSTDNotFinalCompression supported: 1
-2022/10/24-19:58:19.115188 3f5c Fast CRC32 supported: Supported on x86
-2022/10/24-19:58:19.115758 3f5c [WARN] [db\db_impl\db_impl_open.cc:1843] Persisting Option File error: OK
-2022/10/24-19:58:19.115780 3f5c [db\db_impl\db_impl.cc:463] Shutdown: canceling all background work
-2022/10/24-19:58:19.115825 3f5c [db\db_impl\db_impl.cc:642] Shutdown complete
+2022/10/24-20:53:21.958739 1b7c RocksDB version: 6.20.3
+2022/10/24-20:53:21.958813 1b7c Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/10/24-20:53:21.958847 1b7c Compile date 2021-05-07 18:16:49
+2022/10/24-20:53:21.958860 1b7c DB SUMMARY
+2022/10/24-20:53:21.958870 1b7c DB Session ID:  N4WBSN9D0JIWW6I4W3FR
+2022/10/24-20:53:21.959055 1b7c SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema dir, Total Num: 0, files: 
+2022/10/24-20:53:21.959069 1b7c Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema: 
+2022/10/24-20:53:21.959079 1b7c                         Options.error_if_exists: 0
+2022/10/24-20:53:21.959088 1b7c                       Options.create_if_missing: 1
+2022/10/24-20:53:21.959250 1b7c                         Options.paranoid_checks: 1
+2022/10/24-20:53:21.959257 1b7c                               Options.track_and_verify_wals_in_manifest: 0
+2022/10/24-20:53:21.959260 1b7c                                     Options.env: 000001C4FE7EF9A0
+2022/10/24-20:53:21.959264 1b7c                                      Options.fs: WinFS
+2022/10/24-20:53:21.959267 1b7c                                Options.info_log: 000001C4FEE59140
+2022/10/24-20:53:21.959270 1b7c                Options.max_file_opening_threads: 16
+2022/10/24-20:53:21.959273 1b7c                              Options.statistics: 0000000000000000
+2022/10/24-20:53:21.959276 1b7c                               Options.use_fsync: 0
+2022/10/24-20:53:21.959279 1b7c                       Options.max_log_file_size: 0
+2022/10/24-20:53:21.959282 1b7c                  Options.max_manifest_file_size: 1073741824
+2022/10/24-20:53:21.959285 1b7c                   Options.log_file_time_to_roll: 0
+2022/10/24-20:53:21.959287 1b7c                       Options.keep_log_file_num: 1000
+2022/10/24-20:53:21.959291 1b7c                    Options.recycle_log_file_num: 0
+2022/10/24-20:53:21.959293 1b7c                         Options.allow_fallocate: 1
+2022/10/24-20:53:21.959296 1b7c                        Options.allow_mmap_reads: 0
+2022/10/24-20:53:21.959299 1b7c                       Options.allow_mmap_writes: 0
+2022/10/24-20:53:21.959302 1b7c                        Options.use_direct_reads: 0
+2022/10/24-20:53:21.959305 1b7c                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/10/24-20:53:21.959308 1b7c          Options.create_missing_column_families: 0
+2022/10/24-20:53:21.959310 1b7c                              Options.db_log_dir: 
+2022/10/24-20:53:21.959313 1b7c                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema
+2022/10/24-20:53:21.959317 1b7c                Options.table_cache_numshardbits: 6
+2022/10/24-20:53:21.959320 1b7c                         Options.WAL_ttl_seconds: 0
+2022/10/24-20:53:21.959322 1b7c                       Options.WAL_size_limit_MB: 0
+2022/10/24-20:53:21.959325 1b7c                        Options.max_write_batch_group_size_bytes: 1048576
+2022/10/24-20:53:21.959328 1b7c             Options.manifest_preallocation_size: 4194304
+2022/10/24-20:53:21.959331 1b7c                     Options.is_fd_close_on_exec: 1
+2022/10/24-20:53:21.959334 1b7c                   Options.advise_random_on_open: 1
+2022/10/24-20:53:21.959337 1b7c                    Options.db_write_buffer_size: 0
+2022/10/24-20:53:21.959340 1b7c                    Options.write_buffer_manager: 000001C4AE6BC6A0
+2022/10/24-20:53:21.959343 1b7c         Options.access_hint_on_compaction_start: 1
+2022/10/24-20:53:21.959345 1b7c  Options.new_table_reader_for_compaction_inputs: 0
+2022/10/24-20:53:21.959348 1b7c           Options.random_access_max_buffer_size: 1048576
+2022/10/24-20:53:21.959351 1b7c                      Options.use_adaptive_mutex: 0
+2022/10/24-20:53:21.959354 1b7c                            Options.rate_limiter: 0000000000000000
+2022/10/24-20:53:21.959357 1b7c     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/10/24-20:53:21.959360 1b7c                       Options.wal_recovery_mode: 2
+2022/10/24-20:53:21.959381 1b7c                  Options.enable_thread_tracking: 0
+2022/10/24-20:53:21.959386 1b7c                  Options.enable_pipelined_write: 0
+2022/10/24-20:53:21.959389 1b7c                  Options.unordered_write: 0
+2022/10/24-20:53:21.959392 1b7c         Options.allow_concurrent_memtable_write: 1
+2022/10/24-20:53:21.959395 1b7c      Options.enable_write_thread_adaptive_yield: 1
+2022/10/24-20:53:21.959398 1b7c             Options.write_thread_max_yield_usec: 100
+2022/10/24-20:53:21.959400 1b7c            Options.write_thread_slow_yield_usec: 3
+2022/10/24-20:53:21.959403 1b7c                               Options.row_cache: None
+2022/10/24-20:53:21.959406 1b7c                              Options.wal_filter: None
+2022/10/24-20:53:21.959409 1b7c             Options.avoid_flush_during_recovery: 0
+2022/10/24-20:53:21.959412 1b7c             Options.allow_ingest_behind: 0
+2022/10/24-20:53:21.959415 1b7c             Options.preserve_deletes: 0
+2022/10/24-20:53:21.959418 1b7c             Options.two_write_queues: 0
+2022/10/24-20:53:21.959420 1b7c             Options.manual_wal_flush: 0
+2022/10/24-20:53:21.959423 1b7c             Options.atomic_flush: 0
+2022/10/24-20:53:21.959426 1b7c             Options.avoid_unnecessary_blocking_io: 0
+2022/10/24-20:53:21.959429 1b7c                 Options.persist_stats_to_disk: 0
+2022/10/24-20:53:21.959432 1b7c                 Options.write_dbid_to_manifest: 0
+2022/10/24-20:53:21.959435 1b7c                 Options.log_readahead_size: 0
+2022/10/24-20:53:21.959437 1b7c                 Options.file_checksum_gen_factory: Unknown
+2022/10/24-20:53:21.959440 1b7c                 Options.best_efforts_recovery: 0
+2022/10/24-20:53:21.959443 1b7c                Options.max_bgerror_resume_count: 2147483647
+2022/10/24-20:53:21.959446 1b7c            Options.bgerror_resume_retry_interval: 1000000
+2022/10/24-20:53:21.959449 1b7c             Options.allow_data_in_errors: 0
+2022/10/24-20:53:21.959452 1b7c             Options.db_host_id: __hostname__
+2022/10/24-20:53:21.959455 1b7c             Options.max_background_jobs: 2
+2022/10/24-20:53:21.959458 1b7c             Options.max_background_compactions: -1
+2022/10/24-20:53:21.959461 1b7c             Options.max_subcompactions: 1
+2022/10/24-20:53:21.959463 1b7c             Options.avoid_flush_during_shutdown: 0
+2022/10/24-20:53:21.959466 1b7c           Options.writable_file_max_buffer_size: 1048576
+2022/10/24-20:53:21.959469 1b7c             Options.delayed_write_rate : 16777216
+2022/10/24-20:53:21.959472 1b7c             Options.max_total_wal_size: 0
+2022/10/24-20:53:21.959475 1b7c             Options.delete_obsolete_files_period_micros: 21600000000
+2022/10/24-20:53:21.959478 1b7c                   Options.stats_dump_period_sec: 600
+2022/10/24-20:53:21.959481 1b7c                 Options.stats_persist_period_sec: 600
+2022/10/24-20:53:21.959484 1b7c                 Options.stats_history_buffer_size: 1048576
+2022/10/24-20:53:21.959487 1b7c                          Options.max_open_files: -1
+2022/10/24-20:53:21.959489 1b7c                          Options.bytes_per_sync: 0
+2022/10/24-20:53:21.959492 1b7c                      Options.wal_bytes_per_sync: 0
+2022/10/24-20:53:21.959495 1b7c                   Options.strict_bytes_per_sync: 0
+2022/10/24-20:53:21.959498 1b7c       Options.compaction_readahead_size: 0
+2022/10/24-20:53:21.959501 1b7c                  Options.max_background_flushes: -1
+2022/10/24-20:53:21.959504 1b7c Compression algorithms supported:
+2022/10/24-20:53:21.959507 1b7c 	kZSTD supported: 1
+2022/10/24-20:53:21.959510 1b7c 	kSnappyCompression supported: 1
+2022/10/24-20:53:21.959513 1b7c 	kBZip2Compression supported: 0
+2022/10/24-20:53:21.959526 1b7c 	kZlibCompression supported: 1
+2022/10/24-20:53:21.959529 1b7c 	kLZ4Compression supported: 1
+2022/10/24-20:53:21.959532 1b7c 	kXpressCompression supported: 0
+2022/10/24-20:53:21.959535 1b7c 	kLZ4HCCompression supported: 1
+2022/10/24-20:53:21.959538 1b7c 	kZSTDNotFinalCompression supported: 1
+2022/10/24-20:53:21.959543 1b7c Fast CRC32 supported: Supported on x86
+2022/10/24-20:53:21.962369 1b7c [db\db_impl\db_impl_open.cc:285] Creating manifest 1 
+2022/10/24-20:53:21.966452 1b7c [db\version_set.cc:4627] Recovering from manifest file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/MANIFEST-000001
+2022/10/24-20:53:21.966719 1b7c [db\column_family.cc:598] --------------- Options for column family [default]:
+2022/10/24-20:53:21.966727 1b7c               Options.comparator: leveldb.BytewiseComparator
+2022/10/24-20:53:21.966730 1b7c           Options.merge_operator: None
+2022/10/24-20:53:21.966733 1b7c        Options.compaction_filter: None
+2022/10/24-20:53:21.966736 1b7c        Options.compaction_filter_factory: None
+2022/10/24-20:53:21.966739 1b7c  Options.sst_partitioner_factory: None
+2022/10/24-20:53:21.966742 1b7c         Options.memtable_factory: SkipListFactory
+2022/10/24-20:53:21.966745 1b7c            Options.table_factory: BlockBasedTable
+2022/10/24-20:53:21.966769 1b7c            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (000001C4AB95D060)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  pin_top_level_index_and_filter: 1
+  index_type: 0
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 000001C4AC403890
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 67108864
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/10/24-20:53:21.966773 1b7c        Options.write_buffer_size: 67108864
+2022/10/24-20:53:21.966776 1b7c  Options.max_write_buffer_number: 2
+2022/10/24-20:53:21.966779 1b7c          Options.compression: NoCompression
+2022/10/24-20:53:21.966782 1b7c                  Options.bottommost_compression: Disabled
+2022/10/24-20:53:21.966785 1b7c       Options.prefix_extractor: nullptr
+2022/10/24-20:53:21.966788 1b7c   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/10/24-20:53:21.966791 1b7c             Options.num_levels: 7
+2022/10/24-20:53:21.966794 1b7c        Options.min_write_buffer_number_to_merge: 1
+2022/10/24-20:53:21.966797 1b7c     Options.max_write_buffer_number_to_maintain: 0
+2022/10/24-20:53:21.966800 1b7c     Options.max_write_buffer_size_to_maintain: 134217728
+2022/10/24-20:53:21.966802 1b7c            Options.bottommost_compression_opts.window_bits: -14
+2022/10/24-20:53:21.966806 1b7c                  Options.bottommost_compression_opts.level: 32767
+2022/10/24-20:53:21.966809 1b7c               Options.bottommost_compression_opts.strategy: 0
+2022/10/24-20:53:21.966811 1b7c         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/10/24-20:53:21.966814 1b7c         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/10/24-20:53:21.966817 1b7c         Options.bottommost_compression_opts.parallel_threads: 1
+2022/10/24-20:53:21.966820 1b7c                  Options.bottommost_compression_opts.enabled: false
+2022/10/24-20:53:21.966823 1b7c         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/10/24-20:53:21.966826 1b7c            Options.compression_opts.window_bits: -14
+2022/10/24-20:53:21.966829 1b7c                  Options.compression_opts.level: 32767
+2022/10/24-20:53:21.966832 1b7c               Options.compression_opts.strategy: 0
+2022/10/24-20:53:21.966835 1b7c         Options.compression_opts.max_dict_bytes: 0
+2022/10/24-20:53:21.966838 1b7c         Options.compression_opts.zstd_max_train_bytes: 0
+2022/10/24-20:53:21.966843 1b7c         Options.compression_opts.parallel_threads: 1
+2022/10/24-20:53:21.966848 1b7c                  Options.compression_opts.enabled: false
+2022/10/24-20:53:21.966851 1b7c         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/10/24-20:53:21.966854 1b7c      Options.level0_file_num_compaction_trigger: 4
+2022/10/24-20:53:21.966857 1b7c          Options.level0_slowdown_writes_trigger: 20
+2022/10/24-20:53:21.966860 1b7c              Options.level0_stop_writes_trigger: 36
+2022/10/24-20:53:21.966862 1b7c                   Options.target_file_size_base: 67108864
+2022/10/24-20:53:21.966865 1b7c             Options.target_file_size_multiplier: 1
+2022/10/24-20:53:21.966868 1b7c                Options.max_bytes_for_level_base: 268435456
+2022/10/24-20:53:21.966871 1b7c Options.level_compaction_dynamic_level_bytes: 0
+2022/10/24-20:53:21.966874 1b7c          Options.max_bytes_for_level_multiplier: 10.000000
+2022/10/24-20:53:21.966877 1b7c Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/10/24-20:53:21.966880 1b7c Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/10/24-20:53:21.966883 1b7c Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/10/24-20:53:21.966886 1b7c Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/10/24-20:53:21.966889 1b7c Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/10/24-20:53:21.966892 1b7c Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/10/24-20:53:21.966895 1b7c Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/10/24-20:53:21.966898 1b7c       Options.max_sequential_skip_in_iterations: 8
+2022/10/24-20:53:21.966901 1b7c                    Options.max_compaction_bytes: 1677721600
+2022/10/24-20:53:21.966904 1b7c                        Options.arena_block_size: 8388608
+2022/10/24-20:53:21.966907 1b7c   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/10/24-20:53:21.966910 1b7c   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/10/24-20:53:21.966913 1b7c       Options.rate_limit_delay_max_milliseconds: 100
+2022/10/24-20:53:21.966916 1b7c                Options.disable_auto_compactions: 0
+2022/10/24-20:53:21.966919 1b7c                        Options.compaction_style: kCompactionStyleLevel
+2022/10/24-20:53:21.966923 1b7c                          Options.compaction_pri: kMinOverlappingRatio
+2022/10/24-20:53:21.966926 1b7c Options.compaction_options_universal.size_ratio: 1
+2022/10/24-20:53:21.966929 1b7c Options.compaction_options_universal.min_merge_width: 2
+2022/10/24-20:53:21.966931 1b7c Options.compaction_options_universal.max_merge_width: 4294967295
+2022/10/24-20:53:21.966934 1b7c Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/10/24-20:53:21.966937 1b7c Options.compaction_options_universal.compression_size_percent: -1
+2022/10/24-20:53:21.966940 1b7c Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/10/24-20:53:21.966943 1b7c Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/10/24-20:53:21.966946 1b7c Options.compaction_options_fifo.allow_compaction: 0
+2022/10/24-20:53:21.966951 1b7c                   Options.table_properties_collectors: 
+2022/10/24-20:53:21.966954 1b7c                   Options.inplace_update_support: 0
+2022/10/24-20:53:21.966957 1b7c                 Options.inplace_update_num_locks: 10000
+2022/10/24-20:53:21.966960 1b7c               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/10/24-20:53:21.966963 1b7c               Options.memtable_whole_key_filtering: 0
+2022/10/24-20:53:21.966965 1b7c   Options.memtable_huge_page_size: 0
+2022/10/24-20:53:21.966968 1b7c                           Options.bloom_locality: 0
+2022/10/24-20:53:21.966971 1b7c                    Options.max_successive_merges: 0
+2022/10/24-20:53:21.966974 1b7c                Options.optimize_filters_for_hits: 0
+2022/10/24-20:53:21.966977 1b7c                Options.paranoid_file_checks: 0
+2022/10/24-20:53:21.966980 1b7c                Options.force_consistency_checks: 1
+2022/10/24-20:53:21.966983 1b7c                Options.report_bg_io_stats: 0
+2022/10/24-20:53:21.967008 1b7c                               Options.ttl: 2592000
+2022/10/24-20:53:21.967012 1b7c          Options.periodic_compaction_seconds: 0
+2022/10/24-20:53:21.967015 1b7c                    Options.enable_blob_files: false
+2022/10/24-20:53:21.967018 1b7c                        Options.min_blob_size: 0
+2022/10/24-20:53:21.967021 1b7c                       Options.blob_file_size: 268435456
+2022/10/24-20:53:21.967024 1b7c                Options.blob_compression_type: NoCompression
+2022/10/24-20:53:21.967027 1b7c       Options.enable_blob_garbage_collection: false
+2022/10/24-20:53:21.967030 1b7c   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/10/24-20:53:21.968024 1b7c [db\version_set.cc:4675] Recovered from manifest file:C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/MANIFEST-000001 succeeded,manifest_file_number is 1, next_file_number is 3, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+2022/10/24-20:53:21.968036 1b7c [db\version_set.cc:4684] Column family [default] (ID 0), log number is 0
+2022/10/24-20:53:21.968698 1b7c [db\version_set.cc:4119] Creating manifest 4
+2022/10/24-20:53:21.975764 1b7c [db\db_impl\db_impl_open.cc:1757] SstFileManager instance 000001C4FDF80FD0
+2022/10/24-20:53:21.976088 1b7c DB pointer 000001C4FE84D120

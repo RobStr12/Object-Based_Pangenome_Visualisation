@@ -124,6 +124,8 @@ class PangenomeGraphDatabase:
 
 if __name__ == "__main__":
     with PangenomeGraphDatabase("Spidermite") as db:
+        db.create("./Data/DatabaseSchemaTemplate.tql", True)
+        db.json_parser()
         query = db.example_crude_query_generator()
         print(f"Query:\n{query[0]}\nResults:\n{db.query(query)}")
 
