@@ -1,0 +1,31 @@
+define
+
+ locus sub relation,
+ relates gene,
+ relates chromosome;
+
+ gene sub entity,
+ plays locus:gene,
+ owns seq_id,
+ owns seq_length,
+ owns start_at;
+
+ chromosome sub entity,
+ plays locus:chromosome,
+ owns chr_id,
+ owns chr_length;
+
+ seq_id sub attribute,
+ value string;
+
+ chr_id sub attribute,
+ value string;
+
+ seq_length sub attribute,
+ value long;
+
+ chr_length sub attribute,
+ value long;
+
+ start_at sub attribute,
+ value long;

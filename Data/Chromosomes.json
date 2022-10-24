@@ -1,0 +1,14 @@
+[
+  {
+    "chr_id": "1.1",
+    "chr_length": 50000
+  },
+  {
+    "chr_id": "1.2",
+    "chr_length": 45000
+  },
+  {
+    "chr_id": "1.3",
+    "chr_length": 65000
+  }
+]
