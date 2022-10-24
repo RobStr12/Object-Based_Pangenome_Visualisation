@@ -1,0 +1,104 @@
+2022/10/24-19:58:19.113412 3600 RocksDB version: 6.20.3
+2022/10/24-19:58:19.113457 3600 Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/10/24-19:58:19.113472 3600 Compile date 2021-05-07 18:16:49
+2022/10/24-19:58:19.113483 3600 DB SUMMARY
+2022/10/24-19:58:19.113492 3600 DB Session ID:  PMSGQUTVNVACFAR906JJ
+2022/10/24-19:58:19.114950 3600 CURRENT file:  CURRENT
+2022/10/24-19:58:19.114965 3600 IDENTITY file:  IDENTITY
+2022/10/24-19:58:19.115086 3600 MANIFEST file:  MANIFEST-000015 size: 117 Bytes
+2022/10/24-19:58:19.115101 3600 SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Social_Network\schema dir, Total Num: 1, files: 000009.sst 
+2022/10/24-19:58:19.115111 3600 Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Social_Network\schema: 000016.log size: 0 ; 
+2022/10/24-19:58:19.115187 3600                         Options.error_if_exists: 0
+2022/10/24-19:58:19.115193 3600                       Options.create_if_missing: 1
+2022/10/24-19:58:19.115196 3600                         Options.paranoid_checks: 1
+2022/10/24-19:58:19.115199 3600                               Options.track_and_verify_wals_in_manifest: 0
+2022/10/24-19:58:19.115202 3600                                     Options.env: 000001953BBD3140
+2022/10/24-19:58:19.115205 3600                                      Options.fs: WinFS
+2022/10/24-19:58:19.115208 3600                                Options.info_log: 000001953BC190E0
+2022/10/24-19:58:19.115211 3600                Options.max_file_opening_threads: 16
+2022/10/24-19:58:19.115214 3600                              Options.statistics: 0000000000000000
+2022/10/24-19:58:19.115217 3600                               Options.use_fsync: 0
+2022/10/24-19:58:19.115219 3600                       Options.max_log_file_size: 0
+2022/10/24-19:58:19.115222 3600                  Options.max_manifest_file_size: 1073741824
+2022/10/24-19:58:19.115225 3600                   Options.log_file_time_to_roll: 0
+2022/10/24-19:58:19.115228 3600                       Options.keep_log_file_num: 1000
+2022/10/24-19:58:19.115231 3600                    Options.recycle_log_file_num: 0
+2022/10/24-19:58:19.115234 3600                         Options.allow_fallocate: 1
+2022/10/24-19:58:19.115237 3600                        Options.allow_mmap_reads: 0
+2022/10/24-19:58:19.115239 3600                       Options.allow_mmap_writes: 0
+2022/10/24-19:58:19.115242 3600                        Options.use_direct_reads: 0
+2022/10/24-19:58:19.115245 3600                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/10/24-19:58:19.115248 3600          Options.create_missing_column_families: 0
+2022/10/24-19:58:19.115251 3600                              Options.db_log_dir: 
+2022/10/24-19:58:19.115254 3600                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Social_Network\schema
+2022/10/24-19:58:19.115257 3600                Options.table_cache_numshardbits: 6
+2022/10/24-19:58:19.115260 3600                         Options.WAL_ttl_seconds: 0
+2022/10/24-19:58:19.115263 3600                       Options.WAL_size_limit_MB: 0
+2022/10/24-19:58:19.115266 3600                        Options.max_write_batch_group_size_bytes: 1048576
+2022/10/24-19:58:19.115269 3600             Options.manifest_preallocation_size: 4194304
+2022/10/24-19:58:19.115272 3600                     Options.is_fd_close_on_exec: 1
+2022/10/24-19:58:19.115275 3600                   Options.advise_random_on_open: 1
+2022/10/24-19:58:19.115278 3600                    Options.db_write_buffer_size: 0
+2022/10/24-19:58:19.115281 3600                    Options.write_buffer_manager: 000001953BC5FA00
+2022/10/24-19:58:19.115284 3600         Options.access_hint_on_compaction_start: 1
+2022/10/24-19:58:19.115287 3600  Options.new_table_reader_for_compaction_inputs: 0
+2022/10/24-19:58:19.115290 3600           Options.random_access_max_buffer_size: 1048576
+2022/10/24-19:58:19.115293 3600                      Options.use_adaptive_mutex: 0
+2022/10/24-19:58:19.115316 3600                            Options.rate_limiter: 0000000000000000
+2022/10/24-19:58:19.115321 3600     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/10/24-19:58:19.115324 3600                       Options.wal_recovery_mode: 2
+2022/10/24-19:58:19.115327 3600                  Options.enable_thread_tracking: 0
+2022/10/24-19:58:19.115330 3600                  Options.enable_pipelined_write: 0
+2022/10/24-19:58:19.115333 3600                  Options.unordered_write: 0
+2022/10/24-19:58:19.115336 3600         Options.allow_concurrent_memtable_write: 1
+2022/10/24-19:58:19.115338 3600      Options.enable_write_thread_adaptive_yield: 1
+2022/10/24-19:58:19.115341 3600             Options.write_thread_max_yield_usec: 100
+2022/10/24-19:58:19.115344 3600            Options.write_thread_slow_yield_usec: 3
+2022/10/24-19:58:19.115347 3600                               Options.row_cache: None
+2022/10/24-19:58:19.115350 3600                              Options.wal_filter: None
+2022/10/24-19:58:19.115353 3600             Options.avoid_flush_during_recovery: 0
+2022/10/24-19:58:19.115356 3600             Options.allow_ingest_behind: 0
+2022/10/24-19:58:19.115359 3600             Options.preserve_deletes: 0
+2022/10/24-19:58:19.115362 3600             Options.two_write_queues: 0
+2022/10/24-19:58:19.115365 3600             Options.manual_wal_flush: 0
+2022/10/24-19:58:19.115368 3600             Options.atomic_flush: 0
+2022/10/24-19:58:19.115371 3600             Options.avoid_unnecessary_blocking_io: 0
+2022/10/24-19:58:19.115374 3600                 Options.persist_stats_to_disk: 0
+2022/10/24-19:58:19.115377 3600                 Options.write_dbid_to_manifest: 0
+2022/10/24-19:58:19.115380 3600                 Options.log_readahead_size: 0
+2022/10/24-19:58:19.115383 3600                 Options.file_checksum_gen_factory: Unknown
+2022/10/24-19:58:19.115386 3600                 Options.best_efforts_recovery: 0
+2022/10/24-19:58:19.115390 3600                Options.max_bgerror_resume_count: 2147483647
+2022/10/24-19:58:19.115393 3600            Options.bgerror_resume_retry_interval: 1000000
+2022/10/24-19:58:19.115396 3600             Options.allow_data_in_errors: 0
+2022/10/24-19:58:19.115399 3600             Options.db_host_id: __hostname__
+2022/10/24-19:58:19.115402 3600             Options.max_background_jobs: 2
+2022/10/24-19:58:19.115405 3600             Options.max_background_compactions: -1
+2022/10/24-19:58:19.115408 3600             Options.max_subcompactions: 1
+2022/10/24-19:58:19.115411 3600             Options.avoid_flush_during_shutdown: 0
+2022/10/24-19:58:19.115414 3600           Options.writable_file_max_buffer_size: 1048576
+2022/10/24-19:58:19.115418 3600             Options.delayed_write_rate : 16777216
+2022/10/24-19:58:19.115421 3600             Options.max_total_wal_size: 0
+2022/10/24-19:58:19.115424 3600             Options.delete_obsolete_files_period_micros: 21600000000
+2022/10/24-19:58:19.115427 3600                   Options.stats_dump_period_sec: 600
+2022/10/24-19:58:19.115430 3600                 Options.stats_persist_period_sec: 600
+2022/10/24-19:58:19.115433 3600                 Options.stats_history_buffer_size: 1048576
+2022/10/24-19:58:19.115436 3600                          Options.max_open_files: -1
+2022/10/24-19:58:19.115439 3600                          Options.bytes_per_sync: 0
+2022/10/24-19:58:19.115442 3600                      Options.wal_bytes_per_sync: 0
+2022/10/24-19:58:19.115445 3600                   Options.strict_bytes_per_sync: 0
+2022/10/24-19:58:19.115448 3600       Options.compaction_readahead_size: 0
+2022/10/24-19:58:19.115451 3600                  Options.max_background_flushes: -1
+2022/10/24-19:58:19.115454 3600 Compression algorithms supported:
+2022/10/24-19:58:19.115457 3600 	kZSTD supported: 1
+2022/10/24-19:58:19.115460 3600 	kSnappyCompression supported: 1
+2022/10/24-19:58:19.115463 3600 	kBZip2Compression supported: 0
+2022/10/24-19:58:19.115466 3600 	kZlibCompression supported: 1
+2022/10/24-19:58:19.115469 3600 	kLZ4Compression supported: 1
+2022/10/24-19:58:19.115472 3600 	kXpressCompression supported: 0
+2022/10/24-19:58:19.115496 3600 	kLZ4HCCompression supported: 1
+2022/10/24-19:58:19.115501 3600 	kZSTDNotFinalCompression supported: 1
+2022/10/24-19:58:19.115506 3600 Fast CRC32 supported: Supported on x86
+2022/10/24-19:58:19.116025 3600 [WARN] [db\db_impl\db_impl_open.cc:1843] Persisting Option File error: OK
+2022/10/24-19:58:19.116033 3600 [db\db_impl\db_impl.cc:463] Shutdown: canceling all background work
+2022/10/24-19:58:19.116046 3600 [db\db_impl\db_impl.cc:642] Shutdown complete
