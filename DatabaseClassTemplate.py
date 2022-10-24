@@ -6,13 +6,14 @@ import ijson
 
 class PangenomeGraphDatabase:
 
+    # __init__, __enter__, and __exit__ functions
     def __init__(self, localhost: str, name: str):
         self.localhost = localhost
         self.name = name
         self.inputs = [
-            {"file": "./Data/Genes.json", "template": gene_template},
-            {"file": "./Data/Chromosomes.json", "template": chromosome_template},
-            {"file": "./Data/Loci.json", "template": locus_template}
+            {"file": "./Data/Genes.json", "template": self.gene_template},
+            {"file": "./Data/Chromosomes.json", "template": self.chromosome_template},
+            {"file": "./Data/Loci.json", "template": self.locus_template}
         ]
 
     def __enter__(self):
@@ -22,6 +23,7 @@ class PangenomeGraphDatabase:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.client.close()
 
+    # Basic class function for easier management and support of the class
     def exists(self):
         return self.client.databases().contains(self.name)
 
@@ -33,6 +35,24 @@ class PangenomeGraphDatabase:
             with open(input["file"], "r") as data:
                 items = [input["template"](item) for item in ijson.items(data, "item")]
                 self.migrate(items)
+
+    # Define the template function that convert the inputs from the json file into typeQL insert statements
+    def gene_template(self, input):
+        insert = f'insert $gene isa gene, has seq_id "{input["seq_id"]}",'
+        insert += f' has seq_length {input["length"]},'
+        insert += f' has start_at {input["start-at"]};'
+        return insert
+
+    def chromosome_template(self, input):
+        insert = f'insert $chromosome isa chromosome, has chr_id "{input["chr_id"]}",'
+        insert += f' has chr_length {input["chr_length"]};'
+        return insert
+
+    def locus_template(self, input):
+        insert = f'match $gene isa gene, has seq_id "{input["seq_id"]}";'
+        insert += f' $chromosome isa chromosome, has chr_id "{input["chr_id"]}";'
+        insert += f' insert (gene: $gene, chromosome: $chromosome) isa locus;'
+        return insert
 
     def create(self, path: str, replace: bool = None):
         # Check if database already exists
@@ -70,26 +90,6 @@ class PangenomeGraphDatabase:
 
     def query(self, query):
         pass
-
-
-def gene_template(input):
-    insert = f'insert $gene isa gene, has seq_id "{input["seq_id"]}",'
-    insert += f' has seq_length {input["length"]},'
-    insert += f' has start_at {input["start-at"]};'
-    return insert
-
-
-def chromosome_template(input):
-    insert = f'insert $chromosome isa chromosome, has chr_id "{input["chr_id"]}",'
-    insert += f' has chr_length {input["chr_length"]};'
-    return insert
-
-
-def locus_template(input):
-    insert = f'match $gene isa gene, has seq_id "{input["seq_id"]}";'
-    insert += f' $chromosome isa chromosome, has chr_id "{input["chr_id"]}";'
-    insert += f' insert (gene: $gene, chromosome: $chromosome) isa locus;'
-    return insert
 
 
 if __name__ == "__main__":
