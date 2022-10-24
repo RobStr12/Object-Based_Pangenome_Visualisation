@@ -1,0 +1,104 @@
+2022/10/24-19:58:19.113751 5e20 RocksDB version: 6.20.3
+2022/10/24-19:58:19.113794 5e20 Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/10/24-19:58:19.113808 5e20 Compile date 2021-05-07 18:16:49
+2022/10/24-19:58:19.113819 5e20 DB SUMMARY
+2022/10/24-19:58:19.113828 5e20 DB Session ID:  QUM6DPPXZ01YOFPCQHO1
+2022/10/24-19:58:19.115158 5e20 CURRENT file:  CURRENT
+2022/10/24-19:58:19.115173 5e20 IDENTITY file:  IDENTITY
+2022/10/24-19:58:19.115243 5e20 MANIFEST file:  MANIFEST-000035 size: 117 Bytes
+2022/10/24-19:58:19.115256 5e20 SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\phone_calls\schema dir, Total Num: 1, files: 000009.sst 
+2022/10/24-19:58:19.115267 5e20 Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\phone_calls\schema: 000036.log size: 0 ; 
+2022/10/24-19:58:19.115346 5e20                         Options.error_if_exists: 0
+2022/10/24-19:58:19.115351 5e20                       Options.create_if_missing: 1
+2022/10/24-19:58:19.115355 5e20                         Options.paranoid_checks: 1
+2022/10/24-19:58:19.115358 5e20                               Options.track_and_verify_wals_in_manifest: 0
+2022/10/24-19:58:19.115361 5e20                                     Options.env: 000001953BBD3140
+2022/10/24-19:58:19.115364 5e20                                      Options.fs: WinFS
+2022/10/24-19:58:19.115367 5e20                                Options.info_log: 000001953BB46810
+2022/10/24-19:58:19.115370 5e20                Options.max_file_opening_threads: 16
+2022/10/24-19:58:19.115373 5e20                              Options.statistics: 0000000000000000
+2022/10/24-19:58:19.115377 5e20                               Options.use_fsync: 0
+2022/10/24-19:58:19.115380 5e20                       Options.max_log_file_size: 0
+2022/10/24-19:58:19.115383 5e20                  Options.max_manifest_file_size: 1073741824
+2022/10/24-19:58:19.115386 5e20                   Options.log_file_time_to_roll: 0
+2022/10/24-19:58:19.115389 5e20                       Options.keep_log_file_num: 1000
+2022/10/24-19:58:19.115392 5e20                    Options.recycle_log_file_num: 0
+2022/10/24-19:58:19.115395 5e20                         Options.allow_fallocate: 1
+2022/10/24-19:58:19.115398 5e20                        Options.allow_mmap_reads: 0
+2022/10/24-19:58:19.115401 5e20                       Options.allow_mmap_writes: 0
+2022/10/24-19:58:19.115405 5e20                        Options.use_direct_reads: 0
+2022/10/24-19:58:19.115408 5e20                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/10/24-19:58:19.115411 5e20          Options.create_missing_column_families: 0
+2022/10/24-19:58:19.115414 5e20                              Options.db_log_dir: 
+2022/10/24-19:58:19.115417 5e20                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\phone_calls\schema
+2022/10/24-19:58:19.115420 5e20                Options.table_cache_numshardbits: 6
+2022/10/24-19:58:19.115423 5e20                         Options.WAL_ttl_seconds: 0
+2022/10/24-19:58:19.115426 5e20                       Options.WAL_size_limit_MB: 0
+2022/10/24-19:58:19.115429 5e20                        Options.max_write_batch_group_size_bytes: 1048576
+2022/10/24-19:58:19.115432 5e20             Options.manifest_preallocation_size: 4194304
+2022/10/24-19:58:19.115435 5e20                     Options.is_fd_close_on_exec: 1
+2022/10/24-19:58:19.115438 5e20                   Options.advise_random_on_open: 1
+2022/10/24-19:58:19.115441 5e20                    Options.db_write_buffer_size: 0
+2022/10/24-19:58:19.115444 5e20                    Options.write_buffer_manager: 000001953BB3BDD0
+2022/10/24-19:58:19.115447 5e20         Options.access_hint_on_compaction_start: 1
+2022/10/24-19:58:19.115450 5e20  Options.new_table_reader_for_compaction_inputs: 0
+2022/10/24-19:58:19.115453 5e20           Options.random_access_max_buffer_size: 1048576
+2022/10/24-19:58:19.115456 5e20                      Options.use_adaptive_mutex: 0
+2022/10/24-19:58:19.115481 5e20                            Options.rate_limiter: 0000000000000000
+2022/10/24-19:58:19.115486 5e20     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/10/24-19:58:19.115489 5e20                       Options.wal_recovery_mode: 2
+2022/10/24-19:58:19.115492 5e20                  Options.enable_thread_tracking: 0
+2022/10/24-19:58:19.115495 5e20                  Options.enable_pipelined_write: 0
+2022/10/24-19:58:19.115498 5e20                  Options.unordered_write: 0
+2022/10/24-19:58:19.115501 5e20         Options.allow_concurrent_memtable_write: 1
+2022/10/24-19:58:19.115504 5e20      Options.enable_write_thread_adaptive_yield: 1
+2022/10/24-19:58:19.115507 5e20             Options.write_thread_max_yield_usec: 100
+2022/10/24-19:58:19.115510 5e20            Options.write_thread_slow_yield_usec: 3
+2022/10/24-19:58:19.115513 5e20                               Options.row_cache: None
+2022/10/24-19:58:19.115516 5e20                              Options.wal_filter: None
+2022/10/24-19:58:19.115519 5e20             Options.avoid_flush_during_recovery: 0
+2022/10/24-19:58:19.115521 5e20             Options.allow_ingest_behind: 0
+2022/10/24-19:58:19.115524 5e20             Options.preserve_deletes: 0
+2022/10/24-19:58:19.115527 5e20             Options.two_write_queues: 0
+2022/10/24-19:58:19.115530 5e20             Options.manual_wal_flush: 0
+2022/10/24-19:58:19.115538 5e20             Options.atomic_flush: 0
+2022/10/24-19:58:19.115541 5e20             Options.avoid_unnecessary_blocking_io: 0
+2022/10/24-19:58:19.115544 5e20                 Options.persist_stats_to_disk: 0
+2022/10/24-19:58:19.115547 5e20                 Options.write_dbid_to_manifest: 0
+2022/10/24-19:58:19.115549 5e20                 Options.log_readahead_size: 0
+2022/10/24-19:58:19.115552 5e20                 Options.file_checksum_gen_factory: Unknown
+2022/10/24-19:58:19.115555 5e20                 Options.best_efforts_recovery: 0
+2022/10/24-19:58:19.115558 5e20                Options.max_bgerror_resume_count: 2147483647
+2022/10/24-19:58:19.115561 5e20            Options.bgerror_resume_retry_interval: 1000000
+2022/10/24-19:58:19.115564 5e20             Options.allow_data_in_errors: 0
+2022/10/24-19:58:19.115567 5e20             Options.db_host_id: __hostname__
+2022/10/24-19:58:19.115569 5e20             Options.max_background_jobs: 2
+2022/10/24-19:58:19.115572 5e20             Options.max_background_compactions: -1
+2022/10/24-19:58:19.115575 5e20             Options.max_subcompactions: 1
+2022/10/24-19:58:19.115578 5e20             Options.avoid_flush_during_shutdown: 0
+2022/10/24-19:58:19.115581 5e20           Options.writable_file_max_buffer_size: 1048576
+2022/10/24-19:58:19.115584 5e20             Options.delayed_write_rate : 16777216
+2022/10/24-19:58:19.115587 5e20             Options.max_total_wal_size: 0
+2022/10/24-19:58:19.115589 5e20             Options.delete_obsolete_files_period_micros: 21600000000
+2022/10/24-19:58:19.115592 5e20                   Options.stats_dump_period_sec: 600
+2022/10/24-19:58:19.115595 5e20                 Options.stats_persist_period_sec: 600
+2022/10/24-19:58:19.115598 5e20                 Options.stats_history_buffer_size: 1048576
+2022/10/24-19:58:19.115601 5e20                          Options.max_open_files: -1
+2022/10/24-19:58:19.115604 5e20                          Options.bytes_per_sync: 0
+2022/10/24-19:58:19.115607 5e20                      Options.wal_bytes_per_sync: 0
+2022/10/24-19:58:19.115609 5e20                   Options.strict_bytes_per_sync: 0
+2022/10/24-19:58:19.115612 5e20       Options.compaction_readahead_size: 0
+2022/10/24-19:58:19.115615 5e20                  Options.max_background_flushes: -1
+2022/10/24-19:58:19.115618 5e20 Compression algorithms supported:
+2022/10/24-19:58:19.115621 5e20 	kZSTD supported: 1
+2022/10/24-19:58:19.115624 5e20 	kSnappyCompression supported: 1
+2022/10/24-19:58:19.115627 5e20 	kBZip2Compression supported: 0
+2022/10/24-19:58:19.115630 5e20 	kZlibCompression supported: 1
+2022/10/24-19:58:19.115632 5e20 	kLZ4Compression supported: 1
+2022/10/24-19:58:19.115635 5e20 	kXpressCompression supported: 0
+2022/10/24-19:58:19.115685 5e20 	kLZ4HCCompression supported: 1
+2022/10/24-19:58:19.115690 5e20 	kZSTDNotFinalCompression supported: 1
+2022/10/24-19:58:19.115695 5e20 Fast CRC32 supported: Supported on x86
+2022/10/24-19:58:19.116210 5e20 [WARN] [db\db_impl\db_impl_open.cc:1843] Persisting Option File error: OK
+2022/10/24-19:58:19.116218 5e20 [db\db_impl\db_impl.cc:463] Shutdown: canceling all background work
+2022/10/24-19:58:19.116231 5e20 [db\db_impl\db_impl.cc:642] Shutdown complete
