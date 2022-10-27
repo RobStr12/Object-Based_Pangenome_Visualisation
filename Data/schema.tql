@@ -1,0 +1,37 @@
+define
+
+ Gene sub entity,
+ plays GeneLink:first,
+ plays GeneLink:last,
+ owns id,
+ owns start-at,
+ owns end-at,
+ owns strand,
+ owns chromosome,
+ owns genome,
+ owns rank;
+
+ GeneLink sub relation,
+ relates first,
+ relates last;
+
+ id sub attribute,
+ value string;
+
+ start-at sub attribute,
+ value string;
+
+ end-at sub attribute,
+ value string;
+
+ strand sub attribute,
+ value string;
+
+ chromosome sub attribute,
+ value string;
+
+ genome sub attribute,
+ value string;
+
+ rank sub attribute,
+ value long;

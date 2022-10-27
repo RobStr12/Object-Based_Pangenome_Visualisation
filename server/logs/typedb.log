@@ -1,0 +1,195 @@
+20:28:26.017 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+20:28:26.032 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+20:28:26.032 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:28:26.032 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+20:28:26.032 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+20:28:26.032 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+20:28:26.048 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 9664 ms
+20:28:26.048 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+20:29:44.073 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - [DBS04] Invalid Database Operation: The database with the name 'Spidermite' does not exist.
+com.vaticle.typedb.core.common.exception.TypeDBException: [DBS04] Invalid Database Operation: The database with the name 'Spidermite' does not exist.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.session(CoreDatabaseManager.java:142)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.session(CoreDatabaseManager.java:45)
+	at com.vaticle.typedb.core.server.TypeDBService.sessionOpen(TypeDBService.java:180)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:971)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+20:29:57.160 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:29:57.238 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:29:57.238 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:29:57.363 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:30:00.091 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - [DBS04] Invalid Database Operation: The database with the name 'Spider Mite' does not exist.
+com.vaticle.typedb.core.common.exception.TypeDBException: [DBS04] Invalid Database Operation: The database with the name 'Spider Mite' does not exist.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.session(CoreDatabaseManager.java:142)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.session(CoreDatabaseManager.java:45)
+	at com.vaticle.typedb.core.server.TypeDBService.sessionOpen(TypeDBService.java:180)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:971)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+20:30:12.061 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:30:12.077 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:30:12.077 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:30:12.186 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:31:01.176 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+20:32:21.084 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:32:21.099 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:32:21.099 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:32:21.146 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:44:50.389 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+20:45:59.221 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:45:59.283 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:45:59.283 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:45:59.330 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:51:33.435 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:51:33.435 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:51:33.435 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:51:33.466 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:52:12.526 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+20:52:12.542 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+20:52:12.542 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+20:52:12.636 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+20:53:03.200 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+20:53:04.597 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - [DBS03] Invalid Database Operation: The database with the name 'Spidermite' already exists.
+com.vaticle.typedb.core.common.exception.TypeDBException: [DBS03] Invalid Database Operation: The database with the name 'Spidermite' already exists.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.server.TypeDBService.databasesCreate(TypeDBService.java:88)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:947)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+20:53:16.740 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:02:43.517 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:02:53.560 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:03:27.559 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:03:43.595 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:03:43.642 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:03:43.642 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:03:43.673 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:04:39.187 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:04:39.203 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:04:39.203 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:04:39.234 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:04:59.533 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:04:59.533 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:04:59.533 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:04:59.564 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:05:41.571 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:05:41.571 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:05:41.571 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:05:41.603 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:06:05.145 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:06:05.160 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:06:05.160 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:06:05.191 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:15:14.779 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:15:14.810 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:15:14.810 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:15:14.872 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:15:29.094 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:15:45.531 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:16:18.364 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:16:37.227 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:17:11.150 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:17:32.167 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:21:47.449 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:21:59.494 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:22:11.763 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+21:22:11.779 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+21:22:11.779 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+21:22:11.810 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+21:43:06.063 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TransactionService - [TYR03] Invalid Type Read: The type 'GeneLink:Last' does not exist.
+com.vaticle.typedb.core.common.exception.TypeDBException: [TYR03] Invalid Type Read: The type 'GeneLink:Last' does not exist.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.query.Definer.getRoleType(Definer.java:176)
+	at com.vaticle.typedb.core.query.Definer.lambda$definePlays$4(Definer.java:253)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at com.vaticle.typedb.core.query.Definer.definePlays(Definer.java:250)
+	at com.vaticle.typedb.core.query.Definer.define(Definer.java:132)
+	at com.vaticle.typedb.core.query.Definer.lambda$execute$0(Definer.java:93)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1087)
+	at com.vaticle.typedb.core.query.Definer.execute(Definer.java:92)
+	at com.vaticle.typedb.core.query.QueryManager.define(QueryManager.java:168)
+	at com.vaticle.typedb.core.server.query.QueryService.define(QueryService.java:117)
+	at com.vaticle.typedb.core.server.query.QueryService.execute(QueryService.java:78)
+	at com.vaticle.typedb.core.server.TransactionService.executeRequest(TransactionService.java:170)
+	at com.vaticle.typedb.core.server.TransactionService.execute(TransactionService.java:146)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:122)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:79)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:262)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:318)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:301)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:834)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+21:43:09.333 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:43:35.762 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:49:34.433 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:50:05.642 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+21:51:40.577 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:03:41.147 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+22:03:41.163 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+22:03:41.179 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+22:03:41.210 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
