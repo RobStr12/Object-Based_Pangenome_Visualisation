@@ -193,3 +193,48 @@ proces wordt gebruikt.
 22:03:41.163 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
 22:03:41.179 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
 22:03:41.210 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+22:09:57.505 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+22:09:57.513 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+22:09:57.515 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+22:09:57.543 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+22:10:38.645 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:14:04.225 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:14:14.747 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:15:40.290 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:16:54.746 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:17:32.537 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:17:42.258 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:18:09.514 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:18:27.606 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:18:50.209 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:18:59.032 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+22:19:36.482 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+22:19:36.498 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+22:19:36.498 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+22:19:36.545 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+22:20:06.385 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+22:20:06.385 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+22:20:06.385 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+22:20:06.416 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
