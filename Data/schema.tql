@@ -1,2 +1,29 @@
 define
 
+ Gene sub entity,
+ plays GeneLink:First,
+ plays GeneLink:Last,
+ owns Chromosome,
+ owns Gene_Name,
+ owns Start_Position,
+ owns End_Position,
+ owns Strand;
+
+ GeneLink sub relation,
+ relates First,
+ relates Last;
+
+ Chromosome sub attribute,
+ value string;
+
+ Gene_Name sub attribute,
+ value string;
+
+ Start_Position sub attribute,
+ value long;
+
+ End_Position sub attribute,
+ value long;
+
+ Strand sub attribute,
+ value string;
