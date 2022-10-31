@@ -22,26 +22,26 @@ Jannes, when you are ready, can you document your parser here?
 
 Initializes the class, which needs a name (str).
 
-### PangenomeDatabase.start()
+***PangenomeDatabase.start()***
 
 Checks if ./server/data exists, and makes the dir if not. Starts both the server (address: localhost:1730) and the client.
 
-### PangenomeDatabase.close()
+***PangenomeDatabase.close()***
 
 Close the server, client, and OpenJDK Platform binary.
 
-### PangenomeDatabase.exists()
+***PangenomeDatabase.exists()***
 
 Checks if the database exists.
 
-### PangenomeDatabase.delete()
+***PangenomeDatabase.delete()***
 
 Tries to delete the database. If the database does not exist in the first place, it will output "database does not exist...".
 
-### PangenomeDatabase.create(replace: bool = False, file: str = "./Data/schema.tql")
+***PangenomeDatabase.create(replace: bool = False, file: str = "./Data/schema.tql")***
 
 Creates the database. If the database already exists, the replace value will determine if the existing database should be overwritten.
 
 The path to the .tql file containing the database schema should be given to the file argument.
 
-### PangenomeDatabase.migrate(file: str, template, batch_size: int = 2000)
+***PangenomeDatabase.migrate(file: str, template, batch_size: int = 2000)***
