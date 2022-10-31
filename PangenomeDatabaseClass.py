@@ -55,7 +55,7 @@ class PangenomeDatabase:
         except TypeDBClientException:
             print("Database does not exist...")
 
-    def create(self, replace=False, file: str = "./Data/schema.tql"):
+    def create(self, replace: bool = False, file: str = "./Data/schema.tql"):
 
         if replace is True:
             print("(Re-)Creating Database")
@@ -72,7 +72,7 @@ class PangenomeDatabase:
         else:
             print(f"There already exists a database called {self.name}.")
 
-    def migrate(self, file, template, batch_size=2000):
+    def migrate(self, file: str, template, batch_size: int = 2000):
         print(f"Importing data from: '{file}':")
         with gzip.open(file, "rb") as in_file:
             data = [template(item) for item in ijson.items(in_file, "item")]
