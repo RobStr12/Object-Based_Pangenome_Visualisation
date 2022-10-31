@@ -97,7 +97,7 @@ class PangenomeDatabase:
         insert = "match "
         for key, value in input.items():
             insert += f'${key} isa gene, has Gene_Name "{value}";'
-        insert += "(GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
+        insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
 
         return insert
 
