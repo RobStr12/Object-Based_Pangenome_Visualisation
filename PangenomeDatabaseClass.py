@@ -3,6 +3,7 @@ from typedb.common.exception import TypeDBClientException
 from subprocess import Popen
 import psutil
 import ijson
+import gzip
 import os
 
 class PangenomeDatabase:
@@ -70,7 +71,7 @@ class PangenomeDatabase:
             print(f"There already exists a database called {self.name}.")
 
     def migrate(self, file, template):
-        with open(file, "r") as file:
+        with gzip.open(file, "rb") as file:
             data = [template(item) for item in ijson.items(file, "item")]
 
         with self.client.session(self.name, SessionType.DATA) as session:
@@ -108,6 +109,6 @@ class PangenomeDatabase:
 if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
         Db.create(replace=True)
-        Db.migrate("./Data/Genes.json", Db.gene_template)
+        Db.migrate("./Data/Genes.json.gz", Db.gene_template)
         results = Db.query()
         print(results)
