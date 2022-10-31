@@ -4,6 +4,7 @@ from subprocess import Popen
 import psutil
 import ijson
 import gzip
+import time
 import os
 
 class PangenomeDatabase:
@@ -92,6 +93,14 @@ class PangenomeDatabase:
 
         return insert[:-2] + ";"
 
+    def genelink_template(self, input):
+        insert = "match "
+        for key, value in input.items():
+            insert += f'${key} isa gene, has Gene_Name "{value}";'
+        insert += "(GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
+
+        return insert
+
     def query(self, query: str = "./Data/getGeneNames.tql"):
         with self.client.session(self.name, SessionType.DATA) as session:
             with session.transaction(TransactionType.READ) as transaction:
@@ -108,7 +117,21 @@ class PangenomeDatabase:
 
 if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
+        start_time = time.time()
         Db.create(replace=True)
+        created_time = time.time()
         Db.migrate("./Data/Genes.json.gz", Db.gene_template)
+        genes_time = time.time()
+        Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
+        genelinks_time = time.time()
         results = Db.query()
+        query_time = time.time()
         print(results)
+        Db.delete()
+        delete_time = time.time()
+
+    print(f"Total execution time: {delete_time - start_time}\n\n")
+    print(f"Database creation time: {created_time - start_time}\n\n")
+    print(f"Genes migration time: {genes_time - created_time}\n\n")
+    print(f"GeneLinks migration time: {genelinks_time - genes_time}\n\n")
+    print(f"Database deletion time: {delete_time - genelinks_time}\n\n")
