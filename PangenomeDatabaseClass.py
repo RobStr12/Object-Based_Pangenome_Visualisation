@@ -1,5 +1,6 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
+from alive_progress import alive_bar
 from subprocess import Popen
 import psutil
 import ijson
@@ -71,16 +72,24 @@ class PangenomeDatabase:
         else:
             print(f"There already exists a database called {self.name}.")
 
-    def migrate(self, file, template):
+    def migrate(self, file, template, batch_size=2000):
+        print(f"Importing data from: '{file}':")
         with gzip.open(file, "rb") as file:
             data = [template(item) for item in ijson.items(file, "item")]
 
+        size = len(data)
+        batch_index = [(batch_size * i, batch_size * (i + 1)) for i in range(size // batch_size + 1)]
+        batch_num = len(batch_index)
+
+        print(f"Migrating data from '{file}' to the {self.name} database:")
         with self.client.session(self.name, SessionType.DATA) as session:
-            with session.transaction(TransactionType.WRITE) as transaction:
-                for insert in data:
-                    print(insert)
-                    transaction.query().insert(insert)
-                transaction.commit()
+            with alive_bar(batch_num) as bar:
+                for x, y in batch_index:
+                    with session.transaction(TransactionType.WRITE) as transaction:
+                        for insert in data[x:y]:
+                            transaction.query().insert(insert)
+                        transaction.commit()
+                    bar()
 
     def gene_template(self, input):
         insert = f'insert $gene isa Gene, '
@@ -96,7 +105,7 @@ class PangenomeDatabase:
     def genelink_template(self, input):
         insert = "match "
         for key, value in input.items():
-            insert += f'${key} isa gene, has Gene_Name "{value}";'
+            insert += f'${key} isa Gene, has Gene_Name "{value}";'
         insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
 
         return insert
@@ -126,12 +135,12 @@ if __name__ == "__main__":
         genelinks_time = time.time()
         results = Db.query()
         query_time = time.time()
-        print(results)
         Db.delete()
         delete_time = time.time()
 
-    print(f"Total execution time: {delete_time - start_time}\n\n")
-    print(f"Database creation time: {created_time - start_time}\n\n")
-    print(f"Genes migration time: {genes_time - created_time}\n\n")
-    print(f"GeneLinks migration time: {genelinks_time - genes_time}\n\n")
-    print(f"Database deletion time: {delete_time - genelinks_time}\n\n")
+    print(f"\nTotal execution time: {delete_time - start_time}\n")
+    print(f"Database creation time: {created_time - start_time}\n")
+    print(f"Genes migration time: {genes_time - created_time}\n")
+    print(f"GeneLinks migration time: {genelinks_time - genes_time}\n")
+    print(f"Query time: {genelinks_time - query_time}\n")
+    print(f"Database deletion time: {delete_time - query_time}\n")
