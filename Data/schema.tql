@@ -1,8 +1,8 @@
 define
 
  Gene sub entity,
- plays GeneLink:First,
- plays GeneLink:Last,
+ plays GeneLink:GeneA,
+ plays GeneLink:GeneB,
  owns Chromosome,
  owns Gene_Name,
  owns Start_Position,
@@ -10,8 +10,8 @@ define
  owns Strand;
 
  GeneLink sub relation,
- relates First,
- relates Last;
+ relates GeneA,
+ relates GeneB;
 
  Chromosome sub attribute,
  value string;

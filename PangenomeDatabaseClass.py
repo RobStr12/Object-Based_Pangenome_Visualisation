@@ -1,10 +1,9 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
-import matplotlib.pyplot as plt
 from subprocess import Popen
-import networkx as nx
+import psutil
 import ijson
-
+import os
 
 class PangenomeDatabase:
 
@@ -22,6 +21,11 @@ class PangenomeDatabase:
         self.close()
 
     def start(self):
+        # Because github can not have empty folders, the ./server/data folder needs to be re-implemented each time
+        path = "./server/data"
+        if not os.path.isdir(path):
+            os.mkdir(path)
+
         # Start the server at localhost:1730 & start the client
         self.server = Popen("server.bat")
         self.client = TypeDB.core_client("localhost:1730")
@@ -30,6 +34,12 @@ class PangenomeDatabase:
         # close the client & terminate the server
         self.client.close()
         self.server.terminate()
+
+        # in order to be able to delete, change, ... certain files in the server folder, the OpenJDK Platfrom binary
+        # needs to be shut down. To accomplish this, following code is implemented. When initialising the class again,
+        # The OpenJDK Platform binary will restart again on its own.
+        for process in (process for process in psutil.process_iter() if process.name()=="java.exe"):
+            process.kill()
 
     def exists(self):
         # check if the database exists
@@ -101,5 +111,3 @@ if __name__ == "__main__":
         Db.migrate("./Data/Genes.json", Db.gene_template)
         results = Db.query()
         print(results)
-        Db.delete()
-

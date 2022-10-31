@@ -539,3 +539,75 @@ proces wordt gebruikt.
 14:05:12.536 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
 proces wordt gebruikt.
 
+14:16:35.562 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 578 ms
+14:16:35.564 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+14:26:53.107 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+com.vaticle.typedb.core.common.exception.TypeDBException: java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:58)
+	at com.vaticle.typedb.core.database.CoreDatabase.createAndOpen(CoreDatabase.java:156)
+	at com.vaticle.typedb.core.database.CoreFactory$1.databaseCreateAndOpen(CoreFactory.java:42)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.create(CoreDatabaseManager.java:111)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.create(CoreDatabaseManager.java:45)
+	at com.vaticle.typedb.core.server.TypeDBService.databasesCreate(TypeDBService.java:90)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:947)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:521)
+	at java.base/java.nio.file.Files.createDirectory(Files.java:700)
+	at com.vaticle.typedb.core.database.CoreDatabase.createAndOpen(CoreDatabase.java:154)
+	... 13 common frames omitted
+14:27:19.820 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+com.vaticle.typedb.core.common.exception.TypeDBException: java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:58)
+	at com.vaticle.typedb.core.database.CoreDatabase.createAndOpen(CoreDatabase.java:156)
+	at com.vaticle.typedb.core.database.CoreFactory$1.databaseCreateAndOpen(CoreFactory.java:42)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.create(CoreDatabaseManager.java:111)
+	at com.vaticle.typedb.core.database.CoreDatabaseManager.create(CoreDatabaseManager.java:45)
+	at com.vaticle.typedb.core.server.TypeDBService.databasesCreate(TypeDBService.java:90)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:947)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.file.NoSuchFileException: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:521)
+	at java.base/java.nio.file.Files.createDirectory(Files.java:700)
+	at com.vaticle.typedb.core.database.CoreDatabase.createAndOpen(CoreDatabase.java:154)
+	... 13 common frames omitted
+14:27:51.371 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+14:28:32.405 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+14:36:05.287 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:36:05.288 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:36:05.288 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:36:05.288 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:36:05.288 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:36:05.288 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:36:05.289 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 568 ms
+14:36:05.289 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
