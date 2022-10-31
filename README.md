@@ -18,11 +18,11 @@ Jannes, when you are ready, can you document your parser here?
 
 ## The PangenomeDatabase class
 
-### PangenomeDatabase(name: str)
+*** PangenomeDatabase(name: str) ***
 
 Initializes the class, which needs a name (str).
 
-#### PangenomeDatabase.start()
+### PangenomeDatabase.start()
 
 Checks if ./server/data exists, and makes the dir if not. Starts both the server (address: localhost:1730) and the client.
 
