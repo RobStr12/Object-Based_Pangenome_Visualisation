@@ -18,7 +18,7 @@ Jannes, when you are ready, can you document your parser here?
 
 ## The PangenomeDatabase class
 
-*** PangenomeDatabase(name: str) ***
+***PangenomeDatabase(name: str)***
 
 Initializes the class, which needs a name (str).
 
