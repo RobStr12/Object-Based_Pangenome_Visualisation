@@ -101,4 +101,5 @@ if __name__ == "__main__":
         Db.migrate("./Data/Genes.json", Db.gene_template)
         results = Db.query()
         print(results)
+        Db.delete()
 
