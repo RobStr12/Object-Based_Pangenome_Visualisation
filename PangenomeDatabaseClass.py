@@ -74,8 +74,8 @@ class PangenomeDatabase:
 
     def migrate(self, file, template, batch_size=2000):
         print(f"Importing data from: '{file}':")
-        with gzip.open(file, "rb") as file:
-            data = [template(item) for item in ijson.items(file, "item")]
+        with gzip.open(file, "rb") as in_file:
+            data = [template(item) for item in ijson.items(in_file, "item")]
 
         size = len(data)
         batch_index = [(batch_size * i, batch_size * (i + 1)) for i in range(size // batch_size + 1)]
