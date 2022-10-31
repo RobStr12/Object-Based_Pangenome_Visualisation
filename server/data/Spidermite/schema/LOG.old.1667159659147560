@@ -1,0 +1,104 @@
+2022/10/30-20:53:58.557495 56ac RocksDB version: 6.20.3
+2022/10/30-20:53:58.557574 56ac Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/10/30-20:53:58.557590 56ac Compile date 2021-05-07 18:16:49
+2022/10/30-20:53:58.557624 56ac DB SUMMARY
+2022/10/30-20:53:58.557638 56ac DB Session ID:  0T2HSBE9EVPM2XK8C2TI
+2022/10/30-20:53:58.558242 56ac CURRENT file:  CURRENT
+2022/10/30-20:53:58.558258 56ac IDENTITY file:  IDENTITY
+2022/10/30-20:53:58.558331 56ac MANIFEST file:  MANIFEST-000004 size: 57 Bytes
+2022/10/30-20:53:58.558349 56ac SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema dir, Total Num: 0, files: 
+2022/10/30-20:53:58.558361 56ac Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema: 000005.log size: 1161 ; 
+2022/10/30-20:53:58.558547 56ac                         Options.error_if_exists: 0
+2022/10/30-20:53:58.558555 56ac                       Options.create_if_missing: 1
+2022/10/30-20:53:58.558558 56ac                         Options.paranoid_checks: 1
+2022/10/30-20:53:58.558561 56ac                               Options.track_and_verify_wals_in_manifest: 0
+2022/10/30-20:53:58.558564 56ac                                     Options.env: 000001CB84148580
+2022/10/30-20:53:58.558567 56ac                                      Options.fs: WinFS
+2022/10/30-20:53:58.558570 56ac                                Options.info_log: 000001CB83F7C880
+2022/10/30-20:53:58.558573 56ac                Options.max_file_opening_threads: 16
+2022/10/30-20:53:58.558576 56ac                              Options.statistics: 0000000000000000
+2022/10/30-20:53:58.558579 56ac                               Options.use_fsync: 0
+2022/10/30-20:53:58.558582 56ac                       Options.max_log_file_size: 0
+2022/10/30-20:53:58.558584 56ac                  Options.max_manifest_file_size: 1073741824
+2022/10/30-20:53:58.558587 56ac                   Options.log_file_time_to_roll: 0
+2022/10/30-20:53:58.558590 56ac                       Options.keep_log_file_num: 1000
+2022/10/30-20:53:58.558593 56ac                    Options.recycle_log_file_num: 0
+2022/10/30-20:53:58.558596 56ac                         Options.allow_fallocate: 1
+2022/10/30-20:53:58.558599 56ac                        Options.allow_mmap_reads: 0
+2022/10/30-20:53:58.558602 56ac                       Options.allow_mmap_writes: 0
+2022/10/30-20:53:58.558604 56ac                        Options.use_direct_reads: 0
+2022/10/30-20:53:58.558607 56ac                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/10/30-20:53:58.558610 56ac          Options.create_missing_column_families: 0
+2022/10/30-20:53:58.558613 56ac                              Options.db_log_dir: 
+2022/10/30-20:53:58.558615 56ac                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema
+2022/10/30-20:53:58.558618 56ac                Options.table_cache_numshardbits: 6
+2022/10/30-20:53:58.558621 56ac                         Options.WAL_ttl_seconds: 0
+2022/10/30-20:53:58.558624 56ac                       Options.WAL_size_limit_MB: 0
+2022/10/30-20:53:58.558627 56ac                        Options.max_write_batch_group_size_bytes: 1048576
+2022/10/30-20:53:58.558630 56ac             Options.manifest_preallocation_size: 4194304
+2022/10/30-20:53:58.558632 56ac                     Options.is_fd_close_on_exec: 1
+2022/10/30-20:53:58.558635 56ac                   Options.advise_random_on_open: 1
+2022/10/30-20:53:58.558638 56ac                    Options.db_write_buffer_size: 0
+2022/10/30-20:53:58.558641 56ac                    Options.write_buffer_manager: 000001CB83FFA600
+2022/10/30-20:53:58.558644 56ac         Options.access_hint_on_compaction_start: 1
+2022/10/30-20:53:58.558646 56ac  Options.new_table_reader_for_compaction_inputs: 0
+2022/10/30-20:53:58.558649 56ac           Options.random_access_max_buffer_size: 1048576
+2022/10/30-20:53:58.558652 56ac                      Options.use_adaptive_mutex: 0
+2022/10/30-20:53:58.558655 56ac                            Options.rate_limiter: 0000000000000000
+2022/10/30-20:53:58.558679 56ac     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/10/30-20:53:58.558684 56ac                       Options.wal_recovery_mode: 2
+2022/10/30-20:53:58.558687 56ac                  Options.enable_thread_tracking: 0
+2022/10/30-20:53:58.558690 56ac                  Options.enable_pipelined_write: 0
+2022/10/30-20:53:58.558692 56ac                  Options.unordered_write: 0
+2022/10/30-20:53:58.558695 56ac         Options.allow_concurrent_memtable_write: 1
+2022/10/30-20:53:58.558698 56ac      Options.enable_write_thread_adaptive_yield: 1
+2022/10/30-20:53:58.558701 56ac             Options.write_thread_max_yield_usec: 100
+2022/10/30-20:53:58.558704 56ac            Options.write_thread_slow_yield_usec: 3
+2022/10/30-20:53:58.558706 56ac                               Options.row_cache: None
+2022/10/30-20:53:58.558709 56ac                              Options.wal_filter: None
+2022/10/30-20:53:58.558712 56ac             Options.avoid_flush_during_recovery: 0
+2022/10/30-20:53:58.558715 56ac             Options.allow_ingest_behind: 0
+2022/10/30-20:53:58.558718 56ac             Options.preserve_deletes: 0
+2022/10/30-20:53:58.558720 56ac             Options.two_write_queues: 0
+2022/10/30-20:53:58.558723 56ac             Options.manual_wal_flush: 0
+2022/10/30-20:53:58.558726 56ac             Options.atomic_flush: 0
+2022/10/30-20:53:58.558729 56ac             Options.avoid_unnecessary_blocking_io: 0
+2022/10/30-20:53:58.558731 56ac                 Options.persist_stats_to_disk: 0
+2022/10/30-20:53:58.558734 56ac                 Options.write_dbid_to_manifest: 0
+2022/10/30-20:53:58.558737 56ac                 Options.log_readahead_size: 0
+2022/10/30-20:53:58.558740 56ac                 Options.file_checksum_gen_factory: Unknown
+2022/10/30-20:53:58.558742 56ac                 Options.best_efforts_recovery: 0
+2022/10/30-20:53:58.558745 56ac                Options.max_bgerror_resume_count: 2147483647
+2022/10/30-20:53:58.558748 56ac            Options.bgerror_resume_retry_interval: 1000000
+2022/10/30-20:53:58.558751 56ac             Options.allow_data_in_errors: 0
+2022/10/30-20:53:58.558754 56ac             Options.db_host_id: __hostname__
+2022/10/30-20:53:58.558757 56ac             Options.max_background_jobs: 2
+2022/10/30-20:53:58.558759 56ac             Options.max_background_compactions: -1
+2022/10/30-20:53:58.558762 56ac             Options.max_subcompactions: 1
+2022/10/30-20:53:58.558765 56ac             Options.avoid_flush_during_shutdown: 0
+2022/10/30-20:53:58.558768 56ac           Options.writable_file_max_buffer_size: 1048576
+2022/10/30-20:53:58.558770 56ac             Options.delayed_write_rate : 16777216
+2022/10/30-20:53:58.558773 56ac             Options.max_total_wal_size: 0
+2022/10/30-20:53:58.558776 56ac             Options.delete_obsolete_files_period_micros: 21600000000
+2022/10/30-20:53:58.558779 56ac                   Options.stats_dump_period_sec: 600
+2022/10/30-20:53:58.558782 56ac                 Options.stats_persist_period_sec: 600
+2022/10/30-20:53:58.558785 56ac                 Options.stats_history_buffer_size: 1048576
+2022/10/30-20:53:58.558787 56ac                          Options.max_open_files: -1
+2022/10/30-20:53:58.558790 56ac                          Options.bytes_per_sync: 0
+2022/10/30-20:53:58.558793 56ac                      Options.wal_bytes_per_sync: 0
+2022/10/30-20:53:58.558796 56ac                   Options.strict_bytes_per_sync: 0
+2022/10/30-20:53:58.558799 56ac       Options.compaction_readahead_size: 0
+2022/10/30-20:53:58.558801 56ac                  Options.max_background_flushes: -1
+2022/10/30-20:53:58.558811 56ac Compression algorithms supported:
+2022/10/30-20:53:58.558815 56ac 	kZSTD supported: 1
+2022/10/30-20:53:58.558818 56ac 	kSnappyCompression supported: 1
+2022/10/30-20:53:58.558821 56ac 	kBZip2Compression supported: 0
+2022/10/30-20:53:58.558824 56ac 	kZlibCompression supported: 1
+2022/10/30-20:53:58.558827 56ac 	kLZ4Compression supported: 1
+2022/10/30-20:53:58.558829 56ac 	kXpressCompression supported: 0
+2022/10/30-20:53:58.558848 56ac 	kLZ4HCCompression supported: 1
+2022/10/30-20:53:58.558852 56ac 	kZSTDNotFinalCompression supported: 1
+2022/10/30-20:53:58.558869 56ac Fast CRC32 supported: Supported on x86
+2022/10/30-20:53:58.559464 56ac [WARN] [db\db_impl\db_impl_open.cc:1843] Persisting Option File error: OK
+2022/10/30-20:53:58.559486 56ac [db\db_impl\db_impl.cc:463] Shutdown: canceling all background work
+2022/10/30-20:53:58.559540 56ac [db\db_impl\db_impl.cc:642] Shutdown complete

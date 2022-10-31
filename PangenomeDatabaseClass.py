@@ -1,6 +1,8 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
+import matplotlib.pyplot as plt
 from subprocess import Popen
+import networkx as nx
 import ijson
 
 
@@ -97,5 +99,6 @@ if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
         Db.create(replace=True)
         Db.migrate("./Data/Genes.json", Db.gene_template)
-        for result in Db.query():
-            print(result)
+        results = Db.query()
+        print(results)
+
