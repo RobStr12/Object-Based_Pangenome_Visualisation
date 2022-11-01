@@ -1,0 +1,1 @@
+match $gene isa Gene, has Chromosome $chrom; get $chrom;
