@@ -18,7 +18,7 @@ Jannes, when you are ready, can you document your parser here?
 
 ## The PangenomeDatabase class
 
-### Needed Python packages:
+### Dependencies:
 
 - from typedb.client import TypeDB, SessionType, TransactionType
 - from typedb.common.exception import TypeDBClientException
@@ -28,6 +28,8 @@ Jannes, when you are ready, can you document your parser here?
 - import ijson
 - import gzip
 - import os
+
+- server.bat + server folder from vaticle
 
 ### Documentation
 
