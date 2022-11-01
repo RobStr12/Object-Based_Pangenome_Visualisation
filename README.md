@@ -18,6 +18,19 @@ Jannes, when you are ready, can you document your parser here?
 
 ## The PangenomeDatabase class
 
+### Needed Python packages:
+
+- from typedb.client import TypeDB, SessionType, TransactionType
+- from typedb.common.exception import TypeDBClientException
+- from alive_progress import alive_bar
+- from subprocess import Popen
+- import psutil
+- import ijson
+- import gzip
+- import os
+
+### Documentation
+
 ***PangenomeDatabase(name: str)***
 
 Initializes the class, which needs a name (str).
