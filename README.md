@@ -45,3 +45,9 @@ Creates the database. If the database already exists, the replace value will det
 The path to the .tql file containing the database schema should be given to the file argument.
 
 ***PangenomeDatabase.migrate(file: str, template, batch_size: int = 2000)***
+
+Migrates the data from the file to the database using a predefined template. WHen handling larger data, the data is split up in batches with a number of inserts equal to batch_size.
+
+***PangenomeDatabase.query(query: str = "./Data/getGeneNames.tql")***
+
+Returns the result of the query given in the query file with .tql extension.

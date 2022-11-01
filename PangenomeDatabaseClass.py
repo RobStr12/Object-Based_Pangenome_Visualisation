@@ -1,6 +1,7 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
+from datetime import timedelta
 from subprocess import Popen
 import psutil
 import ijson
@@ -75,9 +76,15 @@ class PangenomeDatabase:
     def migrate(self, file: str, template, batch_size: int = 2000):
         print(f"Importing data from: '{file}':")
         with gzip.open(file, "rb") as in_file:
-            data = [template(item) for item in ijson.items(in_file, "item")]
+            # data = [template(item) for item in ijson.items(in_file, "item")]
+            items = list(ijson.items(in_file, "item"))
+            data = []
+            size = len(items)
+            with alive_bar(size) as bar:
+                for item in items:
+                    data.append(template(item))
+                    bar()
 
-        size = len(data)
         batch_index = [(batch_size * i, batch_size * (i + 1)) for i in range(size // batch_size + 1)]
         batch_num = len(batch_index)
 
@@ -138,9 +145,9 @@ if __name__ == "__main__":
         Db.delete()
         delete_time = time.time()
 
-    print(f"\nTotal execution time: {delete_time - start_time}\n")
-    print(f"Database creation time: {created_time - start_time}\n")
-    print(f"Genes migration time: {genes_time - created_time}\n")
-    print(f"GeneLinks migration time: {genelinks_time - genes_time}\n")
-    print(f"Query time: {genelinks_time - query_time}\n")
-    print(f"Database deletion time: {delete_time - query_time}\n")
+    print(f"\nTotal execution time: {timedelta(seconds=(delete_time - start_time))}\n")
+    print(f"Database creation time: {timedelta(seconds=(created_time - start_time))}\n")
+    print(f"Genes migration time: {timedelta(seconds=(genes_time - created_time))}\n")
+    print(f"GeneLinks migration time: {timedelta(seconds=(genelinks_time - genes_time))}\n")
+    print(f"Query time: {timedelta(seconds=(query_time - genelinks_time))}\n")
+    print(f"Database deletion time: {timedelta(seconds=(delete_time - query_time))}\n")
