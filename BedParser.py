@@ -1,10 +1,10 @@
 import json
 from glob import glob
-
-genelist = []
+#test
+finalgenelist = []
 linklist = []
-
 for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.bed"):
+    genelist = []
     for line in open(bedfile):
         line = line.rstrip().split("\t")
         #with open("/Users/jannessauer/Downloads/Tetur_V4/data.tql","a") as tqloutput:
@@ -12,6 +12,7 @@ for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.
         Genedict = {"Chromosome": line[0], "Start_Position": line[1], "End_Position": line[2], "Gene_Name": line[3],
                     "Strand": line[5]}
         genelist.append(Genedict)
+        finalgenelist.append(Genedict)
 
     n = 2
     for i in range(len(genelist) - n + 1):
@@ -21,7 +22,7 @@ for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.
         linklist.append(Genelink)
 
 with open("/Users/jannessauer/Downloads/Tetur_V4/Gene.json", "w") as jsonFile:
-    json.dump(genelist, jsonFile, indent=4, sort_keys=True)
+    json.dump(finalgenelist, jsonFile, indent=4, sort_keys=True)
 jsonFile.close()
 
 with open("/Users/jannessauer/Downloads/Tetur_V4/Genelinks.json", "w") as jsonFile:
