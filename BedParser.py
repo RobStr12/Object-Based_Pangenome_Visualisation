@@ -1,6 +1,9 @@
 import json
 from glob import glob
-#test
+
+
+print("this is a test commit")
+
 finalgenelist = []
 linklist = []
 for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.bed"):
