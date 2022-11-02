@@ -31,7 +31,7 @@ class PangenomeDatabase:
             os.mkdir(path)
 
         # Start the server at localhost:1730 & start the client
-        self.server = Popen("server.sh server")
+        self.server = Popen("server.bat")
         self.client = TypeDB.core_client("localhost:1730")
 
     def close(self):
