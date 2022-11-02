@@ -32,7 +32,7 @@ class PangenomeDatabase:
             os.mkdir(path)
 
         # Start the server at localhost:1730 & start the client
-        servers = {"win32": ("server.bat", ), "darwin": ("server.sh", "server"), "linux": ("server.sh", "server")}
+        servers = {"win32": ("server.bat", ), "darwin": ("server.sh server", ), "linux": ("server.sh", "server")}
         self.server = Process(target=os.system, args=servers[platform])
         self.server.start()
         self.client = TypeDB.core_client("localhost:1730")

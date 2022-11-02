@@ -17,7 +17,7 @@
 
 
 server:
-  address: 0.0.0.0:1729
+  address: 0.0.0.0:1730
 
 storage:
   data: server/data
