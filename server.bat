@@ -1,7 +1,7 @@
 @echo off
 
 set TYPEDB_HOME=%cd%
-set "G_CP=%TYPEDB_HOME%\server\conf\;%TYPEDB_HOME%\server\lib\common\*;%TYPEDB_HOME%\server\lib\prod\*"
+set "G_CP=%TYPEDB_HOME%\server\conf\;%TYPEDB_HOME%\server\lib\win32\common\*;%TYPEDB_HOME%\server\lib\win32\prod\*"
 
 where java >NUL 2>NUL
 if %ERRORLEVEL% GEQ 1 (

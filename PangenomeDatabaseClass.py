@@ -3,6 +3,7 @@ from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
 from multiprocessing import Process
 from datetime import timedelta
+from subprocess import Popen
 from sys import platform
 import psutil
 import ijson
@@ -33,8 +34,7 @@ class PangenomeDatabase:
 
         # Start the server at localhost:1730 & start the client
         servers = {"win32": ("server.bat", ), "darwin": ("server.sh", "server"), "linux": ("server.sh", "server")}
-        self.server = Process(target=os.system, args=servers[platform])
-        self.server.start()
+        self.server = Popen(servers[platform])
         self.client = TypeDB.core_client("localhost:1730")
 
     def close(self):

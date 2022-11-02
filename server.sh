@@ -62,7 +62,7 @@ elif [ "$1" = "console" ]; then
 elif [[ "$1" = "server" ]] || [[ "$1" = "cluster" ]]; then
 
     TYPEDB_SERVER_DIR="${TYPEDB_HOME}/server"
-    TYPEDB_SERVER_LIB_DIR="${TYPEDB_SERVER_DIR}/lib"
+    TYPEDB_SERVER_LIB_DIR="${TYPEDB_SERVER_DIR}/lib/ios"
     TYPEDB_CLUSTER_SERVER_JAR=("${TYPEDB_SERVER_LIB_DIR}"/common/com-vaticle-typedb-typedb-cluster-server-*.jar)
 
     CLASSPATH="${TYPEDB_SERVER_DIR}/conf/:${TYPEDB_SERVER_LIB_DIR}/common/*"
