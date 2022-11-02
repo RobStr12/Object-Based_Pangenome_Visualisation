@@ -4,6 +4,7 @@ from alive_progress import alive_bar
 from multiprocessing import Process
 from datetime import timedelta
 from subprocess import Popen
+from subprocess import run
 from sys import platform
 import psutil
 import ijson
@@ -33,20 +34,25 @@ class PangenomeDatabase:
             os.mkdir(path)
 
         # Start the server at localhost:1730 & start the client
-        servers = {"win32": ("server.bat", ), "darwin": ("server.sh", "server"), "linux": ("server.sh", "server")}
-        self.server = Popen(servers[platform])
+        servers = {"win32": ["server.bat", "&"], "darwin": ("server.sh", "server")}
+        if platform == "win32":
+            self.server = Popen(servers[platform])
+        else:
+            self.server = run(servers[platform])
         self.client = TypeDB.core_client("localhost:1730")
 
-    def close(self):
+    def close(self, kill_java: bool = True):
         # close the client & terminate the server
         self.client.close()
-        self.server.terminate()
+        if platform == "win32":
+            self.server.terminate()
 
         # in order to be able to delete, change, ... certain files in the server folder, the OpenJDK Platfrom binary
         # needs to be shut down. To accomplish this, following code is implemented. When initialising the class again,
         # The OpenJDK Platform binary will restart again on its own.
         for process in (process for process in psutil.process_iter() if process.name()=="java.exe"):
-            process.kill()
+            if kill_java:
+                process.kill()
 
     def exists(self):
         # check if the database exists
@@ -138,11 +144,11 @@ if __name__ == "__main__":
         start_time = time.time()
         Db.create(replace=True)
         created_time = time.time()
-        # Db.migrate("./Data/Genes.json.gz", Db.gene_template)
+        Db.migrate("./Data/Genes.json.gz", Db.gene_template)
         genes_time = time.time()
-        # Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
+        Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
         genelinks_time = time.time()
-        # results = Db.query()
+        results = Db.query()
         query_time = time.time()
         Db.delete()
         delete_time = time.time()
