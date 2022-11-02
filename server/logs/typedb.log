@@ -822,3 +822,11 @@ com.vaticle.typedb.core.common.exception.TypeDBException: [SRV24] Invalid Server
 16:43:31.926 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
 16:43:31.927 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 820 ms
 16:43:31.927 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+16:48:10.255 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 865 ms
+16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...

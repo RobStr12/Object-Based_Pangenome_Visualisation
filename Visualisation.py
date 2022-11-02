@@ -17,12 +17,15 @@ if __name__ == "__main__":
 
         print("Generating Graph...")
         g = Graph.ListDict(GeneLinks, directed=True)
+        ge = Graph(n=len(genes))
         g.vs["label"] = genes
+        ge.vs["label"] = genes
         grid = g.layout_grid()
         graphopt = g.layout_graphopt()
         reingold_tilford = g.layout_reingold_tilford()
 
         print("Plotting Graph...")
+        plot(ge, target = "./Data/plot.png", bbox=(20000, 20000))
         plot(g, layout=grid, target="./Data/plot_grid.png", bbox=(20000, 20000))
         plot(g, layout=graphopt, target="./Data/plot_graphopt.png", bbox=(20000, 20000))
         plot(g, layout=reingold_tilford, target="./Data/plot_reingold_tilford.png", bbox=(20000, 20000))
