@@ -1,0 +1,757 @@
+2022/11/02-16:11:55.593230 ea4 RocksDB version: 6.20.3
+2022/11/02-16:11:55.593286 ea4 Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/11/02-16:11:55.593302 ea4 Compile date 2021-05-07 18:16:49
+2022/11/02-16:11:55.593315 ea4 DB SUMMARY
+2022/11/02-16:11:55.593324 ea4 DB Session ID:  5HMA8C5DS1V30VAWIDJ3
+2022/11/02-16:11:55.595049 ea4 CURRENT file:  CURRENT
+2022/11/02-16:11:55.595065 ea4 IDENTITY file:  IDENTITY
+2022/11/02-16:11:55.595131 ea4 MANIFEST file:  MANIFEST-000330 size: 1816 Bytes
+2022/11/02-16:11:55.595145 ea4 SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data dir, Total Num: 15, files: 000011.sst 000012.sst 000013.sst 000014.sst 000024.sst 000025.sst 000026.sst 000027.sst 000034.sst 
+2022/11/02-16:11:55.595322 ea4 Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data: 000331.log size: 46 ; 
+2022/11/02-16:11:55.595351 ea4                         Options.error_if_exists: 0
+2022/11/02-16:11:55.595355 ea4                       Options.create_if_missing: 1
+2022/11/02-16:11:55.595358 ea4                         Options.paranoid_checks: 1
+2022/11/02-16:11:55.595361 ea4                               Options.track_and_verify_wals_in_manifest: 0
+2022/11/02-16:11:55.595364 ea4                                     Options.env: 0000027C00D88D60
+2022/11/02-16:11:55.595367 ea4                                      Options.fs: WinFS
+2022/11/02-16:11:55.595370 ea4                                Options.info_log: 0000027C0623CEE0
+2022/11/02-16:11:55.595373 ea4                Options.max_file_opening_threads: 16
+2022/11/02-16:11:55.595376 ea4                              Options.statistics: 0000000000000000
+2022/11/02-16:11:55.595379 ea4                               Options.use_fsync: 0
+2022/11/02-16:11:55.595382 ea4                       Options.max_log_file_size: 0
+2022/11/02-16:11:55.595385 ea4                  Options.max_manifest_file_size: 1073741824
+2022/11/02-16:11:55.595388 ea4                   Options.log_file_time_to_roll: 0
+2022/11/02-16:11:55.595391 ea4                       Options.keep_log_file_num: 1000
+2022/11/02-16:11:55.595393 ea4                    Options.recycle_log_file_num: 0
+2022/11/02-16:11:55.595396 ea4                         Options.allow_fallocate: 1
+2022/11/02-16:11:55.595399 ea4                        Options.allow_mmap_reads: 0
+2022/11/02-16:11:55.595402 ea4                       Options.allow_mmap_writes: 0
+2022/11/02-16:11:55.595405 ea4                        Options.use_direct_reads: 0
+2022/11/02-16:11:55.595408 ea4                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/11/02-16:11:55.595411 ea4          Options.create_missing_column_families: 0
+2022/11/02-16:11:55.595413 ea4                              Options.db_log_dir: 
+2022/11/02-16:11:55.595416 ea4                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data
+2022/11/02-16:11:55.595419 ea4                Options.table_cache_numshardbits: 6
+2022/11/02-16:11:55.595422 ea4                         Options.WAL_ttl_seconds: 0
+2022/11/02-16:11:55.595425 ea4                       Options.WAL_size_limit_MB: 0
+2022/11/02-16:11:55.595428 ea4                        Options.max_write_batch_group_size_bytes: 1048576
+2022/11/02-16:11:55.595431 ea4             Options.manifest_preallocation_size: 4194304
+2022/11/02-16:11:55.595440 ea4                     Options.is_fd_close_on_exec: 1
+2022/11/02-16:11:55.595444 ea4                   Options.advise_random_on_open: 1
+2022/11/02-16:11:55.595447 ea4                    Options.db_write_buffer_size: 0
+2022/11/02-16:11:55.595449 ea4                    Options.write_buffer_manager: 0000027C017BE950
+2022/11/02-16:11:55.595452 ea4         Options.access_hint_on_compaction_start: 1
+2022/11/02-16:11:55.595455 ea4  Options.new_table_reader_for_compaction_inputs: 0
+2022/11/02-16:11:55.595458 ea4           Options.random_access_max_buffer_size: 1048576
+2022/11/02-16:11:55.595461 ea4                      Options.use_adaptive_mutex: 0
+2022/11/02-16:11:55.595486 ea4                            Options.rate_limiter: 0000000000000000
+2022/11/02-16:11:55.595492 ea4     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/11/02-16:11:55.595495 ea4                       Options.wal_recovery_mode: 2
+2022/11/02-16:11:55.595498 ea4                  Options.enable_thread_tracking: 0
+2022/11/02-16:11:55.595501 ea4                  Options.enable_pipelined_write: 0
+2022/11/02-16:11:55.595504 ea4                  Options.unordered_write: 0
+2022/11/02-16:11:55.595507 ea4         Options.allow_concurrent_memtable_write: 1
+2022/11/02-16:11:55.595510 ea4      Options.enable_write_thread_adaptive_yield: 1
+2022/11/02-16:11:55.595513 ea4             Options.write_thread_max_yield_usec: 100
+2022/11/02-16:11:55.595515 ea4            Options.write_thread_slow_yield_usec: 3
+2022/11/02-16:11:55.595518 ea4                               Options.row_cache: None
+2022/11/02-16:11:55.595521 ea4                              Options.wal_filter: None
+2022/11/02-16:11:55.595524 ea4             Options.avoid_flush_during_recovery: 0
+2022/11/02-16:11:55.595527 ea4             Options.allow_ingest_behind: 0
+2022/11/02-16:11:55.595530 ea4             Options.preserve_deletes: 0
+2022/11/02-16:11:55.595533 ea4             Options.two_write_queues: 0
+2022/11/02-16:11:55.595536 ea4             Options.manual_wal_flush: 0
+2022/11/02-16:11:55.595538 ea4             Options.atomic_flush: 0
+2022/11/02-16:11:55.595541 ea4             Options.avoid_unnecessary_blocking_io: 0
+2022/11/02-16:11:55.595544 ea4                 Options.persist_stats_to_disk: 0
+2022/11/02-16:11:55.595547 ea4                 Options.write_dbid_to_manifest: 0
+2022/11/02-16:11:55.595550 ea4                 Options.log_readahead_size: 0
+2022/11/02-16:11:55.595552 ea4                 Options.file_checksum_gen_factory: Unknown
+2022/11/02-16:11:55.595555 ea4                 Options.best_efforts_recovery: 0
+2022/11/02-16:11:55.595558 ea4                Options.max_bgerror_resume_count: 2147483647
+2022/11/02-16:11:55.595561 ea4            Options.bgerror_resume_retry_interval: 1000000
+2022/11/02-16:11:55.595564 ea4             Options.allow_data_in_errors: 0
+2022/11/02-16:11:55.595567 ea4             Options.db_host_id: __hostname__
+2022/11/02-16:11:55.595570 ea4             Options.max_background_jobs: 20
+2022/11/02-16:11:55.595573 ea4             Options.max_background_compactions: -1
+2022/11/02-16:11:55.595576 ea4             Options.max_subcompactions: 20
+2022/11/02-16:11:55.595579 ea4             Options.avoid_flush_during_shutdown: 0
+2022/11/02-16:11:55.595581 ea4           Options.writable_file_max_buffer_size: 1048576
+2022/11/02-16:11:55.595584 ea4             Options.delayed_write_rate : 16777216
+2022/11/02-16:11:55.595587 ea4             Options.max_total_wal_size: 0
+2022/11/02-16:11:55.595590 ea4             Options.delete_obsolete_files_period_micros: 21600000000
+2022/11/02-16:11:55.595593 ea4                   Options.stats_dump_period_sec: 600
+2022/11/02-16:11:55.595596 ea4                 Options.stats_persist_period_sec: 600
+2022/11/02-16:11:55.595599 ea4                 Options.stats_history_buffer_size: 1048576
+2022/11/02-16:11:55.595602 ea4                          Options.max_open_files: -1
+2022/11/02-16:11:55.595605 ea4                          Options.bytes_per_sync: 0
+2022/11/02-16:11:55.595607 ea4                      Options.wal_bytes_per_sync: 0
+2022/11/02-16:11:55.595610 ea4                   Options.strict_bytes_per_sync: 0
+2022/11/02-16:11:55.595613 ea4       Options.compaction_readahead_size: 0
+2022/11/02-16:11:55.595616 ea4                  Options.max_background_flushes: -1
+2022/11/02-16:11:55.595619 ea4 Compression algorithms supported:
+2022/11/02-16:11:55.595622 ea4 	kZSTD supported: 1
+2022/11/02-16:11:55.595626 ea4 	kSnappyCompression supported: 1
+2022/11/02-16:11:55.595629 ea4 	kBZip2Compression supported: 0
+2022/11/02-16:11:55.595632 ea4 	kZlibCompression supported: 1
+2022/11/02-16:11:55.595634 ea4 	kLZ4Compression supported: 1
+2022/11/02-16:11:55.595637 ea4 	kXpressCompression supported: 0
+2022/11/02-16:11:55.595656 ea4 	kLZ4HCCompression supported: 1
+2022/11/02-16:11:55.595661 ea4 	kZSTDNotFinalCompression supported: 1
+2022/11/02-16:11:55.595666 ea4 Fast CRC32 supported: Supported on x86
+2022/11/02-16:11:55.596447 ea4 [db\version_set.cc:4627] Recovering from manifest file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data/MANIFEST-000330
+2022/11/02-16:11:55.596546 ea4 [db\column_family.cc:598] --------------- Options for column family [default]:
+2022/11/02-16:11:55.596553 ea4               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:11:55.596557 ea4           Options.merge_operator: None
+2022/11/02-16:11:55.596560 ea4        Options.compaction_filter: None
+2022/11/02-16:11:55.596563 ea4        Options.compaction_filter_factory: None
+2022/11/02-16:11:55.596565 ea4  Options.sst_partitioner_factory: None
+2022/11/02-16:11:55.596568 ea4         Options.memtable_factory: SkipListFactory
+2022/11/02-16:11:55.596571 ea4            Options.table_factory: BlockBasedTable
+2022/11/02-16:11:55.596595 ea4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000027C00DB34B0)
+  cache_index_and_filter_blocks: 1
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 1
+  pin_top_level_index_and_filter: 1
+  index_type: 2
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000027C00D99330
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 1048576000
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.500
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 1
+  use_delta_encoding: 1
+  filter_policy: rocksdb.BuiltinBloomFilter
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/11/02-16:11:55.596599 ea4        Options.write_buffer_size: 134217728
+2022/11/02-16:11:55.596602 ea4  Options.max_write_buffer_number: 4
+2022/11/02-16:11:55.596605 ea4        Options.compression[0]: NoCompression
+2022/11/02-16:11:55.596609 ea4        Options.compression[1]: NoCompression
+2022/11/02-16:11:55.596612 ea4        Options.compression[2]: LZ4
+2022/11/02-16:11:55.596614 ea4        Options.compression[3]: LZ4
+2022/11/02-16:11:55.596617 ea4        Options.compression[4]: LZ4
+2022/11/02-16:11:55.596620 ea4        Options.compression[5]: LZ4
+2022/11/02-16:11:55.596623 ea4        Options.compression[6]: LZ4
+2022/11/02-16:11:55.596626 ea4                  Options.bottommost_compression: Disabled
+2022/11/02-16:11:55.596629 ea4       Options.prefix_extractor: nullptr
+2022/11/02-16:11:55.596632 ea4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:11:55.596635 ea4             Options.num_levels: 7
+2022/11/02-16:11:55.596637 ea4        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:11:55.596640 ea4     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:11:55.596643 ea4     Options.max_write_buffer_size_to_maintain: 536870912
+2022/11/02-16:11:55.596646 ea4            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:11:55.596649 ea4                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:11:55.596652 ea4               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:11:55.596655 ea4         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.596658 ea4         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.596661 ea4         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.596664 ea4                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:11:55.596668 ea4         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.596672 ea4            Options.compression_opts.window_bits: -14
+2022/11/02-16:11:55.596676 ea4                  Options.compression_opts.level: 32767
+2022/11/02-16:11:55.596679 ea4               Options.compression_opts.strategy: 0
+2022/11/02-16:11:55.596681 ea4         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.596684 ea4         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.596687 ea4         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.596690 ea4                  Options.compression_opts.enabled: false
+2022/11/02-16:11:55.596693 ea4         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.596696 ea4      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:11:55.596699 ea4          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:11:55.596702 ea4              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:11:55.596705 ea4                   Options.target_file_size_base: 67108864
+2022/11/02-16:11:55.596708 ea4             Options.target_file_size_multiplier: 1
+2022/11/02-16:11:55.596710 ea4                Options.max_bytes_for_level_base: 536870912
+2022/11/02-16:11:55.596713 ea4 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:11:55.596716 ea4          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:11:55.596720 ea4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:11:55.596723 ea4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:11:55.596726 ea4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:11:55.596729 ea4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:11:55.596731 ea4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:11:55.596734 ea4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:11:55.596737 ea4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:11:55.596740 ea4       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:11:55.596743 ea4                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:11:55.596746 ea4                        Options.arena_block_size: 16777216
+2022/11/02-16:11:55.596749 ea4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:11:55.596752 ea4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:11:55.596755 ea4       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:11:55.596758 ea4                Options.disable_auto_compactions: 0
+2022/11/02-16:11:55.596761 ea4                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:11:55.596765 ea4                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:11:55.596768 ea4 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:11:55.596771 ea4 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:11:55.596774 ea4 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:11:55.596777 ea4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:11:55.596780 ea4 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:11:55.596783 ea4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:11:55.596786 ea4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:11:55.596789 ea4 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:11:55.596793 ea4                   Options.table_properties_collectors: 
+2022/11/02-16:11:55.596797 ea4                   Options.inplace_update_support: 0
+2022/11/02-16:11:55.596800 ea4                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:11:55.596803 ea4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:11:55.596806 ea4               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:11:55.596815 ea4   Options.memtable_huge_page_size: 0
+2022/11/02-16:11:55.596837 ea4                           Options.bloom_locality: 0
+2022/11/02-16:11:55.596842 ea4                    Options.max_successive_merges: 0
+2022/11/02-16:11:55.596845 ea4                Options.optimize_filters_for_hits: 0
+2022/11/02-16:11:55.596848 ea4                Options.paranoid_file_checks: 0
+2022/11/02-16:11:55.596851 ea4                Options.force_consistency_checks: 1
+2022/11/02-16:11:55.596854 ea4                Options.report_bg_io_stats: 0
+2022/11/02-16:11:55.596856 ea4                               Options.ttl: 2592000
+2022/11/02-16:11:55.596859 ea4          Options.periodic_compaction_seconds: 0
+2022/11/02-16:11:55.596862 ea4                    Options.enable_blob_files: false
+2022/11/02-16:11:55.596865 ea4                        Options.min_blob_size: 0
+2022/11/02-16:11:55.596868 ea4                       Options.blob_file_size: 268435456
+2022/11/02-16:11:55.596871 ea4                Options.blob_compression_type: NoCompression
+2022/11/02-16:11:55.596874 ea4       Options.enable_blob_garbage_collection: false
+2022/11/02-16:11:55.596877 ea4   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:11:55.596949 ea4 [db\column_family.cc:598] --------------- Options for column family []:
+2022/11/02-16:11:55.596956 ea4               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:11:55.596959 ea4           Options.merge_operator: None
+2022/11/02-16:11:55.596962 ea4        Options.compaction_filter: None
+2022/11/02-16:11:55.596965 ea4        Options.compaction_filter_factory: None
+2022/11/02-16:11:55.596968 ea4  Options.sst_partitioner_factory: None
+2022/11/02-16:11:55.596971 ea4         Options.memtable_factory: SkipListFactory
+2022/11/02-16:11:55.596974 ea4            Options.table_factory: BlockBasedTable
+2022/11/02-16:11:55.596997 ea4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000027C00DB3580)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  pin_top_level_index_and_filter: 1
+  index_type: 0
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000027C00D99330
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 1048576000
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.500
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 0
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/11/02-16:11:55.597001 ea4        Options.write_buffer_size: 134217728
+2022/11/02-16:11:55.597004 ea4  Options.max_write_buffer_number: 4
+2022/11/02-16:11:55.597007 ea4        Options.compression[0]: NoCompression
+2022/11/02-16:11:55.597010 ea4        Options.compression[1]: NoCompression
+2022/11/02-16:11:55.597013 ea4        Options.compression[2]: LZ4
+2022/11/02-16:11:55.597016 ea4        Options.compression[3]: LZ4
+2022/11/02-16:11:55.597019 ea4        Options.compression[4]: LZ4
+2022/11/02-16:11:55.597022 ea4        Options.compression[5]: LZ4
+2022/11/02-16:11:55.597025 ea4        Options.compression[6]: LZ4
+2022/11/02-16:11:55.597027 ea4                  Options.bottommost_compression: Disabled
+2022/11/02-16:11:55.597031 ea4       Options.prefix_extractor: nullptr
+2022/11/02-16:11:55.597033 ea4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:11:55.597036 ea4             Options.num_levels: 7
+2022/11/02-16:11:55.597039 ea4        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:11:55.597042 ea4     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:11:55.597045 ea4     Options.max_write_buffer_size_to_maintain: 536870912
+2022/11/02-16:11:55.597049 ea4            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:11:55.597053 ea4                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:11:55.597056 ea4               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:11:55.597059 ea4         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597062 ea4         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597065 ea4         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597068 ea4                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:11:55.597071 ea4         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597074 ea4            Options.compression_opts.window_bits: -14
+2022/11/02-16:11:55.597077 ea4                  Options.compression_opts.level: 32767
+2022/11/02-16:11:55.597080 ea4               Options.compression_opts.strategy: 0
+2022/11/02-16:11:55.597082 ea4         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597085 ea4         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597088 ea4         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597091 ea4                  Options.compression_opts.enabled: false
+2022/11/02-16:11:55.597094 ea4         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597097 ea4      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:11:55.597100 ea4          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:11:55.597103 ea4              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:11:55.597105 ea4                   Options.target_file_size_base: 67108864
+2022/11/02-16:11:55.597108 ea4             Options.target_file_size_multiplier: 1
+2022/11/02-16:11:55.597111 ea4                Options.max_bytes_for_level_base: 536870912
+2022/11/02-16:11:55.597114 ea4 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:11:55.597117 ea4          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:11:55.597120 ea4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:11:55.597123 ea4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:11:55.597126 ea4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:11:55.597129 ea4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:11:55.597132 ea4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:11:55.597135 ea4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:11:55.597138 ea4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:11:55.597141 ea4       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:11:55.597144 ea4                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:11:55.597147 ea4                        Options.arena_block_size: 16777216
+2022/11/02-16:11:55.597150 ea4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:11:55.597153 ea4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:11:55.597156 ea4       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:11:55.597158 ea4                Options.disable_auto_compactions: 0
+2022/11/02-16:11:55.597162 ea4                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:11:55.597165 ea4                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:11:55.597168 ea4 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:11:55.597171 ea4 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:11:55.597174 ea4 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:11:55.597177 ea4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:11:55.597180 ea4 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:11:55.597183 ea4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:11:55.597198 ea4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:11:55.597207 ea4 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:11:55.597211 ea4                   Options.table_properties_collectors: 
+2022/11/02-16:11:55.597214 ea4                   Options.inplace_update_support: 0
+2022/11/02-16:11:55.597217 ea4                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:11:55.597220 ea4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:11:55.597224 ea4               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:11:55.597227 ea4   Options.memtable_huge_page_size: 0
+2022/11/02-16:11:55.597230 ea4                           Options.bloom_locality: 0
+2022/11/02-16:11:55.597232 ea4                    Options.max_successive_merges: 0
+2022/11/02-16:11:55.597235 ea4                Options.optimize_filters_for_hits: 0
+2022/11/02-16:11:55.597238 ea4                Options.paranoid_file_checks: 0
+2022/11/02-16:11:55.597241 ea4                Options.force_consistency_checks: 1
+2022/11/02-16:11:55.597244 ea4                Options.report_bg_io_stats: 0
+2022/11/02-16:11:55.597247 ea4                               Options.ttl: 2592000
+2022/11/02-16:11:55.597250 ea4          Options.periodic_compaction_seconds: 0
+2022/11/02-16:11:55.597253 ea4                    Options.enable_blob_files: false
+2022/11/02-16:11:55.597256 ea4                        Options.min_blob_size: 0
+2022/11/02-16:11:55.597258 ea4                       Options.blob_file_size: 268435456
+2022/11/02-16:11:55.597262 ea4                Options.blob_compression_type: NoCompression
+2022/11/02-16:11:55.597265 ea4       Options.enable_blob_garbage_collection: false
+2022/11/02-16:11:55.597267 ea4   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:11:55.597311 ea4 [db\column_family.cc:598] --------------- Options for column family []:
+2022/11/02-16:11:55.597317 ea4               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:11:55.597320 ea4           Options.merge_operator: None
+2022/11/02-16:11:55.597323 ea4        Options.compaction_filter: None
+2022/11/02-16:11:55.597326 ea4        Options.compaction_filter_factory: None
+2022/11/02-16:11:55.597329 ea4  Options.sst_partitioner_factory: None
+2022/11/02-16:11:55.597332 ea4         Options.memtable_factory: SkipListFactory
+2022/11/02-16:11:55.597335 ea4            Options.table_factory: BlockBasedTable
+2022/11/02-16:11:55.597356 ea4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000027C00DB34C0)
+  cache_index_and_filter_blocks: 1
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 1
+  pin_top_level_index_and_filter: 1
+  index_type: 2
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000027C00D99330
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 1048576000
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.500
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 1
+  use_delta_encoding: 1
+  filter_policy: rocksdb.BuiltinBloomFilter
+  whole_key_filtering: 0
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/11/02-16:11:55.597363 ea4        Options.write_buffer_size: 134217728
+2022/11/02-16:11:55.597366 ea4  Options.max_write_buffer_number: 4
+2022/11/02-16:11:55.597369 ea4        Options.compression[0]: NoCompression
+2022/11/02-16:11:55.597372 ea4        Options.compression[1]: NoCompression
+2022/11/02-16:11:55.597375 ea4        Options.compression[2]: LZ4
+2022/11/02-16:11:55.597379 ea4        Options.compression[3]: LZ4
+2022/11/02-16:11:55.597383 ea4        Options.compression[4]: LZ4
+2022/11/02-16:11:55.597386 ea4        Options.compression[5]: LZ4
+2022/11/02-16:11:55.597395 ea4        Options.compression[6]: LZ4
+2022/11/02-16:11:55.597398 ea4                  Options.bottommost_compression: Disabled
+2022/11/02-16:11:55.597401 ea4       Options.prefix_extractor: rocksdb.FixedPrefix.17
+2022/11/02-16:11:55.597404 ea4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:11:55.597407 ea4             Options.num_levels: 7
+2022/11/02-16:11:55.597410 ea4        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:11:55.597413 ea4     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:11:55.597415 ea4     Options.max_write_buffer_size_to_maintain: 536870912
+2022/11/02-16:11:55.597418 ea4            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:11:55.597421 ea4                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:11:55.597424 ea4               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:11:55.597427 ea4         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597430 ea4         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597433 ea4         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597436 ea4                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:11:55.597439 ea4         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597442 ea4            Options.compression_opts.window_bits: -14
+2022/11/02-16:11:55.597445 ea4                  Options.compression_opts.level: 32767
+2022/11/02-16:11:55.597448 ea4               Options.compression_opts.strategy: 0
+2022/11/02-16:11:55.597451 ea4         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597453 ea4         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597456 ea4         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597459 ea4                  Options.compression_opts.enabled: false
+2022/11/02-16:11:55.597462 ea4         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597465 ea4      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:11:55.597468 ea4          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:11:55.597471 ea4              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:11:55.597474 ea4                   Options.target_file_size_base: 67108864
+2022/11/02-16:11:55.597476 ea4             Options.target_file_size_multiplier: 1
+2022/11/02-16:11:55.597479 ea4                Options.max_bytes_for_level_base: 536870912
+2022/11/02-16:11:55.597482 ea4 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:11:55.597485 ea4          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:11:55.597489 ea4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:11:55.597492 ea4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:11:55.597495 ea4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:11:55.597497 ea4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:11:55.597500 ea4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:11:55.597503 ea4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:11:55.597506 ea4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:11:55.597509 ea4       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:11:55.597512 ea4                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:11:55.597515 ea4                        Options.arena_block_size: 16777216
+2022/11/02-16:11:55.597518 ea4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:11:55.597521 ea4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:11:55.597524 ea4       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:11:55.597527 ea4                Options.disable_auto_compactions: 0
+2022/11/02-16:11:55.597557 ea4                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:11:55.597562 ea4                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:11:55.597565 ea4 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:11:55.597568 ea4 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:11:55.597571 ea4 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:11:55.597574 ea4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:11:55.597577 ea4 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:11:55.597580 ea4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:11:55.597583 ea4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:11:55.597586 ea4 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:11:55.597590 ea4                   Options.table_properties_collectors: 
+2022/11/02-16:11:55.597593 ea4                   Options.inplace_update_support: 0
+2022/11/02-16:11:55.597596 ea4                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:11:55.597599 ea4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:11:55.597602 ea4               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:11:55.597605 ea4   Options.memtable_huge_page_size: 0
+2022/11/02-16:11:55.597608 ea4                           Options.bloom_locality: 0
+2022/11/02-16:11:55.597611 ea4                    Options.max_successive_merges: 0
+2022/11/02-16:11:55.597614 ea4                Options.optimize_filters_for_hits: 0
+2022/11/02-16:11:55.597616 ea4                Options.paranoid_file_checks: 0
+2022/11/02-16:11:55.597619 ea4                Options.force_consistency_checks: 1
+2022/11/02-16:11:55.597622 ea4                Options.report_bg_io_stats: 0
+2022/11/02-16:11:55.597625 ea4                               Options.ttl: 2592000
+2022/11/02-16:11:55.597628 ea4          Options.periodic_compaction_seconds: 0
+2022/11/02-16:11:55.597631 ea4                    Options.enable_blob_files: false
+2022/11/02-16:11:55.597634 ea4                        Options.min_blob_size: 0
+2022/11/02-16:11:55.597637 ea4                       Options.blob_file_size: 268435456
+2022/11/02-16:11:55.597640 ea4                Options.blob_compression_type: NoCompression
+2022/11/02-16:11:55.597642 ea4       Options.enable_blob_garbage_collection: false
+2022/11/02-16:11:55.597645 ea4   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:11:55.597684 ea4 [db\column_family.cc:598] --------------- Options for column family []:
+2022/11/02-16:11:55.597690 ea4               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:11:55.597694 ea4           Options.merge_operator: None
+2022/11/02-16:11:55.597697 ea4        Options.compaction_filter: None
+2022/11/02-16:11:55.597699 ea4        Options.compaction_filter_factory: None
+2022/11/02-16:11:55.597702 ea4  Options.sst_partitioner_factory: None
+2022/11/02-16:11:55.597705 ea4         Options.memtable_factory: SkipListFactory
+2022/11/02-16:11:55.597708 ea4            Options.table_factory: BlockBasedTable
+2022/11/02-16:11:55.597728 ea4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000027C00DB35B0)
+  cache_index_and_filter_blocks: 1
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 1
+  pin_top_level_index_and_filter: 1
+  index_type: 2
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000027C00D99330
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 1048576000
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.500
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 1
+  use_delta_encoding: 1
+  filter_policy: rocksdb.BuiltinBloomFilter
+  whole_key_filtering: 0
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/11/02-16:11:55.597734 ea4        Options.write_buffer_size: 67108864
+2022/11/02-16:11:55.597738 ea4  Options.max_write_buffer_number: 2
+2022/11/02-16:11:55.597741 ea4        Options.compression[0]: NoCompression
+2022/11/02-16:11:55.597744 ea4        Options.compression[1]: NoCompression
+2022/11/02-16:11:55.597747 ea4        Options.compression[2]: LZ4
+2022/11/02-16:11:55.597750 ea4        Options.compression[3]: LZ4
+2022/11/02-16:11:55.597753 ea4        Options.compression[4]: LZ4
+2022/11/02-16:11:55.597756 ea4        Options.compression[5]: LZ4
+2022/11/02-16:11:55.597759 ea4        Options.compression[6]: LZ4
+2022/11/02-16:11:55.597761 ea4                  Options.bottommost_compression: Disabled
+2022/11/02-16:11:55.597764 ea4       Options.prefix_extractor: rocksdb.FixedPrefix.20
+2022/11/02-16:11:55.597767 ea4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:11:55.597770 ea4             Options.num_levels: 7
+2022/11/02-16:11:55.597773 ea4        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:11:55.597776 ea4     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:11:55.597779 ea4     Options.max_write_buffer_size_to_maintain: 134217728
+2022/11/02-16:11:55.597782 ea4            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:11:55.597784 ea4                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:11:55.597787 ea4               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:11:55.597790 ea4         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597793 ea4         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597796 ea4         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597799 ea4                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:11:55.597802 ea4         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597805 ea4            Options.compression_opts.window_bits: -14
+2022/11/02-16:11:55.597808 ea4                  Options.compression_opts.level: 32767
+2022/11/02-16:11:55.597811 ea4               Options.compression_opts.strategy: 0
+2022/11/02-16:11:55.597813 ea4         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.597816 ea4         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.597819 ea4         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.597822 ea4                  Options.compression_opts.enabled: false
+2022/11/02-16:11:55.597825 ea4         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.597828 ea4      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:11:55.597831 ea4          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:11:55.597833 ea4              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:11:55.597836 ea4                   Options.target_file_size_base: 67108864
+2022/11/02-16:11:55.597839 ea4             Options.target_file_size_multiplier: 1
+2022/11/02-16:11:55.597842 ea4                Options.max_bytes_for_level_base: 134217728
+2022/11/02-16:11:55.597845 ea4 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:11:55.597848 ea4          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:11:55.597851 ea4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:11:55.597854 ea4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:11:55.597857 ea4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:11:55.597860 ea4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:11:55.597863 ea4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:11:55.597868 ea4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:11:55.597872 ea4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:11:55.597875 ea4       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:11:55.597878 ea4                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:11:55.597881 ea4                        Options.arena_block_size: 8388608
+2022/11/02-16:11:55.597884 ea4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:11:55.597886 ea4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:11:55.597889 ea4       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:11:55.597892 ea4                Options.disable_auto_compactions: 0
+2022/11/02-16:11:55.597896 ea4                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:11:55.597899 ea4                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:11:55.597902 ea4 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:11:55.597905 ea4 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:11:55.597908 ea4 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:11:55.597910 ea4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:11:55.597913 ea4 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:11:55.597916 ea4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:11:55.597920 ea4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:11:55.597922 ea4 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:11:55.597926 ea4                   Options.table_properties_collectors: 
+2022/11/02-16:11:55.597929 ea4                   Options.inplace_update_support: 0
+2022/11/02-16:11:55.597932 ea4                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:11:55.597935 ea4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:11:55.597938 ea4               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:11:55.597941 ea4   Options.memtable_huge_page_size: 0
+2022/11/02-16:11:55.597944 ea4                           Options.bloom_locality: 0
+2022/11/02-16:11:55.597946 ea4                    Options.max_successive_merges: 0
+2022/11/02-16:11:55.597949 ea4                Options.optimize_filters_for_hits: 0
+2022/11/02-16:11:55.597952 ea4                Options.paranoid_file_checks: 0
+2022/11/02-16:11:55.597955 ea4                Options.force_consistency_checks: 1
+2022/11/02-16:11:55.597958 ea4                Options.report_bg_io_stats: 0
+2022/11/02-16:11:55.597960 ea4                               Options.ttl: 2592000
+2022/11/02-16:11:55.597963 ea4          Options.periodic_compaction_seconds: 0
+2022/11/02-16:11:55.597966 ea4                    Options.enable_blob_files: false
+2022/11/02-16:11:55.597969 ea4                        Options.min_blob_size: 0
+2022/11/02-16:11:55.597972 ea4                       Options.blob_file_size: 268435456
+2022/11/02-16:11:55.597975 ea4                Options.blob_compression_type: NoCompression
+2022/11/02-16:11:55.597978 ea4       Options.enable_blob_garbage_collection: false
+2022/11/02-16:11:55.597981 ea4   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:11:55.598022 ea4 [db\column_family.cc:598] --------------- Options for column family []:
+2022/11/02-16:11:55.598028 ea4               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:11:55.598031 ea4           Options.merge_operator: UInt64AddOperator
+2022/11/02-16:11:55.598034 ea4        Options.compaction_filter: None
+2022/11/02-16:11:55.598037 ea4        Options.compaction_filter_factory: None
+2022/11/02-16:11:55.598039 ea4  Options.sst_partitioner_factory: None
+2022/11/02-16:11:55.598042 ea4         Options.memtable_factory: SkipListFactory
+2022/11/02-16:11:55.598045 ea4            Options.table_factory: BlockBasedTable
+2022/11/02-16:11:55.598065 ea4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000027C00DB35C0)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  pin_top_level_index_and_filter: 1
+  index_type: 0
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000027C00EF0C70
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 1
+  block_align: 0
+2022/11/02-16:11:55.598070 ea4        Options.write_buffer_size: 67108864
+2022/11/02-16:11:55.598073 ea4  Options.max_write_buffer_number: 2
+2022/11/02-16:11:55.598076 ea4        Options.compression[0]: NoCompression
+2022/11/02-16:11:55.598079 ea4        Options.compression[1]: NoCompression
+2022/11/02-16:11:55.598082 ea4        Options.compression[2]: LZ4
+2022/11/02-16:11:55.598084 ea4        Options.compression[3]: LZ4
+2022/11/02-16:11:55.598087 ea4        Options.compression[4]: LZ4
+2022/11/02-16:11:55.598090 ea4        Options.compression[5]: LZ4
+2022/11/02-16:11:55.598093 ea4        Options.compression[6]: LZ4
+2022/11/02-16:11:55.598096 ea4                  Options.bottommost_compression: Disabled
+2022/11/02-16:11:55.598099 ea4       Options.prefix_extractor: nullptr
+2022/11/02-16:11:55.598102 ea4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:11:55.598105 ea4             Options.num_levels: 7
+2022/11/02-16:11:55.598108 ea4        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:11:55.598110 ea4     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:11:55.598119 ea4     Options.max_write_buffer_size_to_maintain: 134217728
+2022/11/02-16:11:55.598122 ea4            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:11:55.598125 ea4                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:11:55.598128 ea4               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:11:55.598131 ea4         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.598134 ea4         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.598136 ea4         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.598139 ea4                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:11:55.598142 ea4         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.598145 ea4            Options.compression_opts.window_bits: -14
+2022/11/02-16:11:55.598148 ea4                  Options.compression_opts.level: 32767
+2022/11/02-16:11:55.598151 ea4               Options.compression_opts.strategy: 0
+2022/11/02-16:11:55.598154 ea4         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:11:55.598157 ea4         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:11:55.598160 ea4         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:11:55.598162 ea4                  Options.compression_opts.enabled: false
+2022/11/02-16:11:55.598165 ea4         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:11:55.598168 ea4      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:11:55.598171 ea4          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:11:55.598174 ea4              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:11:55.598177 ea4                   Options.target_file_size_base: 67108864
+2022/11/02-16:11:55.598181 ea4             Options.target_file_size_multiplier: 1
+2022/11/02-16:11:55.598185 ea4                Options.max_bytes_for_level_base: 134217728
+2022/11/02-16:11:55.598187 ea4 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:11:55.598192 ea4          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:11:55.598195 ea4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:11:55.598198 ea4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:11:55.598201 ea4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:11:55.598204 ea4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:11:55.598207 ea4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:11:55.598209 ea4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:11:55.598212 ea4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:11:55.598215 ea4       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:11:55.598218 ea4                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:11:55.598221 ea4                        Options.arena_block_size: 8388608
+2022/11/02-16:11:55.598224 ea4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:11:55.598227 ea4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:11:55.598230 ea4       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:11:55.598233 ea4                Options.disable_auto_compactions: 0
+2022/11/02-16:11:55.598236 ea4                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:11:55.598240 ea4                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:11:55.598243 ea4 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:11:55.598246 ea4 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:11:55.598248 ea4 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:11:55.598251 ea4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:11:55.598254 ea4 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:11:55.598257 ea4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:11:55.598260 ea4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:11:55.598263 ea4 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:11:55.598267 ea4                   Options.table_properties_collectors: 
+2022/11/02-16:11:55.598270 ea4                   Options.inplace_update_support: 0
+2022/11/02-16:11:55.598273 ea4                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:11:55.598276 ea4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:11:55.598279 ea4               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:11:55.598282 ea4   Options.memtable_huge_page_size: 0
+2022/11/02-16:11:55.598285 ea4                           Options.bloom_locality: 0
+2022/11/02-16:11:55.598287 ea4                    Options.max_successive_merges: 0
+2022/11/02-16:11:55.598290 ea4                Options.optimize_filters_for_hits: 0
+2022/11/02-16:11:55.598293 ea4                Options.paranoid_file_checks: 0
+2022/11/02-16:11:55.598296 ea4                Options.force_consistency_checks: 1
+2022/11/02-16:11:55.598299 ea4                Options.report_bg_io_stats: 0
+2022/11/02-16:11:55.598302 ea4                               Options.ttl: 2592000
+2022/11/02-16:11:55.598304 ea4          Options.periodic_compaction_seconds: 0
+2022/11/02-16:11:55.598307 ea4                    Options.enable_blob_files: false
+2022/11/02-16:11:55.598310 ea4                        Options.min_blob_size: 0
+2022/11/02-16:11:55.598313 ea4                       Options.blob_file_size: 268435456
+2022/11/02-16:11:55.598316 ea4                Options.blob_compression_type: NoCompression
+2022/11/02-16:11:55.598319 ea4       Options.enable_blob_garbage_collection: false
+2022/11/02-16:11:55.598323 ea4   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:11:55.606040 ea4 [db\version_set.cc:4675] Recovered from manifest file:C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data/MANIFEST-000330 succeeded,manifest_file_number is 330, next_file_number is 332, last_sequence is 4412036, log_number is 326,prev_log_number is 0,max_column_family is 4,min_log_number_to_keep is 0
+2022/11/02-16:11:55.606053 ea4 [db\version_set.cc:4684] Column family [default] (ID 0), log number is 326
+2022/11/02-16:11:55.606057 ea4 [db\version_set.cc:4684] Column family [] (ID 1), log number is 326
+2022/11/02-16:11:55.606060 ea4 [db\version_set.cc:4684] Column family [] (ID 2), log number is 326
+2022/11/02-16:11:55.606063 ea4 [db\version_set.cc:4684] Column family [] (ID 3), log number is 326
+2022/11/02-16:11:55.606066 ea4 [db\version_set.cc:4684] Column family [] (ID 4), log number is 326
+2022/11/02-16:11:55.607998 ea4 [db\version_set.cc:4119] Creating manifest 334
+2022/11/02-16:11:55.613669 ea4 EVENT_LOG_v1 {"time_micros": 1667401915613662, "job": 1, "event": "recovery_started", "wal_files": [331]}
+2022/11/02-16:11:55.613678 ea4 [db\db_impl\db_impl_open.cc:856] Recovering log #331 mode 2
+2022/11/02-16:11:55.615621 ea4 EVENT_LOG_v1 {"time_micros": 1667401915615590, "cf_name": "", "job": 1, "event": "table_file_creation", "file_number": 335, "file_size": 934, "file_checksum": "", "file_checksum_func_name": "Unknown", "table_properties": {"data_size": 34, "index_size": 27, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 18, "raw_average_key_size": 18, "raw_value_size": 0, "raw_average_value_size": 0, "num_data_blocks": 1, "num_entries": 1, "num_deletions": 0, "num_merge_operands": 0, "num_range_deletions": 0, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "", "column_family_id": 4, "comparator": "leveldb.BytewiseComparator", "merge_operator": "UInt64AddOperator", "prefix_extractor_name": "nullptr", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; ", "creation_time": 1667401915, "oldest_key_time": 0, "file_creation_time": 0, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "3a236710-5ab9-11ed-b0e2-2cf05dd52339", "db_session_id": "5HMA8C5DS1V30VAWIDJ3"}}
+2022/11/02-16:11:55.615684 ea4 [db\version_set.cc:4119] Creating manifest 336
+2022/11/02-16:11:55.619611 ea4 EVENT_LOG_v1 {"time_micros": 1667401915619606, "job": 1, "event": "recovery_finished"}
+2022/11/02-16:11:55.622073 ea4 [file\delete_scheduler.cc:77] Deleted file C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\data/000331.log immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2022/11/02-16:11:55.628064 ea4 [db\db_impl\db_impl_open.cc:1757] SstFileManager instance 0000027C032E7B00
+2022/11/02-16:11:55.629846 ea4 DB pointer 0000027C06246CF0

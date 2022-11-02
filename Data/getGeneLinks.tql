@@ -1,0 +1,1 @@
+match $gA isa Gene; $gB isa Gene; $GL(GeneA: $gA, GeneB: $gB) isa GeneLink; get $GL;

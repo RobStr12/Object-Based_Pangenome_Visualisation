@@ -1,0 +1,294 @@
+2022/11/02-16:20:44.828059 2bf0 RocksDB version: 6.20.3
+2022/11/02-16:20:44.828143 2bf0 Git sha 8608d75d85f8e1b3b64b73a4fb6d19baec61ba5c
+2022/11/02-16:20:44.828159 2bf0 Compile date 2021-05-07 18:16:49
+2022/11/02-16:20:44.828195 2bf0 DB SUMMARY
+2022/11/02-16:20:44.828210 2bf0 DB Session ID:  6RJW93V35WOPTHAI21Y6
+2022/11/02-16:20:44.829877 2bf0 CURRENT file:  CURRENT
+2022/11/02-16:20:44.829893 2bf0 IDENTITY file:  IDENTITY
+2022/11/02-16:20:44.829962 2bf0 MANIFEST file:  MANIFEST-000275 size: 118 Bytes
+2022/11/02-16:20:44.829981 2bf0 SST files in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema dir, Total Num: 1, files: 000009.sst 
+2022/11/02-16:20:44.829992 2bf0 Write Ahead Log file in C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema: 000276.log size: 0 ; 
+2022/11/02-16:20:44.830191 2bf0                         Options.error_if_exists: 0
+2022/11/02-16:20:44.830199 2bf0                       Options.create_if_missing: 1
+2022/11/02-16:20:44.830202 2bf0                         Options.paranoid_checks: 1
+2022/11/02-16:20:44.830205 2bf0                               Options.track_and_verify_wals_in_manifest: 0
+2022/11/02-16:20:44.830208 2bf0                                     Options.env: 000001CCBE4E5010
+2022/11/02-16:20:44.830211 2bf0                                      Options.fs: WinFS
+2022/11/02-16:20:44.830214 2bf0                                Options.info_log: 000001CCBE678930
+2022/11/02-16:20:44.830217 2bf0                Options.max_file_opening_threads: 16
+2022/11/02-16:20:44.830220 2bf0                              Options.statistics: 0000000000000000
+2022/11/02-16:20:44.830223 2bf0                               Options.use_fsync: 0
+2022/11/02-16:20:44.830226 2bf0                       Options.max_log_file_size: 0
+2022/11/02-16:20:44.830229 2bf0                  Options.max_manifest_file_size: 1073741824
+2022/11/02-16:20:44.830232 2bf0                   Options.log_file_time_to_roll: 0
+2022/11/02-16:20:44.830235 2bf0                       Options.keep_log_file_num: 1000
+2022/11/02-16:20:44.830238 2bf0                    Options.recycle_log_file_num: 0
+2022/11/02-16:20:44.830240 2bf0                         Options.allow_fallocate: 1
+2022/11/02-16:20:44.830243 2bf0                        Options.allow_mmap_reads: 0
+2022/11/02-16:20:44.830246 2bf0                       Options.allow_mmap_writes: 0
+2022/11/02-16:20:44.830249 2bf0                        Options.use_direct_reads: 0
+2022/11/02-16:20:44.830252 2bf0                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/11/02-16:20:44.830255 2bf0          Options.create_missing_column_families: 0
+2022/11/02-16:20:44.830257 2bf0                              Options.db_log_dir: 
+2022/11/02-16:20:44.830260 2bf0                                 Options.wal_dir: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema
+2022/11/02-16:20:44.830263 2bf0                Options.table_cache_numshardbits: 6
+2022/11/02-16:20:44.830266 2bf0                         Options.WAL_ttl_seconds: 0
+2022/11/02-16:20:44.830269 2bf0                       Options.WAL_size_limit_MB: 0
+2022/11/02-16:20:44.830272 2bf0                        Options.max_write_batch_group_size_bytes: 1048576
+2022/11/02-16:20:44.830275 2bf0             Options.manifest_preallocation_size: 4194304
+2022/11/02-16:20:44.830278 2bf0                     Options.is_fd_close_on_exec: 1
+2022/11/02-16:20:44.830281 2bf0                   Options.advise_random_on_open: 1
+2022/11/02-16:20:44.830284 2bf0                    Options.db_write_buffer_size: 0
+2022/11/02-16:20:44.830286 2bf0                    Options.write_buffer_manager: 000001CCBE52AEA0
+2022/11/02-16:20:44.830291 2bf0         Options.access_hint_on_compaction_start: 1
+2022/11/02-16:20:44.830293 2bf0  Options.new_table_reader_for_compaction_inputs: 0
+2022/11/02-16:20:44.830296 2bf0           Options.random_access_max_buffer_size: 1048576
+2022/11/02-16:20:44.830299 2bf0                      Options.use_adaptive_mutex: 0
+2022/11/02-16:20:44.830322 2bf0                            Options.rate_limiter: 0000000000000000
+2022/11/02-16:20:44.830328 2bf0     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/11/02-16:20:44.830331 2bf0                       Options.wal_recovery_mode: 2
+2022/11/02-16:20:44.830334 2bf0                  Options.enable_thread_tracking: 0
+2022/11/02-16:20:44.830337 2bf0                  Options.enable_pipelined_write: 0
+2022/11/02-16:20:44.830340 2bf0                  Options.unordered_write: 0
+2022/11/02-16:20:44.830342 2bf0         Options.allow_concurrent_memtable_write: 1
+2022/11/02-16:20:44.830345 2bf0      Options.enable_write_thread_adaptive_yield: 1
+2022/11/02-16:20:44.830348 2bf0             Options.write_thread_max_yield_usec: 100
+2022/11/02-16:20:44.830351 2bf0            Options.write_thread_slow_yield_usec: 3
+2022/11/02-16:20:44.830354 2bf0                               Options.row_cache: None
+2022/11/02-16:20:44.830357 2bf0                              Options.wal_filter: None
+2022/11/02-16:20:44.830360 2bf0             Options.avoid_flush_during_recovery: 0
+2022/11/02-16:20:44.830362 2bf0             Options.allow_ingest_behind: 0
+2022/11/02-16:20:44.830365 2bf0             Options.preserve_deletes: 0
+2022/11/02-16:20:44.830368 2bf0             Options.two_write_queues: 0
+2022/11/02-16:20:44.830371 2bf0             Options.manual_wal_flush: 0
+2022/11/02-16:20:44.830373 2bf0             Options.atomic_flush: 0
+2022/11/02-16:20:44.830376 2bf0             Options.avoid_unnecessary_blocking_io: 0
+2022/11/02-16:20:44.830379 2bf0                 Options.persist_stats_to_disk: 0
+2022/11/02-16:20:44.830382 2bf0                 Options.write_dbid_to_manifest: 0
+2022/11/02-16:20:44.830385 2bf0                 Options.log_readahead_size: 0
+2022/11/02-16:20:44.830388 2bf0                 Options.file_checksum_gen_factory: Unknown
+2022/11/02-16:20:44.830390 2bf0                 Options.best_efforts_recovery: 0
+2022/11/02-16:20:44.830393 2bf0                Options.max_bgerror_resume_count: 2147483647
+2022/11/02-16:20:44.830396 2bf0            Options.bgerror_resume_retry_interval: 1000000
+2022/11/02-16:20:44.830399 2bf0             Options.allow_data_in_errors: 0
+2022/11/02-16:20:44.830402 2bf0             Options.db_host_id: __hostname__
+2022/11/02-16:20:44.830405 2bf0             Options.max_background_jobs: 2
+2022/11/02-16:20:44.830408 2bf0             Options.max_background_compactions: -1
+2022/11/02-16:20:44.830410 2bf0             Options.max_subcompactions: 1
+2022/11/02-16:20:44.830413 2bf0             Options.avoid_flush_during_shutdown: 0
+2022/11/02-16:20:44.830416 2bf0           Options.writable_file_max_buffer_size: 1048576
+2022/11/02-16:20:44.830427 2bf0             Options.delayed_write_rate : 16777216
+2022/11/02-16:20:44.830430 2bf0             Options.max_total_wal_size: 0
+2022/11/02-16:20:44.830433 2bf0             Options.delete_obsolete_files_period_micros: 21600000000
+2022/11/02-16:20:44.830436 2bf0                   Options.stats_dump_period_sec: 600
+2022/11/02-16:20:44.830439 2bf0                 Options.stats_persist_period_sec: 600
+2022/11/02-16:20:44.830442 2bf0                 Options.stats_history_buffer_size: 1048576
+2022/11/02-16:20:44.830445 2bf0                          Options.max_open_files: -1
+2022/11/02-16:20:44.830448 2bf0                          Options.bytes_per_sync: 0
+2022/11/02-16:20:44.830451 2bf0                      Options.wal_bytes_per_sync: 0
+2022/11/02-16:20:44.830454 2bf0                   Options.strict_bytes_per_sync: 0
+2022/11/02-16:20:44.830456 2bf0       Options.compaction_readahead_size: 0
+2022/11/02-16:20:44.830459 2bf0                  Options.max_background_flushes: -1
+2022/11/02-16:20:44.830470 2bf0 Compression algorithms supported:
+2022/11/02-16:20:44.830473 2bf0 	kZSTD supported: 1
+2022/11/02-16:20:44.830477 2bf0 	kSnappyCompression supported: 1
+2022/11/02-16:20:44.830480 2bf0 	kBZip2Compression supported: 0
+2022/11/02-16:20:44.830483 2bf0 	kZlibCompression supported: 1
+2022/11/02-16:20:44.830486 2bf0 	kLZ4Compression supported: 1
+2022/11/02-16:20:44.830488 2bf0 	kXpressCompression supported: 0
+2022/11/02-16:20:44.830509 2bf0 	kLZ4HCCompression supported: 1
+2022/11/02-16:20:44.830513 2bf0 	kZSTDNotFinalCompression supported: 1
+2022/11/02-16:20:44.830527 2bf0 Fast CRC32 supported: Supported on x86
+2022/11/02-16:20:44.831312 2bf0 [db\version_set.cc:4627] Recovering from manifest file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/MANIFEST-000275
+2022/11/02-16:20:44.831481 2bf0 [db\column_family.cc:598] --------------- Options for column family [default]:
+2022/11/02-16:20:44.831492 2bf0               Options.comparator: leveldb.BytewiseComparator
+2022/11/02-16:20:44.831495 2bf0           Options.merge_operator: None
+2022/11/02-16:20:44.831498 2bf0        Options.compaction_filter: None
+2022/11/02-16:20:44.831501 2bf0        Options.compaction_filter_factory: None
+2022/11/02-16:20:44.831504 2bf0  Options.sst_partitioner_factory: None
+2022/11/02-16:20:44.831507 2bf0         Options.memtable_factory: SkipListFactory
+2022/11/02-16:20:44.831510 2bf0            Options.table_factory: BlockBasedTable
+2022/11/02-16:20:44.831537 2bf0            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (000001CCBE4E2120)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  pin_top_level_index_and_filter: 1
+  index_type: 0
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 000001CCBE4B94D0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 67108864
+    num_shard_bits : 6
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 16384
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 16
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 5
+  enable_index_compression: 0
+  block_align: 0
+2022/11/02-16:20:44.831541 2bf0        Options.write_buffer_size: 67108864
+2022/11/02-16:20:44.831544 2bf0  Options.max_write_buffer_number: 2
+2022/11/02-16:20:44.831547 2bf0          Options.compression: NoCompression
+2022/11/02-16:20:44.831550 2bf0                  Options.bottommost_compression: Disabled
+2022/11/02-16:20:44.831553 2bf0       Options.prefix_extractor: nullptr
+2022/11/02-16:20:44.831555 2bf0   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/02-16:20:44.831558 2bf0             Options.num_levels: 7
+2022/11/02-16:20:44.831561 2bf0        Options.min_write_buffer_number_to_merge: 1
+2022/11/02-16:20:44.831564 2bf0     Options.max_write_buffer_number_to_maintain: 0
+2022/11/02-16:20:44.831567 2bf0     Options.max_write_buffer_size_to_maintain: 134217728
+2022/11/02-16:20:44.831570 2bf0            Options.bottommost_compression_opts.window_bits: -14
+2022/11/02-16:20:44.831573 2bf0                  Options.bottommost_compression_opts.level: 32767
+2022/11/02-16:20:44.831575 2bf0               Options.bottommost_compression_opts.strategy: 0
+2022/11/02-16:20:44.831578 2bf0         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/02-16:20:44.831581 2bf0         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:20:44.831588 2bf0         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/02-16:20:44.831591 2bf0                  Options.bottommost_compression_opts.enabled: false
+2022/11/02-16:20:44.831594 2bf0         Options.bottommost_compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:20:44.831597 2bf0            Options.compression_opts.window_bits: -14
+2022/11/02-16:20:44.831600 2bf0                  Options.compression_opts.level: 32767
+2022/11/02-16:20:44.831603 2bf0               Options.compression_opts.strategy: 0
+2022/11/02-16:20:44.831605 2bf0         Options.compression_opts.max_dict_bytes: 0
+2022/11/02-16:20:44.831610 2bf0         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/02-16:20:44.831614 2bf0         Options.compression_opts.parallel_threads: 1
+2022/11/02-16:20:44.831616 2bf0                  Options.compression_opts.enabled: false
+2022/11/02-16:20:44.831619 2bf0         Options.compression_opts.max_dict_buffer_bytes: 0
+2022/11/02-16:20:44.831622 2bf0      Options.level0_file_num_compaction_trigger: 4
+2022/11/02-16:20:44.831625 2bf0          Options.level0_slowdown_writes_trigger: 20
+2022/11/02-16:20:44.831628 2bf0              Options.level0_stop_writes_trigger: 36
+2022/11/02-16:20:44.831630 2bf0                   Options.target_file_size_base: 67108864
+2022/11/02-16:20:44.831633 2bf0             Options.target_file_size_multiplier: 1
+2022/11/02-16:20:44.831636 2bf0                Options.max_bytes_for_level_base: 268435456
+2022/11/02-16:20:44.831639 2bf0 Options.level_compaction_dynamic_level_bytes: 0
+2022/11/02-16:20:44.831648 2bf0          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/02-16:20:44.831652 2bf0 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/02-16:20:44.831655 2bf0 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/02-16:20:44.831658 2bf0 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/02-16:20:44.831661 2bf0 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/02-16:20:44.831663 2bf0 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/02-16:20:44.831666 2bf0 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/02-16:20:44.831669 2bf0 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/02-16:20:44.831672 2bf0       Options.max_sequential_skip_in_iterations: 8
+2022/11/02-16:20:44.831675 2bf0                    Options.max_compaction_bytes: 1677721600
+2022/11/02-16:20:44.831677 2bf0                        Options.arena_block_size: 8388608
+2022/11/02-16:20:44.831680 2bf0   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/02-16:20:44.831683 2bf0   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/02-16:20:44.831686 2bf0       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/02-16:20:44.831689 2bf0                Options.disable_auto_compactions: 0
+2022/11/02-16:20:44.831693 2bf0                        Options.compaction_style: kCompactionStyleLevel
+2022/11/02-16:20:44.831696 2bf0                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/02-16:20:44.831699 2bf0 Options.compaction_options_universal.size_ratio: 1
+2022/11/02-16:20:44.831702 2bf0 Options.compaction_options_universal.min_merge_width: 2
+2022/11/02-16:20:44.831705 2bf0 Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/02-16:20:44.831708 2bf0 Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/02-16:20:44.831711 2bf0 Options.compaction_options_universal.compression_size_percent: -1
+2022/11/02-16:20:44.831714 2bf0 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/02-16:20:44.831717 2bf0 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/02-16:20:44.831720 2bf0 Options.compaction_options_fifo.allow_compaction: 0
+2022/11/02-16:20:44.831724 2bf0                   Options.table_properties_collectors: 
+2022/11/02-16:20:44.831727 2bf0                   Options.inplace_update_support: 0
+2022/11/02-16:20:44.831730 2bf0                 Options.inplace_update_num_locks: 10000
+2022/11/02-16:20:44.831733 2bf0               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/02-16:20:44.831736 2bf0               Options.memtable_whole_key_filtering: 0
+2022/11/02-16:20:44.831739 2bf0   Options.memtable_huge_page_size: 0
+2022/11/02-16:20:44.831742 2bf0                           Options.bloom_locality: 0
+2022/11/02-16:20:44.831744 2bf0                    Options.max_successive_merges: 0
+2022/11/02-16:20:44.831747 2bf0                Options.optimize_filters_for_hits: 0
+2022/11/02-16:20:44.831750 2bf0                Options.paranoid_file_checks: 0
+2022/11/02-16:20:44.831771 2bf0                Options.force_consistency_checks: 1
+2022/11/02-16:20:44.831776 2bf0                Options.report_bg_io_stats: 0
+2022/11/02-16:20:44.831779 2bf0                               Options.ttl: 2592000
+2022/11/02-16:20:44.831782 2bf0          Options.periodic_compaction_seconds: 0
+2022/11/02-16:20:44.831785 2bf0                    Options.enable_blob_files: false
+2022/11/02-16:20:44.831788 2bf0                        Options.min_blob_size: 0
+2022/11/02-16:20:44.831790 2bf0                       Options.blob_file_size: 268435456
+2022/11/02-16:20:44.831793 2bf0                Options.blob_compression_type: NoCompression
+2022/11/02-16:20:44.831796 2bf0       Options.enable_blob_garbage_collection: false
+2022/11/02-16:20:44.831799 2bf0   Options.blob_garbage_collection_age_cutoff: 0.250000
+2022/11/02-16:20:44.833408 2bf0 [db\version_set.cc:4675] Recovered from manifest file:C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/MANIFEST-000275 succeeded,manifest_file_number is 275, next_file_number is 277, last_sequence is 101, log_number is 272,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+2022/11/02-16:20:44.833417 2bf0 [db\version_set.cc:4684] Column family [default] (ID 0), log number is 272
+2022/11/02-16:20:44.835230 2bf0 [db\version_set.cc:4119] Creating manifest 279
+2022/11/02-16:20:44.840264 2bf0 EVENT_LOG_v1 {"time_micros": 1667402444840241, "job": 1, "event": "recovery_started", "wal_files": [276]}
+2022/11/02-16:20:44.840280 2bf0 [db\db_impl\db_impl_open.cc:856] Recovering log #276 mode 2
+2022/11/02-16:20:44.840375 2bf0 [db\version_set.cc:4119] Creating manifest 280
+2022/11/02-16:20:44.844649 2bf0 EVENT_LOG_v1 {"time_micros": 1667402444844644, "job": 1, "event": "recovery_finished"}
+2022/11/02-16:20:44.846976 2bf0 [file\delete_scheduler.cc:77] Deleted file C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/000276.log immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2022/11/02-16:20:44.851102 2bf0 [db\db_impl\db_impl_open.cc:1757] SstFileManager instance 000001CCBE525330
+2022/11/02-16:20:44.852656 2bf0 DB pointer 000001CCBE687750
+2022/11/02-16:20:44.852985 7b94 [db\db_impl\db_impl.cc:932] ------- DUMPING STATS -------
+2022/11/02-16:20:44.852996 7b94 [db\db_impl\db_impl.cc:933] 
+** DB Stats **
+Uptime(secs): 0.0 total, 0.0 interval
+Cumulative writes: 0 writes, 0 keys, 0 commit groups, 0.0 writes per commit group, ingest: 0.00 GB, 0.00 MB/s
+Cumulative WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 0 writes, 0 keys, 0 commit groups, 0.0 writes per commit group, ingest: 0.00 MB, 0.00 MB/s
+Interval WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 MB, 0.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0    2.49 KB   0.3      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Sum      1/0    2.49 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Blob file count: 0, total size: 0.0 GB
+
+Uptime(secs): 0.0 total, 0.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0      1/0    2.49 KB   0.3      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Sum      1/0    2.49 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Blob file count: 0, total size: 0.0 GB
+
+Uptime(secs): 0.0 total, 0.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **

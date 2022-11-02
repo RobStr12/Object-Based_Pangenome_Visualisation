@@ -125,18 +125,24 @@ class PangenomeDatabase:
 
         return insert
 
-    def query(self, query: str = "./Data/getGeneNames.tql"):
+    def query(self, query: str, get: str):
         with self.client.session(self.name, SessionType.DATA) as session:
             with session.transaction(TransactionType.READ) as transaction:
-                with open(query, 'r') as query:
-                    query = query.read().replace("\n", "")
 
                 iterator = transaction.query().match(query)
-                get = query.split("$")[-1].rstrip(";")
-
                 results = [res.get(get).get_value() for res in iterator]
 
         return results
+
+    def query_tql(self, file: str = "./Data/getGeneNames.tql"):
+        with open(file, 'r') as in_file:
+            query = in_file.read()
+            lines = query.split(";")
+            for line in lines:
+                if line.startswith(" get "):
+                    get = line.lstrip(" get $")
+
+        return self.query(query, get)
 
 
 if __name__ == "__main__":
@@ -148,7 +154,7 @@ if __name__ == "__main__":
         genes_time = time.time()
         Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
         genelinks_time = time.time()
-        results = Db.query()
+        results = Db.query_tql()
         query_time = time.time()
         Db.delete()
         delete_time = time.time()
