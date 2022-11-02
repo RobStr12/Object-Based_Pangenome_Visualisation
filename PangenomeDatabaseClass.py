@@ -1,8 +1,9 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
+from multiprocessing import Process
 from datetime import timedelta
-from subprocess import Popen
+from sys import platform
 import psutil
 import ijson
 import gzip
@@ -31,7 +32,9 @@ class PangenomeDatabase:
             os.mkdir(path)
 
         # Start the server at localhost:1730 & start the client
-        self.server = Popen("server.bat")
+        servers = {"win32": ("server.bat", ), "darwin": ("server.sh", "server"), "linux": ("server.sh", "server")}
+        self.server = Process(target=os.system, args=servers[platform])
+        self.server.start()
         self.client = TypeDB.core_client("localhost:1730")
 
     def close(self):
@@ -76,7 +79,6 @@ class PangenomeDatabase:
     def migrate(self, file: str, template, batch_size: int = 2000):
         print(f"Importing data from: '{file}':")
         with gzip.open(file, "rb") as in_file:
-            # data = [template(item) for item in ijson.items(in_file, "item")]
             items = list(ijson.items(in_file, "item"))
             data = []
             size = len(items)
@@ -136,11 +138,11 @@ if __name__ == "__main__":
         start_time = time.time()
         Db.create(replace=True)
         created_time = time.time()
-        Db.migrate("./Data/Genes.json.gz", Db.gene_template)
+        # Db.migrate("./Data/Genes.json.gz", Db.gene_template)
         genes_time = time.time()
-        Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
+        # Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
         genelinks_time = time.time()
-        results = Db.query()
+        # results = Db.query()
         query_time = time.time()
         Db.delete()
         delete_time = time.time()

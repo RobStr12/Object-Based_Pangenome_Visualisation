@@ -105,3 +105,34 @@ com.vaticle.typedb.core.common.exception.TypeDBException: [SSN01] Invalid Sessio
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 10:48:15.095 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+11:25:08.618 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 598 ms
+11:25:08.620 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+11:26:36.147 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - [SRV33] Invalid Server Operation: Another instance of TypeDB server is already running at this port: '/0.0.0.0:1730'.
+11:26:36.149 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+11:26:36.149 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+11:26:36.154 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+11:27:20.983 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+11:27:20.983 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+11:27:20.987 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
+11:27:36.490 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 568 ms
+11:27:36.492 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+11:32:16.855 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 594 ms
+11:32:16.857 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
