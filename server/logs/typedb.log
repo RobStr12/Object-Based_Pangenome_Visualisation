@@ -81,3 +81,27 @@
 15:32:58.334 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
 15:32:58.335 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 558 ms
 15:32:58.335 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+10:48:11.443 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+10:48:11.445 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+10:48:11.445 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+10:48:11.445 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+10:48:11.445 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+10:48:11.445 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+10:48:11.446 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 600 ms
+10:48:11.446 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+10:48:14.768 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+10:48:14.768 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - Shutting down TypeDB Server...
+10:48:14.980 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TypeDBService - [SSN01] Invalid Session Operation: Session with UUID '2538fdf4-9a82-43ae-ae6e-0145c3854207' does not exist.
+com.vaticle.typedb.core.common.exception.TypeDBException: [SSN01] Invalid Session Operation: Session with UUID '2538fdf4-9a82-43ae-ae6e-0145c3854207' does not exist.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.server.TypeDBService.sessionClose(TypeDBService.java:198)
+	at com.vaticle.typedb.protocol.TypeDBGrpc$MethodHandlers.invoke(TypeDBGrpc.java:975)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:182)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:340)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:866)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+10:48:15.095 [TypeDBServer::shutdown::0] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server has been shutdown
