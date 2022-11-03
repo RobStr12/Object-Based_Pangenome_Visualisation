@@ -11,6 +11,7 @@ import gzip
 import time
 import os
 
+
 class PangenomeDatabase:
 
     def __init__(self, name: str):
@@ -131,7 +132,7 @@ class PangenomeDatabase:
         return insert
 
     def query_str(self, query: str):
-        vars = self.getVars(query=query)
+        vars = getVars(query=query)
         with self.client.session(self.name, SessionType.DATA) as session:
             with session.transaction(TransactionType.READ) as transaction:
                 iterator = transaction.query().match(query)
@@ -145,10 +146,11 @@ class PangenomeDatabase:
             query = in_file.read().replace("\n", "")
         return self.query_str(query=query)
 
-    def getVars(self, query: str):
-        vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
-        vars = [var.lstrip("$") for var in vars.split(", ")]
-        return vars
+
+def getVars(query: str):
+    vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
+    vars = [var.lstrip("$") for var in vars.split(", ")]
+    return vars
 
 
 if __name__ == "__main__":
