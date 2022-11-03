@@ -132,7 +132,8 @@ class PangenomeDatabase:
         return insert
 
     def query_str(self, query: str):
-        vars = getVars(query=query)
+        print(f"Query:\n{query}")
+        vars = get_vars(query=query)
         with self.client.session(self.name, SessionType.DATA) as session:
             with session.transaction(TransactionType.READ) as transaction:
                 iterator = transaction.query().match(query)
@@ -147,7 +148,7 @@ class PangenomeDatabase:
         return self.query_str(query=query)
 
 
-def getVars(query: str):
+def get_vars(query: str):
     vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
     vars = [var.lstrip("$") for var in vars.split(", ")]
     return vars
@@ -167,7 +168,8 @@ if __name__ == "__main__":
         Db.delete()
         delete_time = time.time()
 
-    print(results)
+    print("First query result:")
+    print(results[0], end=", ...\n")
 
     print("\n+--------------------------+---------+")
     print(f"| Total execution time     | {timedelta(seconds=round(delete_time - start_time))} |")
@@ -182,6 +184,3 @@ if __name__ == "__main__":
     print("+--------------------------+---------+")
     print(f"| Database deletion time   | {timedelta(seconds=round(delete_time - query_time))} |")
     print("+--------------------------+---------+")
-
-
-
