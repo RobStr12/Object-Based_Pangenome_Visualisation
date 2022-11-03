@@ -83,14 +83,20 @@ class PangenomeDatabase:
 
     def migrate(self, file: str, template, batch_size: int = 5000):
         print(f"Importing data from: '{file}':")
-        with gzip.open(file, "rb") as in_file:
-            items = list(ijson.items(in_file, "item"))
-            data = []
-            size = len(items)
-            with alive_bar(size) as bar:
-                for item in items:
-                    data.append(template(item))
-                    bar()
+        if file.endswith(".json.gz"):
+            in_file = gzip.open(file, "rb")
+        elif file.endswith(".json"):
+            in_file = open(file, "r")
+        else:
+            print("Incorrect File Format. Needs to be either .json or .json.gz file...")
+        items = list(ijson.items(in_file, "item"))
+        in_file.close()
+        data = []
+        size = len(items)
+        with alive_bar(size) as bar:
+            for item in items:
+                data.append(template(item))
+                bar()
 
         batch_index = [(batch_size * i, batch_size * (i + 1)) for i in range(size // batch_size + 1)]
         batch_num = len(batch_index)
@@ -159,12 +165,21 @@ if __name__ == "__main__":
         Db.delete()
         delete_time = time.time()
 
-    print(f"\nTotal execution time: {timedelta(seconds=(delete_time - start_time))}\n")
-    print(f"Database creation time: {timedelta(seconds=(created_time - start_time))}\n")
-    print(f"Genes migration time: {timedelta(seconds=(genes_time - created_time))}\n")
-    print(f"GeneLinks migration time: {timedelta(seconds=(genelinks_time - genes_time))}\n")
-    print(f"Query time: {timedelta(seconds=(query_time - genelinks_time))}\n")
-    print(f"Database deletion time: {timedelta(seconds=(delete_time - query_time))}\n")
-
     print(results)
+
+    print("\n+--------------------------+---------+")
+    print(f"| Total execution time     | {timedelta(seconds=round(delete_time - start_time))} |")
+    print("+--------------------------+---------+")
+    print(f"| Database creation time   | {timedelta(seconds=round(created_time - start_time))} |")
+    print("+--------------------------+---------+")
+    print(f"| Genes migration time     | {timedelta(seconds=round(genes_time - created_time))} |")
+    print("+--------------------------+---------+")
+    print(f"| GeneLinks migration time | {timedelta(seconds=round(genelinks_time - genes_time))} |")
+    print("+--------------------------+---------+")
+    print(f"| Query time               | {timedelta(seconds=round(query_time - genelinks_time))} |")
+    print("+--------------------------+---------+")
+    print(f"| Database deletion time   | {timedelta(seconds=round(delete_time - query_time))} |")
+    print("+--------------------------+---------+")
+
+
 

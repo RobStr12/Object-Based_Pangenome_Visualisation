@@ -308,3 +308,67 @@ proces wordt gebruikt.
 13:24:44.013 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
 13:24:44.013 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 581 ms
 13:24:44.013 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:35:07.520 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:35:07.521 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 575 ms
+13:35:07.522 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:35:46.453 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 580 ms
+13:35:46.455 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:36:53.553 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:36:53.555 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:36:53.555 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:36:53.555 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:36:53.555 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:36:53.555 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:36:53.556 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 575 ms
+13:36:53.556 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:39:00.459 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 562 ms
+13:39:00.461 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:39:31.813 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 560 ms
+13:39:31.815 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:40:21.312 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 580 ms
+13:40:21.314 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:41:52.120 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 557 ms
+13:41:52.122 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+13:42:54.249 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+13:42:54.250 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+13:42:54.250 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+13:42:54.250 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 562 ms
+13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
