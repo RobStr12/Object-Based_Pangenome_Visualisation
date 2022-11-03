@@ -25,7 +25,7 @@ class PangenomeDatabase:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close()
+        self.close(False)
 
     def start(self):
         # Because github can not have empty folders, the ./server/data folder needs to be re-implemented each time
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         genelinks_time = time.time()
         results = Db.query()
         query_time = time.time()
-        Db.delete()
+        # Db.delete()
         delete_time = time.time()
 
     print(f"\nTotal execution time: {timedelta(seconds=(delete_time - start_time))}\n")
