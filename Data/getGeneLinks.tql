@@ -1,1 +1,5 @@
-match $geneA isa Gene, has Gene_Name $nameA; $geneB isa Gene, has Gene_Name $nameB; (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;
+match
+ $geneA isa Gene, has Gene_Name $nameA, has Chromosome $chrom;
+ $geneB isa Gene, has Gene_Name $nameB, has Chromosome $chrom;
+ (GeneA: $geneA, GeneB: $geneB) isa GeneLink;
+ get $nameA, $nameB, $chrom;

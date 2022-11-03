@@ -372,3 +372,62 @@ proces wordt gebruikt.
 13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
 13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 562 ms
 13:42:54.251 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+14:36:17.631 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 628 ms
+14:36:17.633 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+14:37:12.382 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 1254 ms
+14:37:12.384 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+14:37:32.150 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TransactionService - [TQL03] TypeQL Error: There is a syntax error at line 1:
+match $geneA isa Gene, has Gene_Name $nameA, has Chromosome "LG1"; $geneB isa Gene, has Gene_Name $nameB, , has Chromosome "LG1"; (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;
+                                                                                                          ^
+no viable alternative at input 'match $geneA isa Gene, has Gene_Name $nameA, has Chromosome "LG1"; $geneB isa Gene, has Gene_Name $nameB, ,'
+com.vaticle.typeql.lang.common.exception.TypeQLException: [TQL03] TypeQL Error: There is a syntax error at line 1:
+match $geneA isa Gene, has Gene_Name $nameA, has Chromosome "LG1"; $geneB isa Gene, has Gene_Name $nameB, , has Chromosome "LG1"; (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;
+                                                                                                          ^
+no viable alternative at input 'match $geneA isa Gene, has Gene_Name $nameA, has Chromosome "LG1"; $geneB isa Gene, has Gene_Name $nameB, ,'
+	at com.vaticle.typeql.lang.common.exception.TypeQLException.of(TypeQLException.java:36)
+	at com.vaticle.typeql.lang.parser.Parser.parse(Parser.java:127)
+	at com.vaticle.typeql.lang.parser.Parser.parseQueryEOF(Parser.java:150)
+	at com.vaticle.typeql.lang.TypeQL.parseQuery(TypeQL.java:64)
+	at com.vaticle.typedb.core.server.query.QueryService.match(QueryService.java:129)
+	at com.vaticle.typedb.core.server.query.QueryService.execute(QueryService.java:84)
+	at com.vaticle.typedb.core.server.TransactionService.executeRequest(TransactionService.java:170)
+	at com.vaticle.typedb.core.server.TransactionService.execute(TransactionService.java:146)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:122)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:79)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:262)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:318)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:301)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:834)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+14:37:49.885 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 1926 ms
+14:37:49.887 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+14:38:50.625 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+14:38:50.627 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+14:38:50.627 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+14:38:50.627 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+14:38:50.627 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+14:38:50.627 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+14:38:50.628 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 856 ms
+14:38:50.628 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
