@@ -1,0 +1,1 @@
+match $geneA isa Gene, has Gene_Name $nameA; $geneB isa Gene, has Gene_Name $nameB; (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;

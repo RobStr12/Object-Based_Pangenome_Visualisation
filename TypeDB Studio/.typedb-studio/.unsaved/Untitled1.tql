@@ -1,5 +1,5 @@
 match
- $A isa Gene;
- $B isa Gene;
+ $A isa Gene, has Chromosome $chrom;
+ $B isa Gene, has Chromosome $chrom;
  $link(GeneA: $A, GeneB: $B) isa GeneLink;
-get $link;
+get $link, $chrom;

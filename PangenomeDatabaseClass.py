@@ -25,7 +25,7 @@ class PangenomeDatabase:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.close(False)
+        self.close()
 
     def start(self):
         # Because github can not have empty folders, the ./server/data folder needs to be re-implemented each time
@@ -138,6 +138,17 @@ class PangenomeDatabase:
 
         return results
 
+    def queryGeneLinks(self):
+        query = "match $geneA isa Gene, has Gene_Name $nameA; $geneB isa Gene, has Gene_Name $nameB;" \
+                " (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;"
+        get = ["nameA", "nameB"]
+
+        with self.client.session(self.name, SessionType.DATA) as session:
+            with session.transaction(TransactionType.READ) as transaction:
+                iterator = transaction.query().match(query)
+
+                results = [[res.get(g).get_value() for g in get] for res in iterator]
+                print(results)
 
 if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
@@ -153,9 +164,12 @@ if __name__ == "__main__":
         # Db.delete()
         delete_time = time.time()
 
+        Db.queryGeneLinks()
+
     print(f"\nTotal execution time: {timedelta(seconds=(delete_time - start_time))}\n")
     print(f"Database creation time: {timedelta(seconds=(created_time - start_time))}\n")
     print(f"Genes migration time: {timedelta(seconds=(genes_time - created_time))}\n")
     print(f"GeneLinks migration time: {timedelta(seconds=(genelinks_time - genes_time))}\n")
     print(f"Query time: {timedelta(seconds=(query_time - genelinks_time))}\n")
     print(f"Database deletion time: {timedelta(seconds=(delete_time - query_time))}\n")
+

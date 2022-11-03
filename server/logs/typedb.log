@@ -159,3 +159,112 @@ proces wordt gebruikt.
 09:39:42.364 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
 09:39:42.364 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 598 ms
 09:39:42.364 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+09:51:19.408 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+09:52:18.972 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+09:53:00.947 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+09:53:57.140 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+09:54:21.195 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+09:54:21.196 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+09:54:21.196 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+09:54:21.197 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+09:54:21.197 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+09:54:21.197 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+09:54:21.197 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 587 ms
+09:54:21.197 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+09:56:24.619 [typedb-service::0] ERROR com.vaticle.typedb.core.server.TransactionService - [QRY09] Invalid Query Pattern: The thing variable '$chrom' has multiple 'isa' constraints, 'CHromosome' and 'Chromosome'.
+com.vaticle.typedb.core.common.exception.TypeDBException: [QRY09] Invalid Query Pattern: The thing variable '$chrom' has multiple 'isa' constraints, 'CHromosome' and 'Chromosome'.
+	at com.vaticle.typedb.core.common.exception.TypeDBException.of(TypeDBException.java:66)
+	at com.vaticle.typedb.core.pattern.variable.ThingVariable.constrain(ThingVariable.java:123)
+	at com.vaticle.typedb.core.pattern.variable.ThingVariable.lambda$constrainThing$0(ThingVariable.java:76)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at com.vaticle.typedb.core.pattern.variable.ThingVariable.constrainThing(ThingVariable.java:72)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.register(VariableRegistry.java:147)
+	at com.vaticle.typedb.core.pattern.constraint.thing.HasConstraint.of(HasConstraint.java:51)
+	at com.vaticle.typedb.core.pattern.constraint.thing.ThingConstraint.of(ThingConstraint.java:52)
+	at com.vaticle.typedb.core.pattern.variable.ThingVariable.lambda$constrainThing$0(ThingVariable.java:76)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at com.vaticle.typedb.core.pattern.variable.ThingVariable.constrainThing(ThingVariable.java:72)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.register(VariableRegistry.java:147)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.register(VariableRegistry.java:106)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.lambda$createFromVariables$0(VariableRegistry.java:98)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.createFromVariables(VariableRegistry.java:96)
+	at com.vaticle.typedb.core.pattern.variable.VariableRegistry.createFromVariables(VariableRegistry.java:88)
+	at com.vaticle.typedb.core.pattern.Conjunction.create(Conjunction.java:114)
+	at com.vaticle.typedb.core.pattern.Disjunction.lambda$create$0(Disjunction.java:59)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at com.vaticle.typedb.core.pattern.Disjunction.create(Disjunction.java:60)
+	at com.vaticle.typedb.core.pattern.Disjunction.create(Disjunction.java:51)
+	at com.vaticle.typedb.core.query.Matcher.<init>(Matcher.java:85)
+	at com.vaticle.typedb.core.query.Matcher.create(Matcher.java:102)
+	at com.vaticle.typedb.core.query.QueryManager.match(QueryManager.java:72)
+	at com.vaticle.typedb.core.server.query.QueryService.match(QueryService.java:131)
+	at com.vaticle.typedb.core.server.query.QueryService.execute(QueryService.java:84)
+	at com.vaticle.typedb.core.server.TransactionService.executeRequest(TransactionService.java:170)
+	at com.vaticle.typedb.core.server.TransactionService.execute(TransactionService.java:146)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:122)
+	at com.vaticle.typedb.core.server.TransactionService.onNext(TransactionService.java:79)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:262)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:318)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:301)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:834)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+10:16:17.781 [typedb-scheduled::0] WARN com.vaticle.typedb.core.server.SessionService - Session with ID 24659b2a-6d25-4e15-9d0c-1ea89d535169 timed out due to inactivity
+11:09:19.643 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:09:35.940 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:10:00.505 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:11:07.381 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:16:31.217 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:17:10.310 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:18:26.048 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:19:23.009 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:20:18.639 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:21:13.047 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:22:05.639 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:23:35.398 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:23:57.834 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:26:40.014 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:27:03.221 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
+11:32:50.143 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: Failed to create lock file: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data\Spidermite\schema/LOCK: Het proces heeft geen toegang tot het bestand omdat het door een ander
+proces wordt gebruikt.
+
