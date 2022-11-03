@@ -1,7 +1,6 @@
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
-from multiprocessing import Process
 from datetime import timedelta
 from subprocess import Popen
 from subprocess import run
@@ -82,7 +81,7 @@ class PangenomeDatabase:
         else:
             print(f"There already exists a database called {self.name}.")
 
-    def migrate(self, file: str, template, batch_size: int = 2000):
+    def migrate(self, file: str, template, batch_size: int = 5000):
         print(f"Importing data from: '{file}':")
         with gzip.open(file, "rb") as in_file:
             items = list(ijson.items(in_file, "item"))
@@ -125,19 +124,7 @@ class PangenomeDatabase:
 
         return insert
 
-    def queryGeneLinks(self):
-        query = "match $geneA isa Gene, has Gene_Name $nameA; $geneB isa Gene, has Gene_Name $nameB;" \
-                " (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;"
-        get = ["nameA", "nameB"]
-
-        with self.client.session(self.name, SessionType.DATA) as session:
-            with session.transaction(TransactionType.READ) as transaction:
-                iterator = transaction.query().match(query)
-
-                results = [[res.get(g).get_value() for g in get] for res in iterator]
-                print(results)
-
-    def query(self, query: str):
+    def query_str(self, query: str):
         vars = self.getVars(query=query)
         with self.client.session(self.name, SessionType.DATA) as session:
             with session.transaction(TransactionType.READ) as transaction:
@@ -150,7 +137,7 @@ class PangenomeDatabase:
     def query_tql(self, file: str = "./Data/getGeneNames.tql"):
         with open(file, "r") as in_file:
             query = in_file.read().replace("\n", "")
-        return self.query(query=query)
+        return self.query_str(query=query)
 
     def getVars(self, query: str):
         vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
