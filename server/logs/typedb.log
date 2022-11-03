@@ -831,3 +831,20 @@ com.vaticle.typedb.core.common.exception.TypeDBException: [SRV24] Invalid Server
 16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 865 ms
 16:48:10.258 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
 09:50:20.472 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+16:35:11.419 [main] ERROR com.vaticle.typedb.core.server.TypeDBServer - org.rocksdb.RocksDBException: CURRENT file corrupted
+16:35:32.336 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 584 ms
+16:35:32.338 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...
+16:36:19.715 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - TypeDB Server is now running and will keep this process alive.
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - You can press CTRL+C to shutdown this server.
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - 
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - version: 2.11.1
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - listening to address: 0.0.0.0:1730
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - data directory configured to: C:\Users\Robin\PycharmProjects\Object-Based_Pangenome_Visualisation\server\data
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - bootup completed in: 579 ms
+16:36:19.717 [main] INFO com.vaticle.typedb.core.server.TypeDBServer - ...

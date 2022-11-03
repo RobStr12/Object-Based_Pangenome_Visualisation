@@ -23,9 +23,11 @@ if __name__ == "__main__":
         grid = g.layout_grid()
         graphopt = g.layout_graphopt()
         reingold_tilford = g.layout_reingold_tilford()
+        fruchterman_reingold = g.layout_fruchterman_reingold()
 
         print("Plotting Graph...")
         plot(ge, target = "./Data/plot.png", bbox=(20000, 20000))
         plot(g, layout=grid, target="./Data/plot_grid.png", bbox=(20000, 20000))
         plot(g, layout=graphopt, target="./Data/plot_graphopt.png", bbox=(20000, 20000))
         plot(g, layout=reingold_tilford, target="./Data/plot_reingold_tilford.png", bbox=(20000, 20000))
+        plot(g, layout=fruchterman_reingold, target="./Data/plot_fruchterman_reingold.png", bbox=(20000, 20000))
