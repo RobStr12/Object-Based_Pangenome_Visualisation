@@ -125,19 +125,6 @@ class PangenomeDatabase:
 
         return insert
 
-    def query(self, query: str = "./Data/getGeneNames.tql"):
-        with self.client.session(self.name, SessionType.DATA) as session:
-            with session.transaction(TransactionType.READ) as transaction:
-                with open(query, 'r') as query:
-                    query = query.read().replace("\n", "")
-
-                iterator = transaction.query().match(query)
-                get = query.split("$")[-1].rstrip(";")
-
-                results = [res.get(get).get_value() for res in iterator]
-
-        return results
-
     def queryGeneLinks(self):
         query = "match $geneA isa Gene, has Gene_Name $nameA; $geneB isa Gene, has Gene_Name $nameB;" \
                 " (GeneA: $geneA, GeneB: $geneB) isa GeneLink; get $nameA, $nameB;"
@@ -150,6 +137,27 @@ class PangenomeDatabase:
                 results = [[res.get(g).get_value() for g in get] for res in iterator]
                 print(results)
 
+    def query(self, query: str):
+        vars = self.getVars(query=query)
+        with self.client.session(self.name, SessionType.DATA) as session:
+            with session.transaction(TransactionType.READ) as transaction:
+                iterator = transaction.query().match(query)
+
+                results = [{var: res.get(var).get_value() for var in vars} for res in iterator]
+
+        return results
+
+    def query_tql(self, file: str = "./Data/getGeneNames.tql"):
+        with open(file, "r") as in_file:
+            query = in_file.read().replace("\n", "")
+        return self.query(query=query)
+
+    def getVars(self, query: str):
+        vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
+        vars = [var.lstrip("$") for var in vars.split(", ")]
+        return vars
+
+
 if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
         start_time = time.time()
@@ -159,12 +167,10 @@ if __name__ == "__main__":
         genes_time = time.time()
         Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
         genelinks_time = time.time()
-        results = Db.query()
+        results = Db.query_tql("./Data/getGeneLinks.tql")
         query_time = time.time()
-        # Db.delete()
+        Db.delete()
         delete_time = time.time()
-
-        Db.queryGeneLinks()
 
     print(f"\nTotal execution time: {timedelta(seconds=(delete_time - start_time))}\n")
     print(f"Database creation time: {timedelta(seconds=(created_time - start_time))}\n")
@@ -172,4 +178,6 @@ if __name__ == "__main__":
     print(f"GeneLinks migration time: {timedelta(seconds=(genelinks_time - genes_time))}\n")
     print(f"Query time: {timedelta(seconds=(query_time - genelinks_time))}\n")
     print(f"Database deletion time: {timedelta(seconds=(delete_time - query_time))}\n")
+
+    print(results)
 
