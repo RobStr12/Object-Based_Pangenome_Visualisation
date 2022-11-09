@@ -1,3 +1,5 @@
+import json
+
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
@@ -34,7 +36,7 @@ class PangenomeDatabase:
             os.mkdir(path)
 
         # Start the server at localhost:1730 & start the client
-        servers = {"win32": ["server.bat", "&"], "darwin": ("server.sh", "server")}
+        servers = {"win32": ["server.bat"], "darwin": ("server.sh", "server")}
         if platform == "win32":
             self.server = Popen(servers[platform])
         else:
@@ -123,12 +125,22 @@ class PangenomeDatabase:
 
         return insert[:-2] + ";"
 
+    def cluster_template(self, input):
+        insert = f'insert $cluster isa Cluster, has Cluster_Name {input["cluster_name"]}'
+        return insert
+
     def genelink_template(self, input):
         insert = "match "
         for key, value in input.items():
             insert += f'${key} isa Gene, has Gene_Name "{value}";'
         insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
 
+        return insert
+
+    def clusterlink_template(self, input):
+        insert = f'match $gene isa Gene, has Gene_Name "{input["gene_name"]}";' \
+                 f' $cluster isa Cluster, has ClusterName "{input["cluster_name"]}";' \
+                 f' insert (Parent: $cluster, Child: $gene) isa ClusterLink;'
         return insert
 
     def query_str(self, query: str):
@@ -147,6 +159,15 @@ class PangenomeDatabase:
             query = in_file.read().replace("\n", "")
         return self.query_str(query=query)
 
+    def cluster_genes(self, cluster_name: str, q_result: list):
+        items = []
+
+        for gene in q_result:
+            items.append({"gene_name": gene["name"], "cluster_name": cluster_name})
+
+        with gzip.open(f"./Data/cluster_{cluster_name}.json.gz", "w") as fout:
+            fout.write(json.dumps(items).encode("utf-8"))
+
 
 def get_vars(query: str):
     vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
@@ -163,8 +184,9 @@ if __name__ == "__main__":
         genes_time = time.time()
         Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
         genelinks_time = time.time()
-        results = Db.query_tql("./Data/getGeneLinks.tql")
+        results = Db.query_tql("./Data/getGeneNames.tql")
         query_time = time.time()
+        Db.cluster_genes("TeturGenome", results)
         Db.delete()
         delete_time = time.time()
 

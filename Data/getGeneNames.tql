@@ -1,1 +1,1 @@
-match $gene isa Gene, has Gene_Name $name; get $name;
+match $gene isa Gene, has Gene_Name $name, has Chromosome $chrom; get $name, $chrom;

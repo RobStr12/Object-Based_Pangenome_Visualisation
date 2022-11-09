@@ -3,11 +3,20 @@ define
  Gene sub entity,
  plays GeneLink:GeneA,
  plays GeneLink:GeneB,
+ plays ClusterLink:Child,
  owns Chromosome,
  owns Gene_Name,
  owns Start_Position,
  owns End_Position,
  owns Strand;
+
+ Cluster sub entity,
+ plays ClusterLink:Parent,
+ owns Cluster_Name;
+
+ ClusterLink sub relation,
+ relates Parent,
+ relates Child;
 
  GeneLink sub relation,
  relates GeneA,
@@ -26,4 +35,7 @@ define
  value long;
 
  Strand sub attribute,
+ value string;
+
+ Cluster_Name sub attribute,
  value string;
