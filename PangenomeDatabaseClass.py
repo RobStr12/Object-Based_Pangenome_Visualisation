@@ -1,5 +1,3 @@
-import json
-
 from typedb.client import TypeDB, SessionType, TransactionType
 from typedb.common.exception import TypeDBClientException
 from alive_progress import alive_bar
@@ -11,6 +9,7 @@ import psutil
 import ijson
 import gzip
 import time
+import json
 import os
 
 
@@ -114,59 +113,128 @@ class PangenomeDatabase:
                         transaction.commit()
                     bar()
 
-    def gene_template(self, input):
-        insert = f'insert $gene isa Gene, '
-        for key, value in input.items():
-            try:
-                value = int(value)
-                insert += f'has {key} {value}, '
-            except ValueError:
-                insert += f'has {key} "{value}", '
-
-        return insert[:-2] + ";"
-
-    def cluster_template(self, input):
-        insert = f'insert $cluster isa Cluster, has Cluster_Name {input["cluster_name"]}'
-        return insert
-
-    def genelink_template(self, input):
-        insert = "match "
-        for key, value in input.items():
-            insert += f'${key} isa Gene, has Gene_Name "{value}";'
-        insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
-
-        return insert
-
-    def clusterlink_template(self, input):
-        insert = f'match $gene isa Gene, has Gene_Name "{input["gene_name"]}";' \
-                 f' $cluster isa Cluster, has ClusterName "{input["cluster_name"]}";' \
-                 f' insert (Parent: $cluster, Child: $gene) isa ClusterLink;'
-        return insert
-
     def query_str(self, query: str):
         print(f"Query:\n{query}")
         vars = get_vars(query=query)
         with self.client.session(self.name, SessionType.DATA) as session:
-            with session.transaction(TransactionType.READ) as transaction:
-                iterator = transaction.query().match(query)
-
-                results = [{var: res.get(var).get_value() for var in vars} for res in iterator]
-
-        return results
+            return self.query(session, query, vars)
 
     def query_tql(self, file: str = "./Data/getGeneNames.tql"):
         with open(file, "r") as in_file:
             query = in_file.read().replace("\n", "")
         return self.query_str(query=query)
 
-    def cluster_genes(self, cluster_name: str, q_result: list):
-        items = []
+    def query(self, session, query, vars):
+        with session.transaction(TransactionType.READ) as transaction:
+            iterator = transaction.query().match(query)
 
-        for gene in q_result:
-            items.append({"gene_name": gene["name"], "cluster_name": cluster_name})
+            results = [{var: res.get(var).get_value() for var in vars} for res in iterator]
 
-        with gzip.open(f"./Data/cluster_{cluster_name}.json.gz", "w") as fout:
-            fout.write(json.dumps(items).encode("utf-8"))
+        return results
+
+    def cluster(self, name: str, type: str, query: str):
+        with self.client.session(self.name, SessionType.DATA) as session:
+
+            # Step 1: check for correct inputs
+            print("Checking Inputs...")
+            c_types = ["Genome", "Chromosome", "ProteinFamily", "GeneCluster", "Other"]
+
+            if type not in c_types:
+                print("Incorrect cluster type")
+                return None
+
+            # Step 2: Create cluster +  add to clusters.json
+            print(f"Create Cluster {name}")
+            insert = f"""insert $cluster isa Cluster, has Cluster_Name "{name}", has Cluster_Type "{type}";"""
+
+            with session.transaction(TransactionType.WRITE) as transaction:
+                transaction.query().insert(insert)
+                transaction.commit()
+
+            add = {"Cluster_Name": name, "Cluster_Type": type}
+            path = "./Data/Clusters.json"
+
+            if os.path.isfile("./Data/Clusters.json"):
+                with open(path) as file:
+                    items = list(ijson.items(file, "item"))
+                    items.append(add)
+            else:
+                items = [add]
+
+            with open(path, "w") as file:
+                json.dump(items, file, indent=4)
+
+            # Step 3: query database
+            # Step 3.1: if the query is a .tql file, parse this file into the query string.
+            if query.endswith(".tql"):
+                with open(query, "r") as in_file:
+                    query = in_file.read().replace("\n", "")
+            # Step 3.2: query
+            print(f"Query the database for following query:\n{query}")
+            vars = get_vars(query)
+            results = self.query(session, query, vars)
+            genes = [res[vars[0]] for res in results]
+
+            # Step 4: Create Cluster_links of type Cluster->Gene + migrate
+            print("Creating Cluster->Gene ClusterLinks...")
+            cluster_genes_items = [{"gene_name": gene, "cluster_name": name} for gene in genes]
+
+            # Step 5: Check if cluster is parent or child to other clusters
+            print("Checking if new cluster is parent or child to another cluster...")
+            clusters = self.query(session=session, query="match $cluster isa Cluster, has Cluster_Name $name; get $name;", vars=["name"])
+            cluster_cluster = []
+
+            if len(clusters) > 1:
+                for cluster in clusters:
+                    cluster_name = cluster["name"]
+                    is_parent = True
+                    is_child = True
+                    results = self.query(session, f"""match $cluster isa Cluster, has Cluster_Name "{cluster_name}";
+                                                        $gene isa Gene, has Gene_Name $name; 
+                                                        get $name;""", ["name"])
+                    cluster_genes = [res["name"] for res in results]
+                    for gene in cluster_genes:
+                        if gene not in genes:
+                            is_child = False
+
+                    for gene in genes:
+                        if gene not in cluster_genes:
+                            is_parent = False
+
+                    if is_parent and is_child:
+                        print(f"The new cluster is equel to {cluster_name}")
+                    elif is_parent:
+                        cluster_cluster.append({"parent_name": name, "child_name": cluster_name})
+                    elif is_child:
+                        cluster_cluster.append({"parent_name": cluster_name, "child_name": name})
+
+            # Step 6: Create Cluster_Links + migrate all cluster_links
+            print("Creating and migrating all ClusterLinks...")
+            items = [cluster_gene_link_template(item) for item in cluster_genes_items]
+            items.extend([cluster_cluster_link_template(item) for item in cluster_cluster])
+
+            with session.transaction(TransactionType.WRITE) as transaction:
+                with alive_bar(len(items)) as bar:
+                    for item in items:
+                        transaction.query().insert(item)
+                        bar()
+                transaction.commit()
+
+            # Step 7: append to cluster->cluster.json and {cluster}.json.gz
+            print("Creating external json files...")
+            path = "./Data/cluster_cluster.json"
+            if os.path.isfile(path):
+                with open(path, "r") as in_file:
+                    links = list(ijson.items(in_file, "item"))
+                    links.extend(cluster_cluster)
+            else:
+                links = cluster_cluster
+
+            with open(path, "w") as out_file:
+                json.dump(links, out_file, indent=4)
+
+            with open(f"./Data/cluster_{name}.json", "w") as out_file:
+                json.dump(cluster_genes_items, out_file, indent=4)
 
 
 def get_vars(query: str):
@@ -175,18 +243,57 @@ def get_vars(query: str):
     return vars
 
 
+def gene_template(input):
+    insert = f'insert $gene isa Gene, '
+    for key, value in input.items():
+        try:
+            value = int(value)
+            insert += f'has {key} {value}, '
+        except ValueError:
+            insert += f'has {key} "{value}", '
+
+    return insert[:-2] + ";"
+
+
+def cluster_template(input):
+    insert = f'insert $cluster isa Cluster, has Cluster_Name {input["cluster_name"]}'
+    return insert
+
+
+def genelink_template(input):
+    insert = "match "
+    for key, value in input.items():
+        insert += f'${key} isa Gene, has Gene_Name "{value}";'
+    insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
+
+    return insert
+
+
+def cluster_gene_link_template(input):
+    insert = f'match $gene isa Gene, has Gene_Name "{input["gene_name"]}";' \
+             f' $cluster isa Cluster, has Cluster_Name "{input["cluster_name"]}";' \
+             f' insert (Parent: $cluster, Child: $gene) isa ClusterLink, has Cluster_Link_Type "Cluster->Gene";'
+    return insert
+
+
+def cluster_cluster_link_template(input):
+    insert = f'match $child isa Gene, has Gene_Name "{input["child_name"]}";' \
+             f' $parent isa Cluster, has Cluster_Name "{input["parent_name"]}";' \
+             f' insert (Parent: $parent, Child: $child) isa ClusterLink, has Cluster_Link_Type "Cluster->Cluster";'
+    return insert
+
+
 if __name__ == "__main__":
     with PangenomeDatabase("Spidermite") as Db:
         start_time = time.time()
         Db.create(replace=True)
         created_time = time.time()
-        Db.migrate("./Data/Genes.json.gz", Db.gene_template)
+        Db.migrate("./Data/Genes.json.gz", gene_template)
         genes_time = time.time()
-        Db.migrate("./Data/GeneLinks.json.gz", Db.genelink_template)
+        Db.migrate("./Data/GeneLinks.json.gz", genelink_template)
         genelinks_time = time.time()
         results = Db.query_tql("./Data/getGeneNames.tql")
         query_time = time.time()
-        Db.cluster_genes("TeturGenome", results)
         Db.delete()
         delete_time = time.time()
 

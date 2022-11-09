@@ -12,11 +12,14 @@ define
 
  Cluster sub entity,
  plays ClusterLink:Parent,
- owns Cluster_Name;
+ plays ClusterLink:Child,
+ owns Cluster_Name,
+ owns Cluster_Type;
 
  ClusterLink sub relation,
  relates Parent,
- relates Child;
+ relates Child,
+ owns Cluster_Link_Type;
 
  GeneLink sub relation,
  relates GeneA,
@@ -39,3 +42,11 @@ define
 
  Cluster_Name sub attribute,
  value string;
+
+ Cluster_Type sub attribute,
+ value string,
+ regex "^(Genome|Chromosome|ProteinFamiliy|GeneCluster|Other)$";
+
+ Cluster_Link_Type sub attribute,
+ value string,
+ regex "^(Cluster->Gene|Cluster->Cluster)$";
