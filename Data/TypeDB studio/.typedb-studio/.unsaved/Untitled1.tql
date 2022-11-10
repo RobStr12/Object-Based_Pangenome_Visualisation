@@ -1,0 +1,3 @@
+match $parent isa Cluster, has Cluster_Name $name;
+$child isa Cluster;
+ $link($parent, $child) isa ClusterLink;  get $name, $link;

@@ -1,0 +1,1 @@
+match $gene isa Gene, has Gene_Name $gene_name, has Genome "000"; get $gene_name;

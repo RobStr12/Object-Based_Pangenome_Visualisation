@@ -5,6 +5,7 @@ from subprocess import Popen
 from sys import platform
 import psutil
 import ijson
+import json
 import gzip
 import os
 
@@ -20,7 +21,7 @@ def getInsert(file: str):
 def get_vars(query: str):
     vars = [var.lstrip(" get ") for var in query.split(";") if var.startswith(" get ")][0]
     vars = [var.lstrip("$") for var in vars.split(", ")]
-    return
+    return vars
 
 
 def fetch_data(inserts, template):
@@ -45,30 +46,28 @@ def gene_template(input):
 
 
 def cluster_template(input):
-    insert = f'insert $cluster isa Cluster, has Cluster_Name {input["cluster_name"]}'
+    insert = f'insert $cluster isa Cluster, has Cluster_Name "{input["Cluster_Name"]}", has Cluster_Type "{input["Cluster_Type"]}";'
     return insert
 
 
 def genelink_template(input):
     insert = "match "
-    for key, value in input.items():
-        insert += f'${key} isa Gene, has Gene_Name "{value}";'
-    insert += "insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink;"
-
+    insert += f'$GeneA isa Gene, has Gene_Name "{input["GeneA"]}";'
+    insert += f'$GeneB isa Gene, has Gene_Name "{input["GeneB"]}";'
+    insert += f'insert (GeneA: $GeneA, GeneB: $GeneB) isa GeneLink, has GeneLink_Type "{input["GeneLink_Type"]}";'
     return insert
 
 
-def cluster_gene_link_template(input):
-    insert = f'match $gene isa Gene, has Gene_Name "{input["gene_name"]}";' \
-             f' $cluster isa Cluster, has Cluster_Name "{input["cluster_name"]}";' \
-             f' insert (Parent: $cluster, Child: $gene) isa ClusterLink, has Cluster_Link_Type "Cluster->Gene";'
-    return insert
+def clusterlink_template(input):
+    if input["ClusterLink_Type"] == "Cluster->Gene":
+        child = "Gene"
+    else:
+        child = "Cluster"
 
+    insert = f'match $parent isa Cluster, has Cluster_Name "{input["Parent_Name"]}"; '
+    insert += f' $child isa {child}, has {child}_Name "{input["Child_Name"]}"; '
+    insert += f'insert (Parent: $parent, Child: $child) isa ClusterLink, has ClusterLink_Type "{input["ClusterLink_Type"]}";'
 
-def cluster_cluster_link_template(input):
-    insert = f'match $child isa Gene, has Gene_Name "{input["child_name"]}";' \
-             f' $parent isa Cluster, has Cluster_Name "{input["parent_name"]}";' \
-             f' insert (Parent: $parent, Child: $child) isa ClusterLink, has Cluster_Link_Type "Cluster->Cluster";'
     return insert
 
 
@@ -146,9 +145,11 @@ class PangenomeDatabase:
         if type(insert) == list:
             print(f"Fetching inserts from list...")
             items = fetch_data(insert, template)
+            migrating = f"Migrating from list to {self.name}..."
         elif type(insert) == dict:
             print(f"Fetching inserts from dict...")
             items = fetch_data([insert], template)
+            migrating = f"Migrating from dict to {self.name}"
         elif insert.endswith(".json") or insert.endswith(".json.gz"):
             print(f"Fetching inserts from {insert}...")
             inserts = getInsert(insert)
@@ -157,7 +158,7 @@ class PangenomeDatabase:
         elif "insert" in insert:
             print(f"Fetching inserts from string...")
             items = [insert]
-            migrating = f"Migrating insert to {self.name}"
+            migrating = f"Migrating insert {insert} to {self.name}"
         else:
             print("[Cannot migrate data]")
             return
@@ -186,11 +187,97 @@ class PangenomeDatabase:
 
         with self.session.transaction(TransactionType.READ) as transaction:
             iterator = transaction.query().match(query)
-
             results = [{var: res.get(var).get_value() for var in vars} for res in iterator]
 
         return results
 
+    def cluster(self, name: str, type: str, query: str):
+        # Step 1: Check inputs + load external outputs
+        # Step 1.1: Inputs
+        print("Checking Type input...")
+        c_types = ["Genome", "Chromosome", "ProteinFamily", "GeneCluster", "Other"]
+        if type not in c_types:
+            print("Incorrect Cluster Type...")
+            return
 
-with PangenomeDatabase("Spider mite", "schema.tql") as PDb:
-    PDb.migrate("./Data/Gene.json", gene_template)
+        # Step 1.2:outputs
+        path = "./Data/Clusters.json"
+        try:
+            with open(path, "r") as f_in:
+                file = json.load(f_in)
+        except FileNotFoundError:
+            file = {"Clusters": [], "ClusterLinks": []}
+
+        # Step 2: Create Cluster + add to Clusters.json
+        new = {"Cluster_Name": name, "Cluster_Type": type}
+        file["Clusters"].append(new)
+        self.migrate(new, cluster_template)
+
+        # Step 3: Query database
+        results = self.query(query)
+        genes = [result["gene_name"] for result in results]
+
+        # Step 4: Create ClusterLinks of type Cluster->Gene
+        links = [{"Parent_Name": name, "Child_Name": gene, "ClusterLink_Type": "Cluster->Gene"} for gene in genes]
+
+        # Step 5: Checking if cluster is parent or child
+        # Step 5.1: retrieving all clusters
+        clusters = [cluster["cluster_name"] for cluster in self.query("./Data/getClusters.tql")]
+        print(clusters)
+
+        # Step 5.2: find parent-child clusters
+        for cluster in clusters:
+            # Step 5.2.1: Check to compare different clusters
+            if cluster == name:
+                continue
+
+            # Step 5.2.2: Get genes from other cluster
+            q = f'match $cluster isa Cluster, has Cluster_Name "{cluster}"; ' \
+                f'$gene isa Gene, has Gene_Name $gene_name; ' \
+                f'(Parent: $cluster, Child: $gene) isa ClusterLink; ' \
+                f'get $gene_name;'
+            results = self.query(q)
+            cluster_genes = [gene["gene_name"] for gene in results]
+
+            # Step 5.2.3: Compare clusters
+            if len(genes) > len(cluster_genes):
+                parent, child, p_genes, c_genes = name, cluster, genes, cluster_genes
+            elif len(genes) < len(cluster_genes):
+                parent, child, p_genes, c_genes = cluster, name, cluster_genes, genes
+            elif set(genes) == set(cluster_genes):
+                print(f"{name} is the same cluster as {cluster}...")
+            else:
+                continue
+
+            print(f"comparing  parent cluster {parent} and child cluster {child}")
+            equal = []
+            with alive_bar(len(c_genes)) as bar:
+                for gene in c_genes:
+                    equal.append(gene in p_genes)
+                    bar()
+
+            if any(equal):
+                print(f'{parent} is a parent cluster of {child}')
+                relation = {"Parent_Name": parent, "Child_Name": child, "ClusterLink_Type": "Cluster->Cluster"}
+                links.append(relation)
+                file["ClusterLinks"].append(relation)
+            else:
+                print(f'{parent} is not a parent cluster of {child}')
+
+        # Step 6 migrate links
+        self.migrate(links, clusterlink_template)
+
+        # Export file
+        with open("./Data/Clusters.json", "w") as f_out:
+            json.dump(file, f_out)
+
+
+if __name__ == "__main__":
+    with PangenomeDatabase("Spider mite", "schema.tql") as PDb:
+        PDb.migrate("./Data/Genes.json", gene_template)
+        PDb.migrate("./Data/GeneLinks.json", genelink_template)
+
+        PDb.cluster("All", "Other", "./Data/getGenes.tql")
+        PDb.cluster("Tetur", "Genome", """match $gene isa Gene, has Gene_Name $gene_name, has Genome "Tetur"; get $gene_name;""")
+        PDb.cluster("Tetli", "Genome",
+                    """match $gene isa Gene, has Gene_Name $gene_name, has Genome "Tetli"; get $gene_name;""")

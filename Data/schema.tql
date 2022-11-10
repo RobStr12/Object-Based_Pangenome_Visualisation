@@ -8,7 +8,8 @@ define
  owns Gene_Name,
  owns Start_Position,
  owns End_Position,
- owns Strand;
+ owns Strand,
+ owns Genome;
 
  Cluster sub entity,
  plays ClusterLink:Parent,
@@ -39,6 +40,9 @@ define
  value long;
 
  Strand sub attribute,
+ value string;
+
+ Genome sub attribute,
  value string;
 
  Cluster_Name sub attribute,
