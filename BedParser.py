@@ -39,7 +39,7 @@ def reversecomplement(inputsequence):
     return(complement)
 
 
-
+"""
 parsed_dictionary,stranddict = parsingbedfile("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_gff_LATEST/LG2.gff")
 sequencelist = []
 for key, value in parsed_dictionary.items():
@@ -51,14 +51,14 @@ for key, value in parsed_dictionary.items():
         sequence = sequence + gettingGeneSeq(id=chrom, start=int(pos[0])-1, stop=int(pos[1]))
     if stranddict[key] == "-":
         rev = str(translating(reversecomplement(sequence)))
-        sequencedict = {"gene": key, "sequence": rev}
+        sequencedict = {"gene": key,"sequence": reversecomplement(sequence), "protein": rev}
     else:
-        sequencedict = {"gene": key, "sequence": translating(sequence)}
+        sequencedict = {"gene": key, "sequence": sequence, "protein": translating(sequence)}
     sequencelist.append(sequencedict)
 print(sequencelist)
 # sequence = gettingGeneSeq(id="LG1",start=5,stop=12)
 # print(sequence)
-
+"""
 def gettingGeneSeq(id, start, stop, inputfasta: str = "./Data/sequences.fasta"):
     fastref = pysam.FastaFile(inputfasta)
     seq = fastref.fetch(id, start, stop)
@@ -75,7 +75,8 @@ print("this is a test commit")
 finalgenelist = []
 linklist = []
 sequencelist = []
-for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.bed"):
+for bedfile in glob("/Users/jannessauer/Downloads/pangenome_project/bedfiles/*.bed"):
+    print(bedfile)
     genelist = []
     for line in open(bedfile):
         line = line.rstrip().split("\t")
@@ -83,12 +84,12 @@ for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.
         # tqloutput.write(f'insert $gene isa Gene,has Gene_Name "{line[3]}", has Start_Position "{line[1]}", has End_Position "{line[2]}", has Strand "{line[5]}", has Chromosome "{line[0]}";\n')
         Genedict = {"Chromosome": line[0], "Start_Position": line[1], "End_Position": line[2], "Gene_Name": line[3],
                     "Strand": line[5]}
-        try:
-            sequence = gettingGeneSeq(id=line[0], start=int(line[1]) - 1, stop=int(line[2]))
-            sequencedict = {"gene": line[3], "sequence": translating(sequence)}
-            sequencelist.append(sequencedict)
-        except:
-            continue
+        #try:
+        #sequence = gettingGeneSeq(id=line[0], start=int(line[1]) - 1, stop=int(line[2]))
+        #sequencedict = {"gene": line[3], "sequence": translating(sequence)}
+        #sequencelist.append(sequencedict)
+        #except:
+            #continue
         genelist.append(Genedict)
         finalgenelist.append(Genedict)
 
@@ -99,15 +100,16 @@ for bedfile in glob("/Users/jannessauer/Downloads/Tetur_V4/Tetur_4_bed_LATEST/*.
         Genelink = {"GeneA": gene1, "GeneB": gene2}
         linklist.append(Genelink)
 
-with open("/Users/jannessauer/Downloads/Tetur_V4/Gene.json", "w") as jsonFile:
+with open("/Users/jannessauer/Downloads/pangenome_project/Gene.json", "w") as jsonFile:
     json.dump(finalgenelist, jsonFile, indent=4)
 jsonFile.close()
 
-with open("/Users/jannessauer/Downloads/Tetur_V4/Genelinks.json", "w") as jsonFile:
+with open("/Users/jannessauer/Downloads/pangenome_project/Genelinks.json", "w") as jsonFile:
     json.dump(linklist, jsonFile, indent=4)
 jsonFile.close()
 
-with open("/Users/jannessauer/Downloads/Tetur_V4/proteinsequences.json", "w") as jsonFile:
+"""
+with open("/Users/jannessauer/Downloads/pangenome_project/proteinsequences.json", "w") as jsonFile:
     json.dump(sequencelist, jsonFile, indent=4)
 jsonFile.close()
-
+"""
