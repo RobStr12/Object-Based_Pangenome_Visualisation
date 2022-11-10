@@ -1,0 +1,57 @@
+define
+
+ Gene sub entity,
+ plays GeneLink:GeneA,
+ plays GeneLink:GeneB,
+ plays ClusterLink:Child,
+ owns Chromosome,
+ owns Gene_Name,
+ owns Start_Position,
+ owns End_Position,
+ owns Strand;
+
+ Cluster sub entity,
+ plays ClusterLink:Parent,
+ plays ClusterLink:Child,
+ owns Cluster_Name,
+ owns Cluster_Type;
+
+ ClusterLink sub relation,
+ relates Parent,
+ relates Child,
+ owns ClusterLink_Type;
+
+ GeneLink sub relation,
+ relates GeneA,
+ relates GeneB,
+ owns GeneLink_Type;
+
+ Chromosome sub attribute,
+ value string;
+
+ Gene_Name sub attribute,
+ value string;
+
+ Start_Position sub attribute,
+ value long;
+
+ End_Position sub attribute,
+ value long;
+
+ Strand sub attribute,
+ value string;
+
+ Cluster_Name sub attribute,
+ value string;
+
+ Cluster_Type sub attribute,
+ value string,
+ regex "^(Genome|Chromosome|ProteinFamiliy|GeneCluster|Other)$";
+
+ ClusterLink_Type sub attribute,
+ value string,
+ regex "^(Cluster->Gene|Cluster->Cluster)$";
+
+ GeneLink_Type sub attribute,
+ value string,
+ regex "^(GeneOrder|Syntheny|Homology|ProteinProteinInteraction|Other)$";
