@@ -76,13 +76,14 @@ finalgenelist = []
 linklist = []
 sequencelist = []
 for bedfile in glob("/Users/jannessauer/Downloads/pangenome_project/bedfiles/*.bed"):
-    print(bedfile)
+    Genomename = bedfile.rsplit("/", 1)[1].split("_", 1)[0]
+    print(Genomename)
     genelist = []
     for line in open(bedfile):
         line = line.rstrip().split("\t")
         # with open("/Users/jannessauer/Downloads/Tetur_V4/data.tql","a") as tqloutput:
         # tqloutput.write(f'insert $gene isa Gene,has Gene_Name "{line[3]}", has Start_Position "{line[1]}", has End_Position "{line[2]}", has Strand "{line[5]}", has Chromosome "{line[0]}";\n')
-        Genedict = {"Chromosome": line[0], "Start_Position": line[1], "End_Position": line[2], "Gene_Name": line[3],
+        Genedict = {"Genome": Genomename, "Chromosome": line[0], "Start_Position": line[1], "End_Position": line[2], "Gene_Name": line[3],
                     "Strand": line[5]}
         #try:
         #sequence = gettingGeneSeq(id=line[0], start=int(line[1]) - 1, stop=int(line[2]))
@@ -97,7 +98,15 @@ for bedfile in glob("/Users/jannessauer/Downloads/pangenome_project/bedfiles/*.b
     for i in range(len(genelist) - n + 1):
         batch = genelist[i:i + n]
         gene1, gene2 = batch[0]['Gene_Name'], batch[1]['Gene_Name']
-        Genelink = {"GeneA": gene1, "GeneB": gene2}
+        Genelink = {"ClusterLink_Type": "GeneOrder" ,"GeneA": gene1, "GeneB": gene2}
+        linklist.append(Genelink)
+
+for line in open("/Users/jannessauer/Downloads/pangenome_project/Tetli.collinearity"):
+    if "#" in line:
+        continue
+    else:
+        line = line.rstrip().split("\t")
+        Genelink = {"ClusterLink_Type": "Syntheny", "GeneA": line[2], "GeneB": line[1]}
         linklist.append(Genelink)
 
 with open("/Users/jannessauer/Downloads/pangenome_project/Gene.json", "w") as jsonFile:
