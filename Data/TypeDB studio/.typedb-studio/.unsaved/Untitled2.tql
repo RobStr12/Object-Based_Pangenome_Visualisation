@@ -1,0 +1,1 @@
+match $link isa GeneLink, has GeneLink_Type "Syntheny"; get $link; count;
