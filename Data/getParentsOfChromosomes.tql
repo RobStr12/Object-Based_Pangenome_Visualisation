@@ -1,0 +1,1 @@
+match $cluster isa Cluster, has Cluster_Name $cluster_name, has Cluster_Type $cluster_type; $cluster_type != "Chromosome"; get $cluster_name, $cluster_type;

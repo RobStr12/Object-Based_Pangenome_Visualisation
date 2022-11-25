@@ -79,6 +79,7 @@ class PangenomeDatabase:
         self.name = name
         self.schema = "./Data/" + schema
         self.kill_java = kill_java
+        self.save2file = f"./Save/{self.name.replace(' ', '_')}.json.gz"
 
         path = "./server/data"
         if not os.path.isdir(path):
@@ -116,6 +117,33 @@ class PangenomeDatabase:
 
     def delete(self):
         self.client.databases().get(self.name).delete()
+
+    def load(self):
+        try:
+            with gzip.open(self.save2file) as f_in:
+                data = json.load(f_in)
+        except FileNotFoundError:
+            print(f"Could not find file: {self.save2file}")
+            data = {"Genes": [], "GeneLinks": [], "Clusters": [], "ClusterLinks": []}
+        finally:
+            Genes = data["Genes"]
+            GeneLinks = data["GeneLinks"]
+            Clusters = data["Clusters"]
+            ClusterLinks = data["ClusterLinks"]
+
+            self.migrate(Genes, gene_template)
+            self.migrate(GeneLinks, genelink_template)
+            self.migrate(Clusters, cluster_template)
+            self.migrate(ClusterLinks, clusterlink_template)
+
+    def save(self):
+        data = {"Genes": self.query("./Save/getGenes.tql"), "GeneLinks": self.query("./Save/getGeneLinks.tql"),
+                "Clusters": self.query("./Save/getClusters.tql"),
+                "ClusterLinks": self.query("./Save/getClusterClusterLinks.tql")}
+        data["ClusterLinks"].extend(self.query("./Save/getClusterGeneLinks.tql"))
+
+        with gzip.open(self.save2file, "w") as f_out:
+            f_out.write(json.dumps(data, indent=4).encode("utf-8"))
 
     def create(self, replace: bool):
         if replace:
@@ -208,30 +236,34 @@ class PangenomeDatabase:
         except FileNotFoundError:
             file = {"Clusters": [], "ClusterLinks": []}
 
-        # Step 2: Create Cluster + add to Clusters.json
-        new = {"Cluster_Name": name, "Cluster_Type": type}
-        file["Clusters"].append(new)
-        self.migrate(new, cluster_template)
-
-        # Step 3: Query database
+        # Step 2: Query database
         results = self.query(query)
         genes = [result["gene_name"] for result in results]
 
-        # Step 4: Create ClusterLinks of type Cluster->Gene
+        # Step 3: Create ClusterLinks of type Cluster->Gene
         links = [{"Parent_Name": name, "Child_Name": gene, "ClusterLink_Type": "Cluster->Gene"} for gene in genes]
 
-        # Step 5: Checking if cluster is parent or child
-        # Step 5.1: retrieving all clusters
-        clusters = [cluster["cluster_name"] for cluster in self.query("./Data/getClusters.tql")]
-        print(clusters)
+        # Step 4: Checking if cluster is parent or child
+        # Step 4.1: retrieving all candidate clusters
+        if type == "Chromosome":
+            clusters = self.query("./Data/getParentsOfChromosomes.tql")
+        else:
+            clusters = self.query("./Data/getClusters.tql")
 
-        # Step 5.2: find parent-child clusters
-        for cluster in clusters:
-            # Step 5.2.1: Check to compare different clusters
+        clusters = [(cluster["cluster_name"], cluster["cluster_type"]) for cluster in clusters]
+
+        # Step 4.2: find parent-child clusters
+        for cluster, cluster_type in clusters:
+            # Step 4.2.1: Check to compare different clusters
             if cluster == name:
                 continue
 
-            # Step 5.2.2: Get genes from other cluster
+            # Step 4.2.2: Check if both clusters are not of Chromosome type
+            if type == cluster_type == "Chromosome":
+                print(f"Both clusters are chromosomes...")
+                continue
+
+            # Step 4.2.3: Get genes from other cluster
             q = f'match $cluster isa Cluster, has Cluster_Name "{cluster}"; ' \
                 f'$gene isa Gene, has Gene_Name $gene_name; ' \
                 f'(Parent: $cluster, Child: $gene) isa ClusterLink; ' \
@@ -239,7 +271,7 @@ class PangenomeDatabase:
             results = self.query(q)
             cluster_genes = [gene["gene_name"] for gene in results]
 
-            # Step 5.2.3: Compare clusters
+            # Step 4.2.3: Compare clusters
             if len(genes) > len(cluster_genes):
                 parent, child, p_genes, c_genes = name, cluster, genes, cluster_genes
             elif len(genes) < len(cluster_genes):
@@ -250,13 +282,13 @@ class PangenomeDatabase:
                 continue
 
             print(f"comparing  parent cluster {parent} and child cluster {child}")
-            equal = []
-            with alive_bar(len(c_genes)) as bar:
-                for gene in c_genes:
-                    equal.append(gene in p_genes)
-                    bar()
+            # equal = []
+            # with alive_bar(len(c_genes)) as bar:
+                # for gene in c_genes:
+                    # equal.append(gene in p_genes)
+                    # bar()
 
-            if any(equal):
+            if any([gene in p_genes for gene in c_genes]):
                 print(f'{parent} is a parent cluster of {child}')
                 relation = {"Parent_Name": parent, "Child_Name": child, "ClusterLink_Type": "Cluster->Cluster"}
                 links.append(relation)
@@ -264,12 +296,15 @@ class PangenomeDatabase:
             else:
                 print(f'{parent} is not a parent cluster of {child}')
 
-        # Step 6 migrate links
+        # Step 5 migrate all data
+        new = {"Cluster_Name": name, "Cluster_Type": type}
+        file["Clusters"].append(new)
+        self.migrate(new, cluster_template)
         self.migrate(links, clusterlink_template)
 
-        # Export file
+        # Step 6: Export file
         with open("./Data/Clusters.json", "w") as f_out:
-            json.dump(file, f_out)
+            json.dump(file, f_out, indent=4)
 
 
 if __name__ == "__main__":
@@ -277,7 +312,6 @@ if __name__ == "__main__":
         PDb.migrate("./Data/Genes.json", gene_template)
         PDb.migrate("./Data/GeneLinks.json", genelink_template)
 
-        PDb.cluster("All", "Other", "./Data/getGenes.tql")
         PDb.cluster("Tetur", "Genome", """match $gene isa Gene, has Gene_Name $gene_name, has Genome "Tetur"; get $gene_name;""")
         PDb.cluster("Tetli", "Genome",
                     """match $gene isa Gene, has Gene_Name $gene_name, has Genome "Tetli"; get $gene_name;""")

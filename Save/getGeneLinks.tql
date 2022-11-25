@@ -1,0 +1,5 @@
+match
+ $A isa Gene, has Gene_Name $GeneA;
+ $B isa Gene, has Gene_Name $GeneB;
+ (GeneA: $A, GeneB: $B) isa GeneLink, has GeneLink_Type $GeneLink_Type;
+ get $GeneA, $GeneB, $GeneLink_Type;

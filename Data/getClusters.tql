@@ -1,1 +1,1 @@
-match $cluster isa Cluster, has Cluster_Name $cluster_name; get $cluster_name;
+match $cluster isa Cluster, has Cluster_Name $cluster_name, has Cluster_Type $cluster_type; get $cluster_name, $cluster_type;

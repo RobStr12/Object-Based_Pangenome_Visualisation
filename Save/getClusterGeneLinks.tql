@@ -1,0 +1,5 @@
+match
+ $parent isa Cluster, has Cluster_Name $Parent_Name;
+ $child isa Gene, has Gene_Name $Child_Name;
+ (Parent: $parent, Child: $child) isa ClusterLink, has ClusterLink_Type $ClusterLink_Type;
+ get $Parent_Name, $Child_Name, $ClusterLink_Type;
